@@ -244,7 +244,7 @@
             clear: both;
             align-items: flex-start;
             @include screen('mobile') {
-                margin-left: 10px;
+                margin-left: 0px;
             }
             @include screen('xs_mobile') {
                 display: block;

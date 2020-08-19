@@ -133,8 +133,14 @@
             margin-bottom: 10px;
             box-shadow: 0 0 5px #ccc;
 
-             @include screen('xs_mobile'){
-                padding:20px 15px;
+            //  @include screen('xs_mobile'){
+            //     padding:20px 15px;
+            // }
+            .form_grid {
+                @include screen('mobile'){
+                    margin:0;
+                }
+                
             }
         }
         // 查詢記錄
@@ -153,14 +159,22 @@
             }
             .title {
                 flex: none;
-                width: 120px;
+                width: 100px;
                 color: #79634a;
+                text-align: right;
+                @include screen('mobile'){
+                    text-align: left;
+                }
                  @include screen('xs_mobile'){
                     margin-bottom: 10px;
                 }
             }
             .content {
                 flex: auto;
+                padding: 0 0 0 20px;
+                @include screen('mobile'){
+                    padding: 0 0 0 10px;
+                }
             }
         }
 }

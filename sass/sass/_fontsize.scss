@@ -1,0 +1,55 @@
+.font_size {
+    overflow: hidden;
+    // display: inline-block;
+    text-align: center;
+    span {
+        display: inline-block;
+        vertical-align: middle;
+        font-size: .938em;
+        color: #666;
+    }
+    ul {
+        display:flex;
+        vertical-align: middle;
+        @include li-reset;
+        background-color: #740000;
+
+        li {
+            width: 40px;
+            height: 40px;
+            font-size: 1em;
+           display:flex;
+            margin: 0;
+            a {
+                display: block;
+                text-align: center;
+                // line-height: 40px;
+                display:flex;
+                justify-content: center;
+                align-items: center;
+                color: #fff;
+                width: 40px;
+                &:hover, &:focus {
+                    background:darken($primaryColor, 10);
+                    color: #FFF;
+                }
+                &.active {
+                    background:darken($primaryColor, 10);
+                    &:hover, &:focus {
+                        background:darken($primaryColor, 10);
+                        color: #FFF;
+                    }
+                }
+                &.small {
+                    font-size: .875em;
+                }
+                &.large {
+                    font-size: 1.125em;
+                }
+            }
+        }
+    }
+    @include screen('mobile') {
+        display: none;
+    }
+}

@@ -1,0 +1,191 @@
+* {
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    &.noscroll {
+        position: static !important;
+        width: 100%;
+        height: 100%;
+        overflow: hidden !important;
+        overflow-y: hidden !important;
+        margin: 0;
+        padding: 0;
+    }
+}
+// 最外圍預設為100%
+.wrapper {
+    width: 100%;
+    margin: 0px auto;
+    @include screen('mobile') {
+        background: #FFF;
+        overflow: hidden;
+        overflow-y: auto;
+    }
+}
+// 整體共用container樣式，請注意首頁切版頁面的整齊
+.container {
+    padding: 0;
+    margin: 0 auto;
+    max-width: $container-max; //請看_variable.scss
+     @include gutter(); //gutter 代表左右要留白
+   
+}
+.main {
+    position: relative;
+    margin: 0 auto;
+    padding:394px 0 0 0;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#6c594f+0,e0d3c1+50,6c594f+100 */
+background: rgb(108,89,79); /* Old browsers */
+background: -moz-linear-gradient(left,  rgba(108,89,79,1) 0%, rgba(224,211,193,1) 50%, rgba(108,89,79,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(left,  rgba(108,89,79,1) 0%,rgba(224,211,193,1) 50%,rgba(108,89,79,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to right,  rgba(108,89,79,1) 0%,rgba(224,211,193,1) 50%,rgba(108,89,79,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6c594f', endColorstr='#6c594f',GradientType=1 ); /* IE6-9 */
+
+
+
+    &:before{
+       content: '';
+        background-image: url('../images/main_picture01.jpg');
+    background-repeat: repeat-x;
+    background-position: center top;
+    // width: 100%;
+    height: 478px;
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    }
+    // 可先設定一個中央區塊最大寬，限制accesskey對齊
+    @include screen('mobile') {
+        // padding-top: 55px;
+    }
+    h2 {
+        line-height: 1.25em;
+    }
+}
+////////////////////////////////////////////////////////////
+// 為了與首頁區隔，請在內頁加上innerpage ClassName
+.innerpage {
+    padding-top: 2em;
+    @include screen('mobile') {
+        padding-top: 5em;
+    }
+    >.container {
+        @include gutter(); //gutter 代表左右要留白
+    }
+}
+.hidden {
+    display: none;
+}
+.xs_hidden {
+    display: block;
+    @include screen('xs_mobile') {
+        display: none !important;
+    }
+}
+// wordcolor
+.word_red {
+    color: $color-red !important;
+}
+.word_blue {
+    color: $color-blue !important;
+}
+.word_green {
+    color: $color-green !important;
+}
+.word_orange {
+    color: $color-orange !important;
+}
+.word_yellow {
+    color: $color-yellow !important;
+}
+.word_gray {
+    color: $color-gray !important;
+}
+// 系統公告
+.bulletin {
+    position: fixed;
+    z-index: 9999;
+    color: #fff;
+    background-color:lighten($linkColor, 10);
+    width: 100%;
+    margin: 0;
+    top: -50%;
+    font-size: 0.938em;
+    transition: .5s;
+    &.goin {
+        top: 0;
+    }
+    .container {
+        padding: 10px 20px;
+        @include box-sizing;
+        display: flex;
+        align-items: flex-start;
+        @include screen('xs_mobile') {
+            display: block;
+        }
+    }
+    span {
+        flex: auto;
+        @include screen('xs_mobile') {
+            // float: none;
+            // width: 100%;
+            // display: block;
+            // margin-bottom: 10px;
+            // text-align: left;
+        }
+    }
+    .btn_grp {
+        flex: none;
+        width: 100px;
+        padding: 0 !important;
+        @include screen('xs_mobile') {
+            margin: 10px auto 0;
+        }
+    }
+}
+.more{
+    background-color: #fff;
+        border: 1px solid $secondaryColor;
+        position: relative;
+        color: darken($secondaryColor, 10);
+        border-radius: .2em;
+        padding: 10px 0px;
+        transition: .5s;
+        width: 220px;
+        margin:0 auto;
+
+        @media(max-width: 400px) {
+            &:before {
+                display: none;
+            }
+        }
+        &:before {
+            content: '';
+            width: 67px;
+            height: 4px;
+            background-image: url('../images/button_icon02.png');
+            background-repeat: no-repeat;
+            background-position: right center;
+            position: absolute;
+            top: 45%;
+            right: -30px;
+            transition: .5s;
+        }
+        &:hover, &:focus {
+            color: $linkColor;
+            padding: 10px 0px;
+            // padding: 10px 90px 10px 80px;
+            border: 1px solid $secondaryColor !important;
+            width: 240px;
+            &:before {
+                right: -40px;
+            }
+            @media(max-width: 400px) {
+                padding: 10px 0;
+            }
+        }
+}

@@ -1,0 +1,1648 @@
+/////////////////////////////////////////////////////////以下為demo範例///
+// 首頁區塊設定
+// 範例：
+.demosection {
+    // [class^="col"] {
+    //     border: 2px solid #FFF;
+    //     background: #DEDEDE;
+    // }
+}
+// 首頁輪播
+.mpSlider {
+    width: 100%;
+    padding-bottom: 3em;
+    @include gutter(0);
+    .img-container {
+        @include aspect-ratio(5, 2);
+    }
+}
+// 廣告輪播
+.adSlider {
+    @include gutter(30px);
+    margin-top: 35px;
+    @include screen('mobile') {
+        @include gutter();
+    }
+    .slick-prev {
+        background: url(../vendor/slick/icon_arrow_left_inverse2.png) no-repeat center center;
+        background-size: 80%;
+        left: -15px;
+    }
+    .slick-next {
+        background: url(../vendor/slick/icon_arrow_right_inverse2.png) no-repeat center center;
+        background-size: 80%;
+        right: -15px;
+    }
+    .img-container {
+        width: 176px;
+        height: 65px;
+        margin: 0px 15px;
+        a {
+            display: block;
+            text-align: center;
+            img {
+                margin: 0 auto;
+                width: 176px;
+                height: 65px;
+            }
+        }
+        &:focus {
+            &:before {
+                content: "";
+                position: absolute;
+                z-index: 9;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                box-shadow: 0 0px 0px 3px $primaryColor inset;
+            }
+        }
+    }
+}
+// 按鈕
+.btn_grp {
+    button {
+        margin-right: 70px;
+        @media(max-width: 400px) {
+            margin-right: 0;
+        }
+    }
+    .btn-reset, .btn-submit {
+        background-color: #fff;
+        border: 1px solid $secondaryColor;
+        position: relative;
+        color: darken($secondaryColor, 10);
+        padding: 10px 0px;
+        transition: .5s;
+        width: 220px;
+        @media(max-width: 400px) {
+            &:before {
+                display: none;
+            }
+        }
+        &:before {
+            content: '';
+            width: 67px;
+            height: 4px;
+            background-image: url('../images/button_icon02.png');
+            background-repeat: no-repeat;
+            background-position: right center;
+            position: absolute;
+            top: 45%;
+            right: -30px;
+            transition: .5s;
+        }
+        &:hover, &:focus {
+            color: $linkColor;
+            padding: 10px 0px;
+            // padding: 10px 90px 10px 80px;
+            border: 1px solid $secondaryColor !important;
+            width: 240px;
+            &:before {
+                right: -40px;
+            }
+            @media(max-width: 400px) {
+                padding: 10px 0;
+            }
+        }
+    }
+}
+// mph2
+.block01_h2 {
+    color: #1a1a1a;
+    font-size: 1.875em;
+    padding: 0px 10px 0 110px;
+    letter-spacing: .1em;
+    margin: 0 0 30px 0;
+    position: relative;
+    line-height: 1.25em;
+    text-align: left;
+    font-family: 'Noto Serif TC', serif;
+    font-weight: 500;
+    &:before {
+        content: '';
+        width: 90px;
+        height: 2px;
+        background-color: #1a1a1a;
+        position: absolute;
+        left: 0;
+        top: 60%;
+    }
+    @include screen('xs_mobile') {
+        padding: 0px 10px 0 80px;
+        &:before {
+            width: 60px;
+        }
+    }
+}
+// 旅券查詢
+.passport_search_block {
+    >.container {
+        position: relative;
+        &:before {
+            content: '';
+            width: calc(100% - 30px);
+            height: 30px;
+            box-shadow: 0 -5px 8px rgba(153, 153, 153, .5);
+            position: absolute;
+            background-color: #fff;
+            left: 15px;
+            right: 15px;
+            top: 0;
+            z-index: 0;
+        }
+    }
+}
+.passport_search {
+    text-align: left;
+    padding: 30px;
+    position: relative;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&1+73,0+92 */
+    background: -moz-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 73%, rgba(255, 255, 255, 0) 92%, rgba(255, 255, 255, 0) 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 73%, rgba(255, 255, 255, 0) 92%, rgba(255, 255, 255, 0) 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 73%, rgba(255, 255, 255, 0) 92%, rgba(255, 255, 255, 0) 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#00ffffff', GradientType=0);
+    @include box-sizing;
+    /* IE6-9 */
+    &:before {
+        content: '';
+        width: 20px;
+        height: 326px;
+        background-image: url('../images/box_shadow_left.png');
+        background-repeat: no-repeat;
+        background-position: left top;
+        position: absolute;
+        left: -20px;
+        top: 0;
+        z-index: 0;
+    }
+    &:after {
+        content: '';
+        width: 20px;
+        height: 326px;
+        background-image: url('../images/box_shadow_right.png');
+        background-repeat: no-repeat;
+        background-position: right top;
+        position: absolute;
+        right: -20px;
+        top: 0;
+        z-index: 0;
+    }
+    h2 {
+        @extend .block01_h2;
+    }
+    //searchsearch_block
+    .search_block {
+        a {
+            color: $primaryColor;
+            text-decoration: underline;
+            &:hover {
+                text-decoration: none;
+            }
+        }
+        .simple {
+            display: flex;
+            input[type="text"] {
+                width: 80%;
+                display: inline-block;
+                @include screen('mobile') {
+                    width: 70%;
+                }
+            }
+            input[type="submit"] {
+                width: 15%;
+                display: inline-block;
+                @include screen('tablet') {
+                    width: auto;
+                }
+            }
+        }
+        .field {
+            select, input[type="text"] {
+                width: 30%;
+                @include screen('xs_mobile') {
+                    width: 100%;
+                }
+            }
+            .field_pic {
+                width: 5%;
+                display: inline-block;
+                img {
+                    vertical-align: middle;
+                }
+            }
+        }
+        // 關鍵字
+        .keywordHot {
+            display: flex;
+            clear: both;
+            align-items: flex-start;
+            @include screen('mobile') {
+                margin-left: 10px;
+            }
+            @include screen('xs_mobile') {
+                display: block;
+            }
+            .title {
+                flex: none;
+                width: 100px;
+                color: $primaryColor;
+                text-align: right;
+                @include screen('mobile') {
+                    text-align: left;
+                    width: auto;
+                }
+                @include screen('xs_mobile') {
+                    margin-bottom: 5px;
+                }
+            }
+            ul {
+                flex: auto;
+                line-height: 1.65em;
+                margin: 0;
+                padding: 0 0 0 20px;
+                @include screen('xs_mobile') {
+                    padding: 0;
+                }
+                li {
+                    margin: 0 1em 0 0;
+                    padding: 0;
+                    display: inline-block;
+                    position: relative;
+                    &:before {
+                        content: '、';
+                        color: #797979;
+                        position: absolute;
+                        right: -18px;
+                    }
+                    &:last-child {
+                        &:before {
+                            display: none;
+                        }
+                    }
+                }
+                a {
+                    @include aSetting_nocolor;
+                    color: #797979;
+                }
+            }
+        }
+        // 查詢方式說明
+        .explain_btn {
+            background-color: #a39387;
+            color: #fff;
+            padding: 8px 60px 8px 20px;
+            float: right;
+            margin: 0 0 10px 0;
+            position: relative;
+            transition: .5s;
+            &:before {
+                content: '';
+                width: 30px;
+                height: 5px;
+                background-image: url('../images/button_icon01.png');
+                background-repeat: no-repeat;
+                background-position: right center;
+                position: absolute;
+                top: 45%;
+                right: 20px;
+                transition: .5s;
+            }
+            &:hover {
+                background-color: darken(#a39387, 10);
+                padding: 8px 65px 8px 20px;
+                &:before {
+                    right: 15px;
+                }
+            }
+        }
+    }
+}
+// 旅券瀏覽
+.passport_browse_block {
+    background-image: url('../images/passport_browse_bg.jpg');
+    background-position: center top;
+    background-repeat: repeat;
+    padding: 30px 0 0 0;
+}
+.passport_browse {
+    text-align: left;
+    padding: 30px;
+    h2 {
+        @extend .block01_h2;
+    }
+}
+.year_browsing {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 32px;
+    margin-bottom: 20px;
+    @include screen('tablet') {
+        flex-wrap: wrap;
+    }
+    div {
+        flex: none;
+        font-size: 1.125em;
+        padding: 13px 0px 13px 35px;
+        color: #fff;
+        text-align: center;
+        @include box-sizing;
+        position: relative;
+        white-space: nowrap;
+        &:after {
+            content: '';
+            border: 36px solid #ccc;
+            border-top-color: transparent;
+            border-right-color: transparent;
+            border-bottom-color: transparent;
+            position: absolute;
+            right: -71px;
+            top: 0;
+            z-index: 1;
+        }
+        &:first-child {
+            padding: 13px 15px;
+        }
+        @media(max-width: 480px) {
+            padding: 13px 15px;
+        }
+        span {
+            display: block;
+            font-size: 0.875em;
+            letter-spacing: .1em;
+            padding: 0;
+            font-family: 'Comfortaa', cursive;
+            font-weight: 600;
+        }
+        &.period01 {
+            flex-basis: 11%;
+            width: 11%;
+            background-color: #bc8e57;
+            &:after {
+                border-left-color: #bc8e57;
+            }
+            @include screen('tablet') {
+                flex-basis: 20%;
+                width: 20%;
+            }
+            @include screen('mobile') {
+                flex-basis: 38%;
+                width: 38%;
+            }
+            @media(max-width:480px) {
+                flex-basis: 100%;
+                width: 100%;
+            }
+        }
+        &.period02 {
+            flex-basis: 19%;
+            width: 19%;
+            background-color: #bf575e;
+            &:after {
+                border-left-color: #bf575e;
+            }
+            @include screen('tablet') {
+                flex-basis: 33%;
+                width: 33%;
+            }
+            @include screen('mobile') {
+                flex-basis: 62%;
+                width: 62%;
+            }
+            @media(max-width:480px) {
+                flex-basis: 100%;
+                width: 100%;
+            }
+        }
+        &.period03 {
+            flex-basis: 22%;
+            width: 22%;
+            background-color: #68627e;
+            &:after {
+                border-left-color: #68627e;
+            }
+            @include screen('tablet') {
+                flex-basis: 47%;
+                width: 47%;
+            }
+            @include screen('mobile') {
+                flex-basis: 65%;
+                width: 65%;
+            }
+            @media(max-width:480px) {
+                flex-basis: 100%;
+                width: 100%;
+            }
+        }
+        &.period04 {
+            flex-basis: 15%;
+            width: 15%;
+            background-color: #768aaf;
+            &:after {
+                border-left-color: #768aaf;
+            }
+            @include screen('tablet') {
+                flex-basis: 27%;
+                width: 27%;
+            }
+            @include screen('mobile') {
+                flex-basis: 35%;
+                width: 35%;
+            }
+            @media(max-width:480px) {
+                flex-basis: 100%;
+                width: 100%;
+            }
+        }
+        &.period05 {
+            flex-basis: 33%;
+            width: 33%;
+            background-color: #6e7d66;
+            &:after {
+                border-left-color: #6e7d66;
+            }
+            @include screen('tablet') {
+                flex-basis: 73%;
+                width: 73%;
+            }
+            @include screen('mobile') {
+                flex-basis: 100%;
+                width: 100%;
+            }
+        }
+    }
+}
+.year_browsing2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 32px;
+    margin-bottom: 20px;
+    @include screen('tablet') {
+        flex-wrap: wrap;
+    }
+    div {
+        flex: none;
+        font-size: 1em;
+        padding: 13px 0px 13px 35px;
+        color: #fff;
+        text-align: center;
+        @include box-sizing;
+        position: relative;
+        white-space: nowrap;
+        line-height: 1.4em;
+        &:after {
+            content: '';
+            border: 36px solid #ccc;
+            border-top-color: transparent;
+            border-right-color: transparent;
+            border-bottom-color: transparent;
+            position: absolute;
+            right: -71px;
+            top: 0;
+            z-index: 1;
+        }
+        &:first-child {
+            padding: 13px 15px;
+        }
+        span {
+            font-size: 0.875em;
+            letter-spacing: .1em;
+            padding: 0;
+            font-family: 'Comfortaa', cursive;
+            font-weight: 600;
+        }
+        &.period01 {
+            flex-basis: 20%;
+            width: 20%;
+            background-color: #bc8e57;
+            &:after {
+                border-left-color: #bc8e57;
+            }
+            @include screen('tablet') {
+                flex-basis: 36%;
+                width: 36%;
+            }
+            @include screen('xs_mobile') {
+                flex-basis: 100%;
+                width: 100%;
+            }
+        }
+        &.period02 {
+            flex-basis: 30%;
+            width: 30%;
+            background-color: #bf575e;
+            &:after {
+                border-left-color: #bf575e;
+            }
+            @include screen('tablet') {
+                flex-basis: 64%;
+                width: 64%;
+            }
+            @include screen('xs_mobile') {
+                flex-basis: 100%;
+                width: 100%;
+            }
+        }
+        &.period03 {
+            flex-basis: 50%;
+            width: 50%;
+            background-color: #68627e;
+            &:after {
+                border-left-color: #68627e;
+            }
+            @include screen('tablet') {
+                flex-basis: 100%;
+                width: 100%;
+            }
+        }
+    }
+}
+// 時間線
+.timeline {
+    margin: 0;
+    position: relative;
+    .slider-time, .slider-time2 {
+        position: relative;
+        z-index: 2;
+        height: 52px;
+    }
+    .slider-time div, .slider-time2 div {
+        a {
+            display: block;
+            padding: 13px 7px;
+            color: #fff;
+            background-color: #bc8e57;
+            text-align: center;
+            margin: 0 1px 0 0;
+            border: 1px solid #c9c9c9;
+            span {
+                font-family: 'Comfortaa', cursive;
+                font-weight: 600;
+            }
+            // &:focus {
+            //     box-shadow: 0 0px 0px 2px $color-yellow inset;
+            // }
+            &.active {
+                background: none !important;
+                background-color: #fff !important;
+                color: #000 !important;
+                border-bottom: 1px solid #fff;
+            }
+        }
+        // 
+        &.color_brownred {
+            a {
+                @include gradient(#bc8e57, #bf575e, horizontal);
+            }
+        }
+        &.color_redbg {
+            a {
+                background-color: #bf575e;
+            }
+        }
+        &.color_redpurple {
+            a {
+                @include gradient(#bf575e, #68627e, horizontal);
+            }
+        }
+        &.color_purplebg {
+            a {
+                background-color: #68627e;
+            }
+        }
+        &.color_purpleblue {
+            a {
+                @include gradient(#68627e, #768aaf, horizontal);
+            }
+        }
+        &.color_bluebg {
+            a {
+                background-color: #768aaf;
+            }
+        }
+        &.color_bluegreen {
+            a {
+                @include gradient(#768aaf, #6e7d66, horizontal);
+            }
+        }
+        &.color_greenbg {
+            a {
+                background-color: #6e7d66;
+            }
+        }
+    }
+    .content {
+        position: relative;
+        z-index: 1;
+        background-color: #fff;
+        border: 1px solid #c9c9c9;
+        margin-top: -1px;
+        font-size: 1em;
+        padding: 10px;
+        overflow: hidden;
+        ul.appendix {
+            margin: 0;
+            padding: 0;
+            li {
+                float: left;
+                margin: 0 0.25% 5px;
+                width: 24.5%;
+                @include screen('tablet') {
+                    margin: 0 0.41% 5px;
+                    width: 32.5%;
+                }
+                @include screen('mobile') {
+                    margin: 0 0.5% 5px;
+                    width: 49%;
+                }
+                @include screen('xs_mobile') {
+                    margin: 0 0 5px;
+                    width: 100%;
+                }
+                a {
+                    border: 1px solid #ddd;
+                    display: block;
+                    padding: 10px 5px;
+                    width: 100%;
+                    height: 46px;
+                    background-color: #fff;
+                    color: #000;
+                    text-align: center;
+                    white-space: nowrap;
+                    @include box-sizing;
+                    &:hover, &:focus {
+                        background-color: #eee;
+                    }
+                    &.active {
+                        background-color: #666;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+        ul.hall {
+            margin: 0;
+            padding: 0;
+            li {
+                float: left;
+                margin: 0 0.25% 5px;
+                width: 12%;
+                @include screen('notebook') {
+                    margin: 0 0.39% 5px;
+                    width: 13.5%;
+                }
+                @include screen('tablet') {
+                    margin: 0 0.33% 5px;
+                    width: 16%;
+                }
+                @include screen('mobile') {
+                    margin: 0 0.5% 5px;
+                    width: 19%;
+                }
+                @include screen('xs_mobile') {
+                    margin: 0 0.66% 5px;
+                    width: 32%;
+                }
+                @media(max-width: 400px) {
+                    margin: 0 1% 5px;
+                    width: 48%;
+                }
+                a {
+                    border: 1px solid #ddd;
+                    display: block;
+                    padding: 10px 5px;
+                    width: 100%;
+                    height: 46px;
+                    background-color: #fff;
+                    color: #000;
+                    text-align: center;
+                    white-space: nowrap;
+                    @include box-sizing;
+                    &:hover, &:focus {
+                        background-color: #eee;
+                    }
+                    &.active {
+                        background-color: #666;
+                        color: #fff;
+                    }
+                    &.mansion {
+                        color: $linkColor;
+                    }
+                }
+            }
+        }
+    }
+    // 箭頭
+    .slick-prev {
+        left: -35px;
+    }
+    .slick-next {
+        right: -35px;
+    }
+}
+// 旅行地點分佈
+.travel_location_block {
+    padding: 50px 0 60px;
+    .container {
+        @include gutter(80px);
+    }
+    .travel_location {
+        h2 {
+            @extend .block01_h2;
+            color: #fff;
+            margin: 0 0 60px 0;
+            &:before {
+                background-color: #fff;
+            }
+        }
+    }
+    // 地點分佈輪播
+    .location_slider {
+        // 地點區塊
+        .location_blcok {
+            display: flex;
+            @include screen('tablet') {
+                display: block;
+            }
+            .map_pic {
+                flex: none;
+                width: 678px;
+                margin-right: 3px;
+                position: relative;
+                img {
+                    width: 678px;
+                    z-index: 1;
+                }
+                @include screen('tablet') {
+                    display: none;
+                }
+                .point {
+                    position: absolute;
+                    // z-index: 2;
+                    a {
+                        transition: .5s;
+                        text-shadow: 0 0 3px #333;
+                        &:hover {
+                            text-shadow: 0 0 3px #333, 0 0 3px #333, 0 0 3px #333;
+                        }
+                    }
+                    .num_people {
+                        padding: 5px 10px;
+                        color: #333;
+                        background-color: lighten($color-yellow, 10);
+                        border-radius: 5px;
+                        position: absolute;
+                        display: none;
+                        min-width: 120px;
+                        z-index: 9;
+                        span {
+                            display: block;
+                            em {
+                                font-style: normal;
+                                color: red;
+                                padding: 0 3px;
+                                font-family: 'Comfortaa', cursive;
+                                font-weight: 600;
+                            }
+                        }
+                    }
+                    // 廈門
+                    &.location01 {
+                        bottom: 13.2%;
+                        right: 38%;
+                        a {
+                            span {
+                                &.distributed_point_no05 {
+                                    &:before {
+                                        left: -42px;
+                                        top: -10px;
+                                    }
+                                }
+                            }
+                        }
+                        .num_people {
+                            left: -175px;
+                            top: -50px;
+                        }
+                    }
+                    // 福州
+                    &.location02 {
+                        bottom: 18%;
+                        right: 36.5%;
+                        a {
+                            span {
+                                &.distributed_point_no04 {
+                                    &:before {
+                                        left: -32px;
+                                        top: -3px;
+                                    }
+                                }
+                            }
+                        }
+                        .num_people {
+                            left: -165px;
+                            top: -50px;
+                        }
+                    }
+                    // 上海
+                    &.location03 {
+                        bottom: 33.4%;
+                        right: 37%;
+                        a {
+                            span {
+                                &.distributed_point_no03 {
+                                    &:before {
+                                        left: -16px;
+                                        top: 4px;
+                                    }
+                                }
+                            }
+                        }
+                        .num_people {
+                            left: -140px;
+                            top: -50px;
+                        }
+                    }
+                    // 香港
+                    &.location04 {
+                        bottom: 5%;
+                        right: 47%;
+                        a {
+                            span {
+                                &.distributed_point_no03 {
+                                    &:before {
+                                        left: 10px;
+                                        bottom: 23px;
+                                    }
+                                }
+                            }
+                        }
+                        .num_people {
+                            left: -115px;
+                            top: -70px;
+                        }
+                    }
+                    // 汕頭
+                    &.location05 {
+                        bottom: 9%;
+                        right: 41.5%;
+                        a {
+                            span {
+                                &.distributed_point_no02 {
+                                    &:before {
+                                        left: -14px;
+                                        top: 0;
+                                    }
+                                }
+                            }
+                        }
+                        .num_people {
+                            left: -135px;
+                            top: -60px;
+                        }
+                    }
+                    // 廣東
+                    &.location06 {
+                        bottom: 11%;
+                        right: 50.2%;
+                        a {
+                            span {
+                                &.distributed_point_no01 {
+                                    &:before {
+                                        left: 37px;
+                                        top: 5px;
+                                    }
+                                }
+                            }
+                        }
+                        .num_people {
+                            right: 0;
+                            top: -60px;
+                        }
+                    }
+                    // 牛莊
+                    &.location07 {
+                        top: 30%;
+                        right: 44%;
+                        a {
+                            span {
+                                &.distributed_point_no01 {
+                                    &:before {
+                                        left: -13px;
+                                        top: 6px;
+                                    }
+                                }
+                            }
+                        }
+                        .num_people {
+                            left: -140px;
+                            top: -50px;
+                        }
+                    }
+                    // 滿洲國
+                    &.location08 {
+                        top: 27%;
+                        right: 54%;
+                        a {
+                            span {
+                                &.distributed_point_no01 {
+                                    &:before {
+                                        left: 55px;
+                                        top: 7px;
+                                    }
+                                }
+                            }
+                        }
+                        .num_people {
+                            right: -10px;
+                            top: -60px;
+                        }
+                    }
+                    // 天津
+                    &.location09 {
+                        top: 35%;
+                        left: 35%;
+                        a {
+                            span {
+                                &.distributed_point_no01 {
+                                    &:before {
+                                        left: 36px;
+                                        top: 7px;
+                                    }
+                                }
+                            }
+                        }
+                        .num_people {
+                            right: -140px;
+                            top: 10px;
+                        }
+                    }
+                    // 南京
+                    &.location10 {
+                        top: 60%;
+                        left: 48.5%;
+                        a {
+                            span {
+                                &.distributed_point_no01 {
+                                    &:before {
+                                        left: 36px;
+                                        top: 7px;
+                                    }
+                                }
+                            }
+                        }
+                        .num_people {
+                            right: -125px;
+                            top: -60px;
+                        }
+                    }
+                    // 
+                    a {
+                        display: block;
+                        transition: .5s;
+                        span {
+                            position: relative;
+                            color: #fff;
+                            &:before {
+                                content: '';
+                                position: absolute;
+                                border-radius: 50%;
+                                background-color: rgba(255, 0, 0, .6);
+                                transition: .5s;
+                            }
+                            // 點點大小
+                            &.distributed_point_no01 {
+                                &:before {
+                                    width: 8px;
+                                    height: 8px;
+                                }
+                            }
+                            &.distributed_point_no02 {
+                                &:before {
+                                    width: 10px;
+                                    height: 10px;
+                                }
+                            }
+                            &.distributed_point_no03 {
+                                &:before {
+                                    width: 16px;
+                                    height: 16px;
+                                }
+                            }
+                            &.distributed_point_no04 {
+                                &:before {
+                                    width: 28px;
+                                    height: 28px;
+                                }
+                            }
+                            &.distributed_point_no05 {
+                                &:before {
+                                    width: 38px;
+                                    height: 38px;
+                                }
+                            }
+                        }
+                        &:hover {
+                            span {
+                                &:before {
+                                    background-color: $color-yellow;
+                                }
+                            }
+                        }
+                        &.addcolor {
+                            span {
+                                &:before {
+                                    background-color: $color-yellow;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            // 海外
+            .map_pic2 {
+                flex: none;
+                width: 744px;
+                margin-right: 3px;
+                position: relative;
+                img {
+                    width: 744px;
+                    z-index: 1;
+                }
+                @include screen('tablet') {
+                    display: none;
+                }
+                .point {
+                    position: absolute;
+                    // z-index: 2;
+                    a {
+                        transition: .5s;
+                        text-shadow: 0 0 3px #333;
+                        &:hover {
+                            text-shadow: 0 0 3px #333, 0 0 3px #333, 0 0 3px #333;
+                        }
+                    }
+                    .num_people {
+                        padding: 5px 10px;
+                        color: #333;
+                        background-color:lighten($color-yellow, 10);
+                        border-radius: 5px;
+                        position: absolute;
+                        display: none;
+                        min-width: 120px;
+                        z-index: 9;
+                        span {
+                            display: block;
+                            em {
+                                font-style: normal;
+                                color: red;
+                                padding: 0 3px;
+                                font-family: 'Comfortaa', cursive;
+                                font-weight: 600;
+                            }
+                        }
+                    }
+                    // 清／中華民國
+                    &.location01 {
+                        top: 34%;
+                        right: 12%;
+                        a {
+                            span {
+                                &.distributed_point_no02 {
+                                    &:before {
+                                        right: 0px;
+                                        top: 30px;
+                                    }
+                                }
+                            }
+                        }
+                        .num_people {
+                            right: 0;
+                            top: -65px;
+                        }
+                    }
+                    //印尼
+                    &.location02 {
+                        bottom: 41%;
+                        right: 6%;
+                        a {
+                            span {
+                                &.distributed_point_no01 {
+                                    &:before {
+                                        left: -15px;
+                                        top: 5px;
+                                    }
+                                }
+                            }
+                        }
+                        .num_people {
+                            left: -145px;
+                            top: -50px;
+                        }
+                    }
+                    // 匈牙利
+                    &.location03 {
+                        top: 28%;
+                        right: 38%;
+                        a {
+                            span {
+                                &.distributed_point_no01 {
+                                    &:before {
+                                        left: -15px;
+                                        top: 7px;
+                                        ;
+                                    }
+                                }
+                            }
+                        }
+                        .num_people {
+                            left: -140px;
+                            top: -50px;
+                        }
+                    }
+                    // 菲律賓
+                    &.location04 {
+                        top: 46%;
+                        right: 1.5%;
+                        a {
+                            span {
+                                &.distributed_point_no01 {
+                                    &:before {
+                                        left: -15px;
+                                        bottom: 7px;
+                                    }
+                                }
+                            }
+                        }
+                        .num_people {
+                            left: -145px;
+                            bottom: 15px;
+                        }
+                    }
+                    // 美國
+                    &.location05 {
+                        top: 35%;
+                        left: 19%;
+                        a {
+                            span {
+                                &.distributed_point_no01 {
+                                    &:before {
+                                        left: -14px;
+                                        top: 6px;
+                                    }
+                                }
+                            }
+                        }
+                        .num_people {
+                            left: -125px;
+                            top: -60px;
+                        }
+                    }
+                    // 泰國
+                    &.location06 {
+                        top: 44%;
+                        right: 18.5%;
+                        a {
+                            span {
+                                &.distributed_point_no01 {
+                                    &:before {
+                                        right: -15px;
+                                        top: 7px;
+                                    }
+                                }
+                            }
+                        }
+                        .num_people {
+                            right: -130px;
+                            top: -60px;
+                        }
+                    }
+                    // 越南
+                    &.location07 {
+                        top: 48%;
+                        right: 14.5%;
+                        a {
+                            span {
+                                &.distributed_point_no01 {
+                                    &:before {
+                                        right: 0;
+                                        top: -10px;
+                                    }
+                                }
+                            }
+                        }
+                        .num_people {
+                            right: 10px;
+                            top: -75px;
+                        }
+                    }
+                    // 新加坡
+                    &.location08 {
+                        top: 54%;
+                        right: 17%;
+                        a {
+                            span {
+                                &.distributed_point_no01 {
+                                    &:before {
+                                        left: 55px;
+                                        top: 7px;
+                                    }
+                                }
+                            }
+                        }
+                        .num_people {
+                            right: -10px;
+                            top: 25px
+                        }
+                    }
+                    //法國
+                    &.location09 {
+                        top: 27%;
+                        right: 51%;
+                        a {
+                            span {
+                                &.distributed_point_no01 {
+                                    &:before {
+                                        right: -15px;
+                                        top: 7px;
+                                    }
+                                }
+                            }
+                        }
+                        .num_people {
+                            right: -5px;
+                            top: -60px;
+                        }
+                    }
+                    // 澳洲
+                    &.location10 {
+                        top: 70%;
+                        right: 2%;
+                        a {
+                            span {
+                                &.distributed_point_no01 {
+                                    &:before {
+                                        left: -15px;
+                                        top: 7px;
+                                    }
+                                }
+                            }
+                        }
+                        .num_people {
+                            left: -140px;
+                            top: -50px;
+                        }
+                    }
+                    // 
+                    a {
+                        display: block;
+                        transition: .5s;
+                        span {
+                            position: relative;
+                            color: #fff;
+                            &:before {
+                                content: '';
+                                position: absolute;
+                                border-radius: 50%;
+                                background-color: rgba(255, 0, 0, .6);
+                                transition: .5s;
+                            }
+                            // 點點大小
+                            &.distributed_point_no01 {
+                                &:before {
+                                    width: 8px;
+                                    height: 8px;
+                                }
+                            }
+                            &.distributed_point_no02 {
+                                &:before {
+                                    width: 10px;
+                                    height: 10px;
+                                }
+                            }
+                            &.distributed_point_no03 {
+                                &:before {
+                                    width: 16px;
+                                    height: 16px;
+                                }
+                            }
+                            &.distributed_point_no04 {
+                                &:before {
+                                    width: 28px;
+                                    height: 28px;
+                                }
+                            }
+                            &.distributed_point_no05 {
+                                &:before {
+                                    width: 38px;
+                                    height: 38px;
+                                }
+                            }
+                        }
+                        &:hover {
+                            span {
+                                &:before {
+                                    background-color: lighten($color-yellow, 10);
+                                }
+                            }
+                        }
+                        &.addcolor {
+                            span {
+                                &:before {
+                                    background-color: $color-yellow;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            // 右欄資料
+            .leaderboard {
+                flex: auto;
+                text-align: center;
+                .title {
+                    color: #fff;
+                    font-size: 1.125em;
+                    background-color: $secondaryColor;
+                    padding: 12px 5px 11px;
+                    line-height: 1.7em;
+                    border-bottom: 1px solid #fff;
+                    span {
+                        display: block;
+                        font-size: 1.188em;
+                    }
+                }
+                .heading {
+                    display: flex;
+                    background-color: #bb6a45;
+                    border-bottom: 1px solid #fff;
+                    color: #fff;
+                    span {
+                        flex: none;
+                        width: 50%;
+                        padding: 12px 5px;
+                        border-right: 1px solid #fff;
+                        &:nth-child(2n) {
+                            border-right: none;
+                        }
+                    }
+                }
+                .content {
+                    .group {
+                        background-color: #fff;
+                        a {
+                            display: flex;
+                            color: #000;
+                            border: 1px solid #fff;
+                            transition: 0.5s;
+                            span {
+                                flex: none;
+                                width: 50%;
+                                padding: 8px 5px 7px;
+                                border-right: 1px solid #fff;
+                                &.number {
+                                    font-family: 'Comfortaa', cursive;
+                                    font-weight: 600;
+                                }
+                                &:nth-child(2n) {
+                                    border-right: none;
+                                }
+                            }
+                            &:hover, &:focus {
+                                background-color: lighten($color-yellow, 10);
+                                color: #000;
+                            }
+                            &.addhover {
+                                background-color: lighten($color-yellow, 10);
+                                color: #000;
+                            }
+                        }
+                        &:nth-child(even) {
+                            background-color: #d5d5d4;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// 旅行目的
+.travel_purpose_block {
+    background-image: url('../images/travel_purpose_bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    min-height: 900px;
+    background-color: #e0d3c1;
+    position: relative;
+    &:before {
+        content: '';
+        background-image: url('../images/travel_purpose_beforebg.png');
+        background-repeat: repeat-x;
+        background-position: center top;
+        width: 100%;
+        height: 12px;
+        position: absolute;
+        top: -11px;
+        left: 0;
+        right: 0;
+    }
+    .container {
+        @include gutter(80px);
+    }
+    .travel_purpose {
+        background-color: rgba(6, 6, 6, .7);
+        padding: 55px 30px 0;
+        overflow: hidden;
+        margin: 65px 0;
+       
+        @media(max-width: 400px) {
+            padding: 55px 20px;
+        }
+        h2 {
+            color: #fff;
+            font-size: 1.75em;
+            letter-spacing: .1em;
+            margin: 0 0 60px 0;
+            position: relative;
+            line-height: 1em;
+            text-align: center;
+            font-family: 'Noto Serif TC', serif;
+            font-weight: 500;
+        }
+        ul {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+            li {
+                // float: left;
+                flex: none;
+                text-align: center;
+                list-style-type: none;
+                width: 13%;
+                margin: 0 0.6% 50px;
+                @include screen('tablet') {
+                    width: 19%;
+                    margin: 0 0.5% 50px;
+                }
+                @include screen('mobile') {
+                    width: 32%;
+                    margin: 0 0.6% 50px;
+                }
+                @media(max-width: 480px) {
+                    width: 48%;
+                    margin: 0 1% 30px;
+                }
+                // @media(max-width: 400px) {
+                //     width: 48%;
+                //     margin: 0 1% 30px;
+                // }
+                img {
+                    width: 100px;
+                    height: 90px;
+                    margin-bottom: 0px;
+                }
+                span {
+                    display: block;
+                    em {
+                        display: block;
+                        font-style: normal;
+                    }
+                }
+                a {
+                    color: #fff;
+                    display: block;
+                    padding: 8px 0;
+                    transition: .5s;
+                    border-radius: 10px;
+                    margin-top: 5px;
+                    &:hover, &:focus {
+                        background-color: $primaryColor;
+                        box-shadow: 0px 4px 8px #000;
+                        margin-top: 0px;
+                    }
+                }
+            }
+        }
+    }
+}
+// 專題旅券
+.topic_passport_block {
+    background-image: url('../images/topic_passport_bg.jpg');
+    background-repeat: repeat;
+    background-position: center top;
+    padding: 60px 0 80px;
+    .container {
+        @include gutter(80px);
+    }
+    .topic_passport {
+        h2 {
+            @extend .block01_h2;
+            margin-bottom: 50px;
+            margin-left: 15px;
+        }
+    }
+    .topic_slider {
+        margin-bottom: 30px;
+        .topic_content {
+            background-color: #fff;
+            border: 1px solid #897253;
+            padding: 15px 15px 25px;
+            margin: 0 12px;
+            box-shadow: 0 0 6px #ccc;
+            color: #222;
+            h3 {
+                background-color: #312222;
+                color: #fff;
+                margin: 0;
+                padding: 15px 10px;
+                text-align: center;
+                margin-bottom: 15px;
+                letter-spacing: 0.07em;
+                font-size: 1.188em;
+                &.no01 {
+                    background-color: #312222;
+                }
+                &.no02 {
+                    background-color: #5c483f;
+                }
+                &.no03 {
+                    background-color: #bc8e57;
+                }
+            }
+            .editor {
+                text-align: right;
+                margin-bottom: 10px;
+            }
+            .img-container {
+                margin-bottom: 20px;
+            }
+            p {
+                text-align: left;
+                line-height: 1.7em;
+                height: 165px;
+                overflow: hidden;
+                margin: 0 0 10px 0;
+                a {
+                    color: $linkColor;
+                    text-decoration: underline;
+                    &:hover {
+                        color: $importantColor;
+                    }
+                }
+            }
+            .btn_link {
+                button {
+                    background-color: #fff !important;
+                    color: #333;
+                    padding: 5px 0px 5px;
+                    position: relative;
+                    margin: 0 25px;
+                    border-radius: 0;
+                    border-bottom: 1px solid #333;
+                    &:before {
+                        content: '';
+                        background-image: url('../images/button_icon03.png');
+                        background-repeat: no-repeat;
+                        width: 25px;
+                        height: 4px;
+                        position: absolute;
+                        right: -30px;
+                        top: 13px;
+                        transition: .5s;
+                    }
+                    &:hover {
+                        color: $importantColor;
+                        padding: 5px;
+                        &:before {
+                            right: -35px;
+                        }
+                    }
+                }
+            }
+        }
+        // 箭頭
+        .slick-prev {
+            left: 0px;
+            top: 40%;
+            background-color: #fff;
+            border: 1px solid #897253;
+        }
+        .slick-next {
+            right: 0px;
+            top: 40%;
+            background-color: #fff;
+            border: 1px solid #897253;
+        }
+    }
+}

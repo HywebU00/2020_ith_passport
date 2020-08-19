@@ -1,0 +1,1285 @@
+<!doctype html>
+<html lang="zh-Hant" class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>臺灣總督府旅券系統系統公告</title>
+    <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <!-- slick css-->
+    <link rel="stylesheet" type="text/css" href="vendor/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="vendor/slick/slick-theme.css" />
+    <!-- wow -->
+    <link rel="stylesheet" href="css/animate.css">
+    <!-- 燈箱facybox -->
+    <link rel="stylesheet" type="text/css" href="vendor/facybox/dist/jquery.fancybox.min.css">
+    <!-- hyUI css -->
+    <link rel="stylesheet" href="css/hyui.css">
+    <!-- favicon -->
+    <link href="images/favicon.ico" rel="icon" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@600&family=Noto+Serif+TC:wght@500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- 直接跳主內容區 -->
+    <a class="goCenter" href="#center" tabindex="1">按Enter到主內容區</a>
+    <!-- 系統公告 start-->
+    <div class="bulletin hidden">
+        <div class="container"><span>系統公告︰本系統將於2020年8月1日進行系統更新！</span>
+            <div class="btn_grp"><a href="#" class="btn">我知道了</a></div>
+        </div>
+    </div>
+    <!-- 系統公告 end-->
+    <!-- wrapper Start -->
+    <div class="wrapper">
+        <!-- header Start -->
+        <header class="header">
+            <div class="container">
+                <a class="accesskey" href="#aU" id="aU" accesskey="U" title="網站標題" tabindex="2">:::</a>
+                <!-- navigation Start -->
+                <nav class="navigation">
+                    <!-- 一組ul預設靠右 -->
+                    <!-- 兩組ul已寫JQ靠左靠右 -->
+                    <ul>
+                        <li><a href="#">臺灣史研究所</a></li>
+                        <li><a href="#">臺史所．檔案館</a></li>
+                        <li><a href="#">網站導覽</a></li>
+                        <li><a href="#">我要提問</a></li>
+                    </ul>
+                    <!-- 文字大小 -->
+                    <div class="font_size">
+                        <ul>
+                            <li><a href="#" class="small">A</a></li>
+                            <li><a href="#" class="medium">A</a></li>
+                            <li><a href="#" class="large">A</a></li>
+                        </ul>
+                    </div>
+                </nav>
+                <!-- navigation End -->
+                <h1 class="wow fadeInDown" data-wow-duration="1s" data-wow-delay="0s">
+                    <a href="#"><img src="images/logo.svg" alt="臺灣總督府旅券系統" /></a>
+                </h1>
+                <!-- noscript -->
+                <noscript> 您的瀏覽器不支援JavaScript語法，JavaScript語法並不影響內容的陳述。您可使用按鍵盤上的Ctrl鍵+ (+)鍵放大/(-)鍵縮小來改變字型大小；回到上一頁可使用瀏覽器提供的 Alt+左方向鍵(←) 快速鍵功能；列印可使用瀏覽器提供的(Ctrl+P)功能。您的瀏覽器，不支援script語法，若您的瀏覽器無法支援請點選此超連結 <a href="#">網站導覽</a>
+                </noscript>
+                <!-- menu Start -->
+                <nav class="menu">
+                    <ul>
+                        <li><a href="#">旅券查詢</a></li>
+                        <li><a href="#">旅券瀏覽</a></li>
+                        <li><a href="#">旅行地點分佈</a></li>
+                        <li><a href="#">旅行目的</a></li>
+                        <li><a href="#">專題旅券</a></li>
+                        <li><a href="#">系統簡介</a></li>
+                        <li><a href="#">系統資訊</a>
+                            <ul>
+                                <li><a href="#">系統公告</a></li>
+                                <li><a href="#">常見問題</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- menu End -->
+            </div>
+        </header>
+        <!-- header End -->
+        <!-- main Start -->
+        <div id="center" class="main">
+            <a class="accesskey" href="#aC" id="aC" accesskey="C" title="主要內容區">:::</a>
+            <!-- 任何一個section下一層都要包下一層都要包div container作對齊 -->
+            <!-- //// class 都可以隨意命名 !!! ///// -->
+            <section class="demosection col-12 passport_search_block">
+                <div class="container wow fadeInUp" data-wow-duration="2s" data-wow-delay="0s">
+                    <div class="col">
+                        <!-- 旅券查詢 start -->
+                        <div class="passport_search">
+                            <h2>旅券查詢</h2>
+                            <!-- 頁籤start -->
+                            <div class="tabSet">
+                                <section class="tabs">
+                                    <div class="tabItem active"><a href="#">簡易查詢</a></div>
+                                    <!--選到的頁籤項目-->
+                                    <div class="tabContent">
+                                        <!-- 表單區塊 start -->
+                                        <div class="search_block">
+                                            <form action="" class="form_grid ">
+                                                <div class="form_grp">
+                                                    <label for="" class="form_title">全文檢索</label>
+                                                    <div class="form_content form_inline simple">
+                                                        <input name="" type="text" placeholder="輸入關鍵字">
+                                                        <input name="" type="submit" title="搜尋" value="搜尋" />
+                                                    </div>
+                                                </div>
+                                            </form>
+                                            <div class="keywordHot">
+                                                <div class="title">熱門關鍵字</div>
+                                                <ul>
+                                                    <li><a href="#">臺北州</a></li>
+                                                    <li><a href="#">家族親友活動</a></li>
+                                                    <li><a href="#">東南亞</a></li>
+                                                    <li><a href="#">廈門澎湖聽</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <!-- 表單區塊 end -->
+                                        <!-- 查詢記錄 start-->
+                                        <div class="recording">
+                                            <div class="title"> 歷史查詢紀錄</div>
+                                            <div class="content">
+                                                <ul>
+                                                    <li><a href="#">菲律賓</a></li>
+                                                    <li><a href="#">張木生</a></li>
+                                                    <li><a href="#">旅券下付表</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <!-- 查詢記錄 end-->
+                                    </div>
+                                    <div class="tabItem"><a href="#">進階查詢</a></div>
+                                    <div class="tabContent">
+                                        <!-- 表單區塊 start -->
+                                        <div class="search_block">
+                                            <button type="button" data-fancybox data-src="#lightbox_style01" class="explain_btn">查詢方式說明</button>
+                                            <!-- 查詢方式說明燈箱 start-->
+                                            <div class="lightboxblock commonlightbox_big" id="lightbox_style01">
+                                                <h3 class="title">延伸查詢</h3>
+                                                <div class="content">
+                                                    <h4>查詢方式說明</h4>
+                                                    <ul>
+                                                        <li>(1)可以布林值進行多個欄位組合查詢</li>
+                                                        <li>(2)選擇布林值，可用「且（AND）」、「或（OR）」、「不含（NOT）」等布林邏輯加以組合後查詢</li>
+                                                        <li>(3)查詢「登載年代」欄位，請輸入「1897~1942」值，例如︰1918</li>
+                                                    </ul>
+                                                    <ul>
+                                                        <li>例1︰想不分欄位同時列出「1898」年與「臺北縣」州廳相關的資料，可輸入「1898、且(AND)、臺北縣」</li>
+                                                        <li>例2︰想列出「新竹縣」州廳或「新竹州」州廳相關的資料，可輸入「新竹縣、或(OR)、新竹州」</li>
+                                                        <li>例3︰想列出「桃仔園廳」州廳且不含「桃園廳」州廳相關的資料，可輸入「桃仔園廳、不含(NOT)、桃園廳」</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="btn_grp">
+                                                    <input data-fancybox-close name="" type="submit" value="確定" />
+                                                </div>
+                                            </div>
+                                            <!-- 查詢方式說明燈箱 end-->
+                                            <form action="" class="form_grid">
+                                                <div class="form_grp">
+                                                    <label for="username" class="form_title">查詢欄位</label>
+                                                    <div class="form_content form_inline field">
+                                                        <select id="selectSample" name="">
+                                                            <option value="">請選擇</option>
+                                                            <option value="">不限欄位</option>
+                                                            <option value="">登載年代</option>
+                                                            <option value="">申請州廳</option>
+                                                            <option value="">姓名</option>
+                                                            <option value="">旅行目的</option>
+                                                            <option value="">旅行地名</option>
+                                                        </select>
+                                                        <input name="" type="text" placeholder="1920">
+                                                        <select id="selectSample" name="">
+                                                            <option value="">請選擇布林值</option>
+                                                            <option value="">且(AND)</option>
+                                                            <option value="">或(OR)</option>
+                                                            <option value="">非(ONT)</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="form_grp">
+                                                    <label for="username" class="form_title">查詢欄位</label>
+                                                    <div class="form_content form_inline field">
+                                                        <select id="selectSample" name="">
+                                                            <option value="">請選擇</option>
+                                                            <option value="">不限欄位</option>
+                                                            <option value="">登載年代</option>
+                                                            <option value="">申請州廳</option>
+                                                            <option value="">姓名</option>
+                                                            <option value="">旅行目的</option>
+                                                            <option value="">旅行地名</option>
+                                                        </select>
+                                                        <input name="" type="text" placeholder="1920">
+                                                        <select id="selectSample" name="">
+                                                            <option value="">請選擇布林值</option>
+                                                            <option value="">且(AND)</option>
+                                                            <option value="">或(OR)</option>
+                                                            <option value="">非(ONT)</option>
+                                                        </select>
+                                                        <span class="field_pic"><a href="#"><img src="images/icon_add_field.png"></a></span>
+                                                    </div>
+                                                </div>
+                                                <div class="form_grp">
+                                                    <label for="username" class="form_title">查詢欄位</label>
+                                                    <div class="form_content form_inline field">
+                                                        <select id="selectSample" name="">
+                                                            <option value="">請選擇</option>
+                                                            <option value="">不限欄位</option>
+                                                            <option value="">登載年代</option>
+                                                            <option value="">申請州廳</option>
+                                                            <option value="">姓名</option>
+                                                            <option value="">旅行目的</option>
+                                                            <option value="">旅行地名</option>
+                                                        </select>
+                                                        <input name="" type="text" placeholder="1920">
+                                                        <select id="selectSample" name="">
+                                                            <option value="">請選擇布林值</option>
+                                                            <option value="">且(AND)</option>
+                                                            <option value="">或(OR)</option>
+                                                            <option value="">非(ONT)</option>
+                                                        </select>
+                                                        <span class="field_pic"><a href="#"><img src="images/icon_reduce_field.png"></a></span>
+                                                    </div>
+                                                </div>
+                                                <div class="form_grp">
+                                                    <label for="username" class="form_title">查詢欄位</label>
+                                                    <div class="form_content form_inline ">
+                                                        <select id="selectSample" name="">
+                                                            <option value="">請選擇</option>
+                                                            <option value="">1897年</option>
+                                                            <option value="">1898年</option>
+                                                            <option value="">1899年</option>
+                                                            <option value="">1900年</option>
+                                                            <option value="">1901年</option>
+                                                            <option value="">1902年</option>
+                                                        </select> <span class="to">～</span> <select id="selectSample" name="">
+                                                            <option value="">請選擇</option>
+                                                            <option value="">1897年</option>
+                                                            <option value="">1898年</option>
+                                                            <option value="">1899年</option>
+                                                            <option value="">1900年</option>
+                                                            <option value="">1901年</option>
+                                                            <option value="">1902年</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="form_grp" role="group" aria-labelledby="fake-legend">
+                                                    <label for="" class="form_title">旅券類型</label>
+                                                    <div class="form_content" id="fake-legend">
+                                                        <div class="check_grp form_inline">
+                                                            <label>
+                                                                <input type="checkbox" name="" value="" checked>旅券下付及返納表</label>
+                                                            <label>
+                                                                <input type="checkbox" name="" value="">旅券下付表</label>
+                                                            <label>
+                                                                <input type="checkbox" name="" value="">旅券返納表</label>
+                                                            <label>
+                                                                <input type="checkbox" name="" value="">下付通知表</label>
+                                                            <label>
+                                                                <input type="checkbox" name="" value="">渡航證明書</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form_grp" role="group" aria-labelledby="fake-legend">
+                                                    <label for="" class="form_title">查詢模式</label>
+                                                    <div class="form_content" id="fake-legend">
+                                                        <div class="radio_grp form_inline">
+                                                            <label>
+                                                                <input type="radio" name="" value="" checked>精準</label>
+                                                            <label>
+                                                                <input type="radio" name="" value="" checked>模糊</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form_grp" role="group" aria-labelledby="fake-legend">
+                                                    <label for="" class="form_title">同義詞查詢</label>
+                                                    <div class="form_content" id="fake-legend">
+                                                        <div class="radio_grp form_inline">
+                                                            <label>
+                                                                <input type="radio" name="" value="" checked>啟用</label>
+                                                            <label>
+                                                                <input type="radio" name="" value="" checked>不啟用</label>
+                                                            <span><a href="#">地名對照表</a></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form_grp">
+                                                    <label for="username" class="form_title">查詢欄位</label>
+                                                    <div class="form_content form_inline "> 第一順位 <select id="selectSample" name="">
+                                                            <option value="">請選擇</option>
+                                                            <option value="">識別號小->大</option>
+                                                            <option value="">識別號大->小</option>
+                                                            <option value="">登載年代小->大</option>
+                                                            <option value="">登載年代大->小</option>
+                                                            <option value="">申請州廳小->大</option>
+                                                            <option value="">申請州廳大->小</option>
+                                                            <option value="">姓名小->大</option>
+                                                            <option value="">姓名大->小</option>
+                                                        </select> > 第二順位 <select id="selectSample" name="">
+                                                            <option value="">請選擇</option>
+                                                            <option value="">識別號小->大</option>
+                                                            <option value="">識別號大->小</option>
+                                                            <option value="">登載年代小->大</option>
+                                                            <option value="">登載年代大->小</option>
+                                                            <option value="">申請州廳小->大</option>
+                                                            <option value="">申請州廳大->小</option>
+                                                            <option value="">姓名小->大</option>
+                                                            <option value="">姓名大->小</option>
+                                                        </select> > 第三順位 <select id="selectSample" name="">
+                                                            <option value="">請選擇</option>
+                                                            <option value="">識別號小->大</option>
+                                                            <option value="">識別號大->小</option>
+                                                            <option value="">登載年代小->大</option>
+                                                            <option value="">登載年代大->小</option>
+                                                            <option value="">申請州廳小->大</option>
+                                                            <option value="">申請州廳大->小</option>
+                                                            <option value="">姓名小->大</option>
+                                                            <option value="">姓名大->小</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="btn_grp">
+                                                    <!-- <button class="btn btn-reset">清除</button> -->
+                                                    <button class="btn btn-submit">確認送出</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <!-- 表單區塊 end -->
+                                        <!-- 查詢記錄 start-->
+                                        <div class="recording">
+                                            <div class="title">本次查詢記錄</div>
+                                            <div class="content">
+                                                <ul>
+                                                    <li><a href="#">姓名（正體字）=張木生 OR 申請州廳=臺北縣 NOT 旅券類型=旅券下付表</a></li>
+                                                    <li><a href="#">姓名（正體字）=張木生 AND 不限欄位=臺北縣 OR 旅券類型=旅券下付表 NOT 旅行目的=家族引取 </a></li>
+                                                    <li><a href="#">不限欄位=張木生 OR 不限欄位=臺北縣 NOT 不限欄位=旅券下付表</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <!-- 查詢記錄 end-->
+                                    </div>
+                                </section>
+                            </div>
+                            <!-- 頁籤end -->
+                        </div>
+                        <!-- 旅券查詢 end -->
+                    </div>
+                </div>
+            </section>
+            <!-- 旅券瀏覽 block start-->
+            <section class="demosection col-12 passport_browse_block">
+                <div class="container">
+                    <div class="col">
+                        <!-- 旅券瀏覽 start -->
+                        <div class="passport_browse wow fadeInUp" data-wow-duration="3s" data-wow-delay=".5s">
+                            <h2>旅券瀏覽</h2>
+                            <!-- 頁籤 start-->
+                            <div class="tabSet">
+                                <section class="tabs example-1">
+                                    <div class="tabItem active"><a href="#">依法規時期分件瀏覽</a></div>
+                                    <!--選到的頁籤項目-->
+                                    <div class="tabContent">
+                                        <!-- 年瀏覽start -->
+                                        <div class="year_browsing2">
+                                            <div class="period01"><span>1897</span>年-<span>1900</span>年<br>外國行旅券規則時期</div>
+                                            <div class="period02"><span>1901</span>年-<span>1907</span>年<br>外國旅行券規則時期</div>
+                                            <div class="period03"><span>1908</span>年-<span>1942</span>年<br>外國旅券規則時期</div>
+                                        </div>
+                                        <!-- 年瀏覽end -->
+                                        <!-- 時間線start -->
+                                        <div class="timeline">
+                                            <div class="slider slider-time2">
+                                                <div>
+                                                    <a href="javascript:;">
+                                                        <span>1897</span>年 </a>
+                                                </div>
+                                                <div>
+                                                    <a href="javascript:;">
+                                                        <span>1898</span>年 </a>
+                                                </div>
+                                                <div>
+                                                    <a href="javascript:;">
+                                                        <span>1899</span>年 </a>
+                                                </div>
+                                                <div>
+                                                    <a href="javascript:;">
+                                                        <span>1900</span>年 </a>
+                                                </div>
+                                                <div class="color_redbg">
+                                                    <a href="javascript:;" class="active">
+                                                        <span>1901</span>年 </a>
+                                                </div>
+                                                <div class="color_redbg">
+                                                    <a href="javascript:;">
+                                                        <span>1902</span>年 </a>
+                                                </div>
+                                                <div class="color_redbg">
+                                                    <a href="javascript:;">
+                                                        <span>1903</span>年 </a>
+                                                </div>
+                                                <div class="color_redbg">
+                                                    <a href="javascript:;">
+                                                        <span>1904</span>年 </a>
+                                                </div>
+                                                <div class="color_redbg">
+                                                    <a href="javascript:;">
+                                                        <span>1905</span>年 </a>
+                                                </div>
+                                                <div class="color_redbg">
+                                                    <a href="javascript:;">
+                                                        <span>1906</span>年 </a>
+                                                </div>
+                                                <div class="color_redbg">
+                                                    <a href="javascript:;">
+                                                        <span>1907</span>年 </a>
+                                                </div>
+                                                <div class="color_purplebg">
+                                                    <a href="javascript:;">
+                                                        <span>1908</span>年 </a>
+                                                </div>
+                                                <div class="color_purplebg">
+                                                    <a href="javascript:;">
+                                                        <span>1909</span>年 </a>
+                                                </div>
+                                                <div class="color_purplebg">
+                                                    <a href="javascript:;">
+                                                        <span>1910</span>年 </a>
+                                                </div>
+                                                <div class="color_purplebg">
+                                                    <a href="javascript:;">
+                                                        <span>1911</span>年 </a>
+                                                </div>
+                                                <div class="color_purplebg">
+                                                    <a href="javascript:;">
+                                                        <span>1912</span>年 </a>
+                                                </div>
+                                                <div class="color_purplebg">
+                                                    <a href="javascript:;">
+                                                        <span>1913</span>年 </a>
+                                                </div>
+                                                <div class="color_purplebg">
+                                                    <a href="javascript:;">
+                                                        <span>1914</span>年 </a>
+                                                </div>
+                                                <div class="color_purplebg">
+                                                    <a href="javascript:;">
+                                                        <span>1915</span>年 </a>
+                                                </div>
+                                                <div class="color_purplebg">
+                                                    <a href="javascript:;">
+                                                        <span>1916</span>年 </a>
+                                                </div>
+                                                <div class="color_purplebg">
+                                                    <a href="javascript:;">
+                                                        <span>1917</span>年 </a>
+                                                </div>
+                                                <div class="color_purplebg">
+                                                    <a href="javascript:;">
+                                                        <span>1918</span>年 </a>
+                                                </div>
+                                                <div class="color_purplebg">
+                                                    <a href="javascript:;">
+                                                        <span>1919</span>年 </a>
+                                                </div>
+                                                <div class="color_purplebg">
+                                                    <a href="javascript:;">
+                                                        <span>1920</span>年 </a>
+                                                </div>
+                                                <div class="color_purplebg">
+                                                    <a href="javascript:;">
+                                                        <span>1921</span>年 </a>
+                                                </div>
+                                                <div class="color_purplebg">
+                                                    <a href="javascript:;">
+                                                        <span>1922</span>年 </a>
+                                                </div>
+                                                <div class="color_purplebg">
+                                                    <a href="javascript:;">
+                                                        <span>1923</span>年 </a>
+                                                </div>
+                                                <div class="color_purplebg" dir="">
+                                                    <a href="javascript:;">
+                                                        <span>1924</span>年 </a>
+                                                </div>
+                                                <div class="color_purplebg">
+                                                    <a href="javascript:;">
+                                                        <span>1925</span>年 </a>
+                                                </div>
+                                                <div class="color_purplebg">
+                                                    <a href="javascript:;">
+                                                        <span>1926</span>年 </a>
+                                                </div>
+                                                <div class="color_purplebg">
+                                                    <a href="javascript:;">
+                                                        <span>1927</span>年 </a>
+                                                </div>
+                                                <div class="color_purplebg">
+                                                    <a href="javascript:;">
+                                                        <span>1928</span>年 </a>
+                                                </div>
+                                                <div class="color_purplebg">
+                                                    <a href="javascript:;">
+                                                        <span>1929</span>年 </a>
+                                                </div>
+                                                <div class="color_purplebg">
+                                                    <a href="javascript:;">
+                                                        <span>1930</span>年 </a>
+                                                </div>
+                                                <div class="color_purplebg">
+                                                    <a href="javascript:;">
+                                                        <span>1931</span>年 </a>
+                                                </div>
+                                                <div class="color_purplebg">
+                                                    <a href="javascript:;">
+                                                        <span>1932</span>年 </a>
+                                                </div>
+                                                <div class="color_purplebg">
+                                                    <a href="javascript:;">
+                                                        <span>1933</span>年 </a>
+                                                </div>
+                                                <div class="color_purplebg">
+                                                    <a href="javascript:;">
+                                                        <span>1934</span>年 </a>
+                                                </div>
+                                                <div class="color_purplebg">
+                                                    <a href="javascript:;">
+                                                        <span>1935</span>年 </a>
+                                                </div>
+                                                <div class="color_purplebg">
+                                                    <a href="javascript:;">
+                                                        <span>1936</span>年 </a>
+                                                </div>
+                                                <div class="color_purplebg">
+                                                    <a href="javascript:;">
+                                                        <span>1937</span>年 </a>
+                                                </div>
+                                                <div class="color_purplebg">
+                                                    <a href="javascript:;">
+                                                        <span>1938</span>年 </a>
+                                                </div>
+                                                <div class="color_purplebg">
+                                                    <a href="javascript:;">
+                                                        <span>1939</span>年 </a>
+                                                </div>
+                                                <div class="color_purplebg">
+                                                    <a href="javascript:;">
+                                                        <span>1940</span>年 </a>
+                                                </div>
+                                                <div class="color_purplebg">
+                                                    <a href="javascript:;">
+                                                        <span>1941</span>年 </a>
+                                                </div>
+                                                <div class="color_purplebg">
+                                                    <a href="javascript:;">
+                                                        <span>1942</span>年 </a>
+                                                </div>
+                                            </div>
+                                            <div class="content">
+                                                <ul class="appendix">
+                                                    <li><a href="javascript:;">1月返納表</a></li>
+                                                    <li><a href="javascript:;" class="active">2月下付表及返納表</a></li>
+                                                    <li><a href="javascript:;">3月下付表及返納表</a></li>
+                                                    <li><a href="javascript:;">4月下付表及返納表</a></li>
+                                                    <li><a href="javascript:;">5月下付表及返納表</a></li>
+                                                    <li><a href="javascript:;">6月下付表及返納表</a></li>
+                                                    <li><a href="javascript:;" class="active">7月下付表及返納表</a></li>
+                                                    <li><a href="javascript:;">8月下付表及返納表</a></li>
+                                                    <li><a href="javascript:;">9月-12月下付表及返納表</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="btn_grp">
+                                                <button class="btn btn-reset">清除</button>
+                                                <button class="btn btn-submit">確認送出</button>
+                                            </div>
+                                        </div>
+                                        <!-- 時間線 end -->
+                                    </div>
+                                    <div class="tabItem"><a href="#">依申請官廳分年瀏覽</a></div>
+                                    <div class="tabContent">
+                                        <!-- 年瀏覽start -->
+                                        <div class="year_browsing">
+                                            <div class="period01">縣廳時期<span>1897-1901</span></div>
+                                            <div class="period02">二十廳<span>1901-1909</span></div>
+                                            <div class="period03">十二廳<span>1909-1920</span></div>
+                                            <div class="period04">五州二廳<span>1920-1926</span></div>
+                                            <div class="period05">五州三廳<span>1926-1942</span></div>
+                                        </div>
+                                        <!-- 年瀏覽end -->
+                                        <!-- 時間線start -->
+                                        <div class="timeline">
+                                            <div class="slider slider-time">
+                                                <div>
+                                                    <a href="javascript:;">
+                                                        <span>1897</span>年 </a>
+                                                </div>
+                                                <div>
+                                                    <a href="javascript:;">
+                                                        <span>1898</span>年 </a>
+                                                </div>
+                                                <div>
+                                                    <a href="javascript:;">
+                                                        <span>1899</span>年 </a>
+                                                </div>
+                                                <div>
+                                                    <a href="javascript:;">
+                                                        <span>1900</span>年 </a>
+                                                </div>
+                                                <div class="color_brownred">
+                                                    <a href="javascript:;" class="active">
+                                                        <span>1901</span>年 </a>
+                                                </div>
+                                                <div class="color_redbg">
+                                                    <a href="javascript:;">
+                                                        <span>1902</span>年 </a>
+                                                </div>
+                                                <div class="color_redbg">
+                                                    <a href="javascript:;">
+                                                        <span>1903</span>年 </a>
+                                                </div>
+                                                <div class="color_redbg">
+                                                    <a href="javascript:;">
+                                                        <span>1904</span>年 </a>
+                                                </div>
+                                                <div class="color_redbg">
+                                                    <a href="javascript:;">
+                                                        <span>1905</span>年 </a>
+                                                </div>
+                                                <div class="color_redbg">
+                                                    <a href="javascript:;">
+                                                        <span>1906</span>年 </a>
+                                                </div>
+                                                <div class="color_redbg">
+                                                    <a href="javascript:;">
+                                                        <span>1907</span>年 </a>
+                                                </div>
+                                                <div class="color_redbg">
+                                                    <a href="javascript:;">
+                                                        <span>1908</span>年 </a>
+                                                </div>
+                                                <div class="color_redpurple">
+                                                    <a href="javascript:;">
+                                                        <span>1909</span>年 </a>
+                                                </div>
+                                                <div class="color_purplebg">
+                                                    <a href="javascript:;">
+                                                        <span>1910</span>年 </a>
+                                                </div>
+                                                <div class="color_purplebg">
+                                                    <a href="javascript:;">
+                                                        <span>1911</span>年 </a>
+                                                </div>
+                                                <div class="color_purplebg">
+                                                    <a href="javascript:;">
+                                                        <span>1912</span>年 </a>
+                                                </div>
+                                                <div class="color_purplebg">
+                                                    <a href="javascript:;">
+                                                        <span>1913</span>年 </a>
+                                                </div>
+                                                <div class="color_purplebg">
+                                                    <a href="javascript:;">
+                                                        <span>1914</span>年 </a>
+                                                </div>
+                                                <div class="color_purplebg">
+                                                    <a href="javascript:;">
+                                                        <span>1915</span>年 </a>
+                                                </div>
+                                                <div class="color_purplebg">
+                                                    <a href="javascript:;">
+                                                        <span>1916</span>年 </a>
+                                                </div>
+                                                <div class="color_purplebg">
+                                                    <a href="javascript:;">
+                                                        <span>1917</span>年 </a>
+                                                </div>
+                                                <div class="color_purplebg">
+                                                    <a href="javascript:;">
+                                                        <span>1918</span>年 </a>
+                                                </div>
+                                                <div class="color_purplebg">
+                                                    <a href="javascript:;">
+                                                        <span>1919</span>年 </a>
+                                                </div>
+                                                <div class="color_purpleblue">
+                                                    <a href="javascript:;">
+                                                        <span>1920</span>年 </a>
+                                                </div>
+                                                <div class="color_bluebg">
+                                                    <a href="javascript:;">
+                                                        <span>1921</span>年 </a>
+                                                </div>
+                                                <div class="color_bluebg">
+                                                    <a href="javascript:;">
+                                                        <span>1922</span>年 </a>
+                                                </div>
+                                                <div class="color_bluebg">
+                                                    <a href="javascript:;">
+                                                        <span>1923</span>年 </a>
+                                                </div>
+                                                <div class="color_bluebg" dir="">
+                                                    <a href="javascript:;">
+                                                        <span>1924</span>年 </a>
+                                                </div>
+                                                <div class="color_bluebg">
+                                                    <a href="javascript:;">
+                                                        <span>1925</span>年 </a>
+                                                </div>
+                                                <div class="color_bluegreen">
+                                                    <a href="javascript:;">
+                                                        <span>1926</span>年 </a>
+                                                </div>
+                                                <div class="color_greenbg">
+                                                    <a href="javascript:;">
+                                                        <span>1927</span>年 </a>
+                                                </div>
+                                                <div class="color_greenbg">
+                                                    <a href="javascript:;">
+                                                        <span>1928</span>年 </a>
+                                                </div>
+                                                <div class="color_greenbg">
+                                                    <a href="javascript:;">
+                                                        <span>1929</span>年 </a>
+                                                </div>
+                                                <div class="color_greenbg">
+                                                    <a href="javascript:;">
+                                                        <span>1930</span>年 </a>
+                                                </div>
+                                                <div class="color_greenbg">
+                                                    <a href="javascript:;">
+                                                        <span>1931</span>年 </a>
+                                                </div>
+                                                <div class="color_greenbg">
+                                                    <a href="javascript:;">
+                                                        <span>1932</span>年 </a>
+                                                </div>
+                                                <div class="color_greenbg">
+                                                    <a href="javascript:;">
+                                                        <span>1933</span>年 </a>
+                                                </div>
+                                                <div class="color_greenbg">
+                                                    <a href="javascript:;">
+                                                        <span>1934</span>年 </a>
+                                                </div>
+                                                <div class="color_greenbg">
+                                                    <a href="javascript:;">
+                                                        <span>1935</span>年 </a>
+                                                </div>
+                                                <div class="color_greenbg">
+                                                    <a href="javascript:;">
+                                                        <span>1936</span>年 </a>
+                                                </div>
+                                                <div class="color_greenbg">
+                                                    <a href="javascript:;">
+                                                        <span>1937</span>年 </a>
+                                                </div>
+                                                <div class="color_greenbg">
+                                                    <a href="javascript:;">
+                                                        <span>1938</span>年 </a>
+                                                </div>
+                                                <div class="color_greenbg">
+                                                    <a href="javascript:;">
+                                                        <span>1939</span>年 </a>
+                                                </div>
+                                                <div class="color_greenbg">
+                                                    <a href="javascript:;">
+                                                        <span>1940</span>年 </a>
+                                                </div>
+                                                <div class="color_greenbg">
+                                                    <a href="javascript:;">
+                                                        <span>1941</span>年 </a>
+                                                </div>
+                                                <div class="color_greenbg">
+                                                    <a href="javascript:;">
+                                                        <span>1942</span>年 </a>
+                                                </div>
+                                            </div>
+                                            <div class="content">
+                                                <ul class="hall">
+                                                    <li><a href="javascript:;" class="mansion">臺灣總督府</a></li>
+                                                    <li><a href="javascript:;" class="active">宜蘭廳</a></li>
+                                                    <li><a href="javascript:;">深坑廳</a></li>
+                                                    <li><a href="javascript:;">基隆廳</a></li>
+                                                    <li><a href="javascript:;">臺北縣</a></li>
+                                                    <li><a href="javascript:;">臺北廳</a></li>
+                                                    <li><a href="javascript:;">桃仔園廳</a></li>
+                                                    <li><a href="javascript:;">新竹廳</a></li>
+                                                    <li><a href="javascript:;">苗栗廳</a></li>
+                                                    <li><a href="javascript:;">臺中縣</a></li>
+                                                    <li><a href="javascript:;">臺中廳</a></li>
+                                                    <li><a href="javascript:;">彰化廳</a></li>
+                                                    <li><a href="javascript:;">南投廳</a></li>
+                                                    <li><a href="javascript:;">斗六廳</a></li>
+                                                    <li><a href="javascript:;">嘉義廳</a></li>
+                                                    <li><a href="javascript:;">臺南縣</a></li>
+                                                    <li><a href="javascript:;">臺南廳</a></li>
+                                                    <li><a href="javascript:;">鳳山廳</a></li>
+                                                    <li><a href="javascript:;" class="active">蕃薯藔廳</a></li>
+                                                    <li><a href="javascript:;">阿猴廳</a></li>
+                                                    <li><a href="javascript:;">恆春廳</a></li>
+                                                    <li><a href="javascript:;">臺東廳</a></li>
+                                                    <li><a href="javascript:;">澎湖廳</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="btn_grp">
+                                                <button class="btn btn-reset">清除</button>
+                                                <button class="btn btn-submit">確認送出</button>
+                                            </div>
+                                        </div>
+                                        <!-- 時間線 end -->
+                                    </div>
+                            </div>
+                            <!-- 頁籤end -->
+                        </div>
+                        <!-- 旅券瀏覽 end -->
+                    </div>
+                </div>
+            </section>
+            <!-- 旅券瀏覽 block end-->
+            <!-- 旅行地點分佈 block start -->
+            <section class="demosection col-12 travel_location_block">
+                <div class="container">
+                    <div class="col">
+                        <!-- 旅行地點分佈 start -->
+                        <div class="travel_location wow fadeInUp" data-wow-duration="3s" data-wow-delay=".5s">
+                            <h2>旅行地點分佈</h2>
+                            <!-- 地點分佈輪播start -->
+                            <div class="location_slider">
+                                <!-- 1 -->
+                                <div class="location_blcok">
+                                    <div class="map_pic">
+                                        <img src="images/map_pic01.jpg">
+                                        <!-- 分佈位置start -->
+                                        <!-- 廈門 -->
+                                        <div class="point location01">
+                                            <a href="javascript:;"><span class="distributed_point_no05">廈門</span></a>
+                                            <div class="num_people">廈門<span>旅行<em>7877</em>人次</span></div>
+                                        </div>
+                                        <!-- 福州 -->
+                                        <div class="point location02">
+                                            <a href="javascript:;"><span class="distributed_point_no04">福州</span></a>
+                                            <div class="num_people">福州<span>旅行<em>1493</em>人次</span></div>
+                                        </div>
+                                        <!-- 上海 -->
+                                        <div class="point location03">
+                                            <a href="javascript:;"><span class="distributed_point_no03">上海</span></a>
+                                            <div class="num_people">上海<span>旅行<em>894</em>人次</span></div>
+                                        </div>
+                                        <!-- 香港 -->
+                                        <div class="point location04">
+                                            <a href="javascript:;"><span class="distributed_point_no03">香港</span></a>
+                                            <div class="num_people">香港<span>旅行<em>830</em>人次</span></div>
+                                        </div>
+                                        <!-- 汕頭 -->
+                                        <div class="point location05">
+                                            <a href="javascript:;"><span class="distributed_point_no02">汕頭</span></a>
+                                            <div class="num_people">汕頭<span>旅行<em>688</em>人次</span></div>
+                                        </div>
+                                        <!-- 廣東 -->
+                                        <div class="point location06">
+                                            <a href="javascript:;"><span class="distributed_point_no01">廣東</span></a>
+                                            <div class="num_people">廣東<span>旅行<em>281</em>人次</span></div>
+                                        </div>
+                                        <!-- 牛莊 -->
+                                        <div class="point location07">
+                                            <a href="javascript:;"><span class="distributed_point_no01">牛莊</span></a>
+                                            <div class="num_people">牛莊<span>旅行<em>174</em>人次</span></div>
+                                        </div>
+                                        <!-- 滿洲國 -->
+                                        <div class="point location08">
+                                            <a href="javascript:;"><span class="distributed_point_no01">滿洲國</span></a>
+                                            <div class="num_people">滿洲國<span>旅行<em>63</em>人次</span></div>
+                                        </div>
+                                        <!-- 天津 -->
+                                        <div class="point location09">
+                                            <a href="javascript:;"><span class="distributed_point_no01">天津</span></a>
+                                            <div class="num_people">天津<span>旅行<em>53</em>人次</span></div>
+                                        </div>
+                                        <!-- 南京 -->
+                                        <div class="point location10">
+                                            <a href="javascript:;"><span class="distributed_point_no01">南京</span></a>
+                                            <div class="num_people">南京<span>旅行<em>39</em>人次</span></div>
+                                        </div>
+                                        <!-- 分佈位置end -->
+                                    </div>
+                                    <!-- 右欄資訊 start -->
+                                    <div class="leaderboard">
+                                        <div class="title">清/中華民國<span>十大排行榜</span></div>
+                                        <div class="heading">
+                                            <span>旅行地點</span>
+                                            <span>人次</span>
+                                        </div>
+                                        <!-- 內容start -->
+                                        <div class="content">
+                                            <div class="group group01">
+                                                <a href="javascript:;">
+                                                    <span>廈門</span>
+                                                    <span class="number">7877</span>
+                                                </a>
+                                            </div>
+                                            <div class="group group02">
+                                                <a href="javascript:;">
+                                                    <span>福州</span>
+                                                    <span class="number">1493</span>
+                                                </a>
+                                            </div>
+                                            <div class="group group03">
+                                                <a href="javascript:;">
+                                                    <span>上海</span>
+                                                    <span class="number">894</span>
+                                                </a>
+                                            </div>
+                                            <div class="group group04">
+                                                <a href="javascript:;">
+                                                    <span>香港</span>
+                                                    <span class="number">830</span>
+                                                </a>
+                                            </div>
+                                            <div class="group group05">
+                                                <a href="javascript:;">
+                                                    <span>汕頭</span>
+                                                    <span class="number">688</span>
+                                                </a>
+                                            </div>
+                                            <div class="group group06">
+                                                <a href="javascript:;">
+                                                    <span>廣東</span>
+                                                    <span class="number">281</span>
+                                                </a>
+                                            </div>
+                                            <div class="group group07">
+                                                <a href="javascript:;">
+                                                    <span>牛莊</span>
+                                                    <span class="number">174</span>
+                                                </a>
+                                            </div>
+                                            <div class="group group08">
+                                                <a href="javascript:;">
+                                                    <span>滿洲國</span>
+                                                    <span class="number">63</span>
+                                                </a>
+                                            </div>
+                                            <div class="group group09">
+                                                <a href="javascript:;">
+                                                    <span>天津</span>
+                                                    <span class="number">53</span>
+                                                </a>
+                                            </div>
+                                            <div class="group group10">
+                                                <a href="javascript:;">
+                                                    <span>南京</span>
+                                                    <span class="number">39</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <!-- 內容end -->
+                                    </div>
+                                    <!-- 右欄資訊 end -->
+                                </div>
+                                <!-- 2 -->
+                                <div class="location_blcok">
+                                    <div class="map_pic2">
+                                        <img src="images/map_pic02.jpg">
+                                        <!-- 分佈位置start -->
+                                        <!-- 清／中華民國 -->
+                                        <div class="point location01">
+                                            <a href="javascript:;"><span class="distributed_point_no02">清／中華民國</span></a>
+                                            <div class="num_people">清／中華民國<span>旅行<em>605</em>人次</span></div>
+                                        </div>
+                                        <!-- 印尼 -->
+                                        <div class="point location02">
+                                            <a href="javascript:;"><span class="distributed_point_no01">印尼</span></a>
+                                            <div class="num_people">印尼<span>旅行<em>142</em>人次</span></div>
+                                        </div>
+                                        <!-- 匈牙利 -->
+                                        <div class="point location03">
+                                            <a href="javascript:;"><span class="distributed_point_no01">匈牙利</span></a>
+                                            <div class="num_people">匈牙利<span>旅行<em>116</em>人次</span></div>
+                                        </div>
+                                        <!-- 菲律賓 -->
+                                        <div class="point location04">
+                                            <a href="javascript:;"><span class="distributed_point_no01">菲律賓</span></a>
+                                            <div class="num_people">菲律賓<span>旅行<em>94</em>人次</span></div>
+                                        </div>
+                                        <!-- 美國 -->
+                                        <div class="point location05">
+                                            <a href="javascript:;"><span class="distributed_point_no01">美國</span></a>
+                                            <div class="num_people">美國<span>旅行<em>71</em>人次</span></div>
+                                        </div>
+                                        <!-- 泰國 -->
+                                        <div class="point location06">
+                                            <a href="javascript:;"><span class="distributed_point_no01">泰國</span></a>
+                                            <div class="num_people">泰國<span>旅行<em>39</em>人次</span></div>
+                                        </div>
+                                        <!-- 越南 -->
+                                        <div class="point location07">
+                                            <a href="javascript:;"><span class="distributed_point_no01">越南</span></a>
+                                            <div class="num_people">越南<span>旅行<em>29</em>人次</span></div>
+                                        </div>
+                                        <!-- 新加坡 -->
+                                        <div class="point location08">
+                                            <a href="javascript:;"><span class="distributed_point_no01">新加坡</span></a>
+                                            <div class="num_people">新加坡<span>旅行<em>27</em>人次</span></div>
+                                        </div>
+                                        <!-- 法國 -->
+                                        <div class="point location09">
+                                            <a href="javascript:;"><span class="distributed_point_no01">法國</span></a>
+                                            <div class="num_people">法國<span>旅行<em>24</em>人次</span></div>
+                                        </div>
+                                        <!-- 澳洲 -->
+                                        <div class="point location10">
+                                            <a href="javascript:;"><span class="distributed_point_no01">澳洲</span></a>
+                                            <div class="num_people">澳洲<span>旅行<em>20</em>人次</span></div>
+                                        </div>
+                                        <!-- 分佈位置end -->
+                                    </div>
+                                    <!-- 右欄資訊 start -->
+                                    <div class="leaderboard">
+                                        <div class="title">海外<span>十大排行榜</span></div>
+                                        <div class="heading">
+                                            <span>旅行地點</span>
+                                            <span>人次</span>
+                                        </div>
+                                        <!-- 內容start -->
+                                        <div class="content">
+                                            <div class="group group01">
+                                                <a href="javascript:;">
+                                                    <span>清／中華民國</span>
+                                                    <span class="number">605</span>
+                                                </a>
+                                            </div>
+                                            <div class="group group02">
+                                                <a href="javascript:;">
+                                                    <span>印尼</span>
+                                                    <span class="number">124</span>
+                                                </a>
+                                            </div>
+                                            <div class="group group03">
+                                                <a href="javascript:;">
+                                                    <span>匈牙利</span>
+                                                    <span class="number">116</span>
+                                                </a>
+                                            </div>
+                                            <div class="group group04">
+                                                <a href="javascript:;">
+                                                    <span>菲律賓</span>
+                                                    <span class="number">94</span>
+                                                </a>
+                                            </div>
+                                            <div class="group group05">
+                                                <a href="javascript:;">
+                                                    <span>美國</span>
+                                                    <span class="number">71</span>
+                                                </a>
+                                            </div>
+                                            <div class="group group06">
+                                                <a href="javascript:;">
+                                                    <span>泰國</span>
+                                                    <span class="number">39</span>
+                                                </a>
+                                            </div>
+                                            <div class="group group07">
+                                                <a href="javascript:;">
+                                                    <span>越南</span>
+                                                    <span class="number">29</span>
+                                                </a>
+                                            </div>
+                                            <div class="group group08">
+                                                <a href="javascript:;">
+                                                    <span>新加坡</span>
+                                                    <span class="number">27</span>
+                                                </a>
+                                            </div>
+                                            <div class="group group09">
+                                                <a href="javascript:;">
+                                                    <span>法國</span>
+                                                    <span class="number">24</span>
+                                                </a>
+                                            </div>
+                                            <div class="group group10">
+                                                <a href="javascript:;">
+                                                    <span>澳洲</span>
+                                                    <span class="number">20</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <!-- 內容end -->
+                                    </div>
+                                    <!-- 右欄資訊 end -->
+                                </div>
+                                <!--  -->
+                            </div>
+                            <!-- 地點分佈輪播end -->
+                        </div>
+                        <!-- 旅行地點分佈 end -->
+                    </div>
+                </div>
+            </section>
+            <!-- 旅行地點分佈 block end -->
+            <!-- 旅行目的 block start -->
+            <section class="demosection col-12 travel_purpose_block">
+                <div class="container">
+                    <div class="col">
+                        <!-- 旅行目的start -->
+                        <div class="travel_purpose wow fadeInUp" data-wow-duration="3s" data-wow-delay=".5s">
+                            <h2>旅行目的</h2>
+                            <ul>
+                                <li class="wow fadeInDown" data-wow-duration="1" data-wow-delay="0.5s"><a href="javascript:;"><img src="images/travel_purpose_01.png"><span>家族親友活動<em>34%</em></span></a></li>
+                                <li class="wow fadeInDown" data-wow-duration="1" data-wow-delay="0.6s"><a href="javascript:;"><img src="images/travel_purpose_02.png"><span>商業<em>22%</em></span></a></li>
+                                <li class="wow fadeInDown" data-wow-duration="1" data-wow-delay="0.7s"><a href="javascript:;"><img src="images/travel_purpose_03.png"><span>受僱<em>11%</em></span></a></li>
+                                <li class="wow fadeInDown" data-wow-duration="1" data-wow-delay="0.8s"><a href="javascript:;"><img src="images/travel_purpose_04.png"><span>宗教<em>5%</em></span></a></li>
+                                <li class="wow fadeInDown" data-wow-duration="1" data-wow-delay="0.9s"><a href="javascript:;"><img src="images/travel_purpose_05.png"><span>農林業<em>5%</em></span></a></li>
+                                <li class="wow fadeInDown" data-wow-duration="1" data-wow-delay="1s"><a href="javascript:;"><img src="images/travel_purpose_06.png"><span>醫藥業<em>5%</em></span></a></li>
+                                <li class="wow fadeInDown" data-wow-duration="1" data-wow-delay="1.1s"><a href="javascript:;"><img src="images/travel_purpose_07.png"><span>喪葬掃墓<em>4%</em></span></a></li>
+                                <li class="wow fadeInDown" data-wow-duration="1" data-wow-delay="1.2s"><a href="javascript:;"><img src="images/travel_purpose_08.png"><span>工礦製造業<em>3%</em></span></a></li>
+                                <li class="wow fadeInDown" data-wow-duration="1" data-wow-delay="1.3s"><a href="javascript:;"><img src="images/travel_purpose_09.png"><span>教育研究<em>3%</em></span></a></li>
+                                <li class="wow fadeInDown" data-wow-duration="1" data-wow-delay="1.4s"><a href="javascript:;"><img src="images/travel_purpose_10.png"><span>航海漁業<em>2%</em></span></a></li>
+                                <li class="wow fadeInDown" data-wow-duration="1" data-wow-delay="1.5s"><a href="javascript:;"><img src="images/travel_purpose_11.png"><span>演藝娛樂<em>2%</em></span></a></li>
+                                <li class="wow fadeInDown" data-wow-duration="1" data-wow-delay="1.6s"><a href="javascript:;"><img src="images/travel_purpose_12.png"><span>公務<em>1%</em></span></a></li>
+                                <li class="wow fadeInDown" data-wow-duration="1" data-wow-delay="1.7s"><a href="javascript:;"><img src="images/travel_purpose_13.png"><span>訴訟<em>1%</em></span></a></li>
+                                <li class="wow fadeInDown" data-wow-duration="1" data-wow-delay="1.8s"><a href="javascript:;"><img src="images/travel_purpose_14.png"><span>旅遊<em>1%</em></span></a></li>
+                                <!-- <li class="wow fadeInDown" data-wow-duration="1" data-wow-delay="1.9s"><a href="javascript:;"><img src="images/travel_purpose_15.png"><span>其他<em>1%</em></span></a></li> -->
+                            </ul>
+                        </div>
+                        <!-- 旅行目的end -->
+                    </div>
+                </div>
+            </section>
+            <!-- 旅行目的 block end -->
+            <!-- 專題旅券 block start -->
+            <section class="demosection col-12 topic_passport_block">
+                <div class="container">
+                    <div class="col">
+                        <div class="topic_passport wow fadeInUp" data-wow-duration="3s" data-wow-delay=".5s">
+                            <h2>專題旅券</h2>
+                            <!-- 輪播內容 start-->
+                            <div class="topic_slider">
+                                <div>
+                                    <!-- start -->
+                                    <div class="topic_content">
+                                        <h3 class="no01">環遊世界的旅人</h3>
+                                        <div class="img-container">
+                                            <img src="images/topic_pic01.jpg" class="cover">
+                                        </div>
+                                        <div class="editor">編撰者︰莊崇暉</div>
+                                        <p>旅券還能環遊世界，<a href="#">顏國年</a>的《最近歐美旅行記》、<a href="#">杜聰明</a>的《杜聰明博士世界旅遊記》與<a href="#">林獻堂</a>的《環球遊記》皆有記載。林獻堂環遊世界、寫遊記。歷經 370 餘天完成這躺旅程，並寫於個人日記中，也寫成「環球遊記」專欄連載於《臺灣民報》、《臺灣新民報》。</p>
+                                        <div class="btn_link">
+                                            <button>旅券瀏覽</button>
+                                            <button>專題內容</button>
+                                        </div>
+                                    </div>
+                                    <!-- end -->
+                                </div>
+                                <div>
+                                    <!-- start -->
+                                    <div class="topic_content">
+                                        <h3 class="no02">臺灣人渡海尋求教育機會</h3>
+                                        <div class="img-container">
+                                            <img src="images/topic_pic02.jpg" class="cover">
+                                        </div>
+                                        <div class="editor">編撰者︰莊崇暉</div>
+                                        <p>日本人在中國辦的學校非常熱門，比方日治時期將近 120 名臺灣人在滿洲醫科大學拿到學位和醫生執照，至少一半以上留在滿州當醫生。此外，青島醫科大學也吸引很多臺灣學生進行<a href="#">教育研究</a>。但當時臺灣的醫學高等教育機構，只有臺灣總督府臺北醫學專門學校一所。</p>
+                                        <div class="btn_link">
+                                            <button>旅券瀏覽</button>
+                                            <button>專題內容</button>
+                                        </div>
+                                    </div>
+                                    <!-- end -->
+                                </div>
+                                <div>
+                                    <!-- start -->
+                                    <div class="topic_content">
+                                        <h3 class="no03">最忙錄的商人-劉瓶</h3>
+                                        <div class="img-container">
+                                            <img src="images/topic_pic02.jpg" class="cover">
+                                        </div>
+                                        <div class="editor">編撰者︰莊崇暉</div>
+                                        <p>資料來源中，自1898年至1915年間，<a href="#">劉瓶</a>在這17年間內共申請了近260次的旅券紀錄，平均每年申請約15次，其主要目的更集中在<a href="#">商業</a>類別，勘稱是當時最忙碌的商人。</p>
+                                        <div class="btn_link">
+                                            <button>旅券瀏覽</button>
+                                            <button>專題內容</button>
+                                        </div>
+                                    </div>
+                                    <!-- end -->
+                                </div>
+                            </div>
+                            <!-- 輪播內容 end-->
+                            <div class="more"><a href="javascript:;">更多</a></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- 專題旅券 block end -->
+        </div>
+        <!-- footer Start-->
+        <footer>
+            <div class="container">
+                <a class="accesskey" href="#aZ" id="aZ" accesskey="Z" title="頁尾區">:::</a>
+                <div class="footer_info">
+                    <ul class="footer_link">
+                        <li><a href="javascript:;">政府網站資料開放宣告</a></li>
+                        <li><a href="javascript:;">隱私權及資訊安全政策</a></li>
+                    </ul>
+                    <p> 地址：<em>115</em>臺北市南港區研究院路二段<em>128</em>號 &nbsp;&nbsp;人文社會科學館南棟<em>11樓</em><br /> 電話：<em>886-2-2652-5181 </em><br /> 傳真：<em>886-2-2652-5184</em><br /> </p>
+                    <p class="Copyright">建議瀏覽器：<em>Chrome、Firefox、Safari、IE11</em>以上版本 (螢幕最佳顯示效果為<em>1280*960</em> )<br />
+                        <em>Copyright©2016 </em>版權所有</p>
+                    <!-- <span class="update">更新日期:<em>2018/01/01</em></span>
+                    <span class="counter">累計瀏覽人次:<em>46476653</em></span> -->
+                    <!-- adslider start -->
+                    <div class="adSlider">
+                        <div class="img-container">
+                            <a href="#" title="">
+                                <img data-lazy="images/adbanner01.jpg" class="contain">
+                            </a>
+                        </div>
+                        <div class="img-container">
+                            <a href="#" title="">
+                                <img data-lazy="images/adbanner02.jpg" class="contain">
+                            </a>
+                        </div>
+                        <div class="img-container">
+                            <a href="#" title="">
+                                <img data-lazy="images/adbanner03.jpg" class="contain">
+                            </a>
+                        </div>
+                        <div class="img-container">
+                            <a href="#" title="">
+                                <img data-lazy="images/adbanner04.jpg" class="contain">
+                            </a>
+                        </div>
+                        <div class="img-container">
+                            <a href="#" title="">
+                                <img data-lazy="images/adbanner05.jpg" class="contain">
+                            </a>
+                        </div>
+                        <div class="img-container">
+                            <a href="#" title="">
+                                <img data-lazy="images/demo/ad_06.jpg" class="contain">
+                            </a>
+                        </div>
+                        <div class="img-container">
+                            <a href="#" title="">
+                                <img data-lazy="images/demo/ad_07.jpg" class="cover">
+                            </a>
+                        </div>
+                    </div>
+                    <!-- adslider end -->
+                </div>
+            </div>
+        </footer>
+        <!-- footer End -->
+    </div>
+    <a href="javascript:;" class="scrollToTop">回頁首</a>
+    <!-- JQ -->
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <!-- 外掛 plugin js -->
+    <script src="vendor/jquery.easing.min.js"></script><!-- ease -->
+    <script src="vendor/slick/slick.min.js "></script><!-- slick -->
+    <script src="vendor/slick/slick-lightbox.js "></script><!-- slick lightbox -->
+    <script src="vendor/lazyload/lazyload.js"></script><!-- lazyload -->
+    <script src="vendor/picturefill/picturefill.min.js" async></script><!-- picturefill -->
+    <script src="vendor/scrolltable/jquery.scroltable.min.js"></script><!-- scrolltable -->
+    </script>
+    <!-- wow js -->
+    <script src="js/wow.min.js"></script>
+    <script>
+    new WOW().init();
+    </script>
+    <!-- 燈箱facybox -->
+    <script src="vendor/facybox/dist/jquery.fancybox.min.js"></script>
+    <!-- hyUI -->
+    <script src="js/hyui.js"></script>
+    <!-- 客製js -->
+    <script src="js/customize.js"></script>
+</body>
+
+</html>

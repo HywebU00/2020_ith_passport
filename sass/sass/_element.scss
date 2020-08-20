@@ -101,7 +101,7 @@ a.more {
     right: 10px;
     transition: .3s ease-out;
     display: none;
-    z-index: 99999999;
+    z-index: 99;
     text-indent: -999999px;
     @include screen('mobile'){
         right: 10px;

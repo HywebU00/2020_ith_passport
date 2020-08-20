@@ -431,6 +431,10 @@
         font-size: 1.25em;
         width: 200px !important;
         height: 30px !important;
+        @include screen('xs_mobile'){
+            font-size: 1.125em;
+        }
+
         &:hover, &:focus {
             box-shadow: none;
         }
@@ -441,6 +445,9 @@
             &:hover, &:focus {
                 box-shadow: none;
             }
+             @media(max-width: 400px){
+            display: none;
+        }
         }
     }
     .slick-next {

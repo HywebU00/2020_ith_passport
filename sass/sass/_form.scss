@@ -443,6 +443,7 @@ input[type="checkbox"]:checked {
 }
 input[type="radio"]:checked {
     box-shadow: #fff 0 0 0 3px inset, $color-gray 0 0 0 1px;
+    
 }
 input[type="radio"]:focus{
    border-color:$color-orange;

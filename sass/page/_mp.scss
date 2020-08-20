@@ -906,8 +906,15 @@
             @extend .block01_h2;
             color: #fff;
             margin: 0 0 60px 0;
+            text-shadow: 0 0 2px  #666, 0 0 4px  #666;
             &:before {
                 background-color: #fff;
+            }
+            @include screen('xs_mobile'){
+                padding: 0px 10px 0 20px;
+                &:before {
+                    width: 10px;
+                }
             }
         }
     }
@@ -1263,7 +1270,7 @@
                         right: 12%;
                         a {
                             span {
-                                &.distributed_point_no02 {
+                                &.distributed_point_no03{
                                     &:before {
                                         right: 0px;
                                         top: 30px;

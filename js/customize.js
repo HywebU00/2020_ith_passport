@@ -488,7 +488,7 @@ $(function() {
 
 $(function() {
     $('.menu_group01').click(function(e) {
-        $('body,html').stop(true, true).animate({ scrollTop: $('.groupA').offset().top - 80 }, 200, 'easeOutExpo');
+        $('body,html').stop(true, true).animate({ scrollTop: $('.groupA').offset().top - 90 }, 200, 'easeOutExpo');
     });
     $('.menu_group02').click(function(e) {
         $('body,html').stop(true, true).animate({ scrollTop: $('.groupB').offset().top - 70 }, 200, 'easeOutExpo');

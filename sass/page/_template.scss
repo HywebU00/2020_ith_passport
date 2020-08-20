@@ -146,6 +146,10 @@ body {
         @include screen('xs_mobile') {
             margin: 10px auto 0;
         }
+        .btn{
+            background-color: #666;
+            color:#fff;
+        }
     }
 }
 .more {

@@ -96,11 +96,13 @@
             transition: .5s;
         }
         &:hover, &:focus {
-            color: $linkColor;
+            // color: $linkColor;
             padding: 10px 0px;
             // padding: 10px 90px 10px 80px;
             border: 1px solid $secondaryColor !important;
             width: 240px;
+            background-color: $secondaryColor;
+            color:#fff;
             &:before {
                 right: -40px;
             }

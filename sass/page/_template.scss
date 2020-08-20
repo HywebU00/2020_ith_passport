@@ -146,51 +146,55 @@ body {
         @include screen('xs_mobile') {
             margin: 10px auto 0;
         }
-        .btn{
+        .btn {
             background-color: #666;
-            color:#fff;
+            color: #fff;
         }
     }
 }
 .more {
-    background-color: #fff;
-    border: 1px solid $secondaryColor;
-    position: relative;
-    color: darken($secondaryColor, 10);
-    border-radius: .2em;
-    padding: 10px 0px;
-    transition: .5s;
-    width: 220px;
-    margin: 0 auto;
-    @media(max-width: 400px) {
-        &:before {
-            display: none;
-        }
-    }
-    &:before {
-        content: '';
-        width: 67px;
-        height: 4px;
-        background-image: url('../images/button_icon02.png');
-        background-repeat: no-repeat;
-        background-position: right center;
-        position: absolute;
-        top: 45%;
-        right: -30px;
-        transition: .5s;
-    }
-    &:hover, &:focus {
-        color: $linkColor;
+    a {
+        background-color: #fff;
+        border: 1px solid $secondaryColor;
+        position: relative;
+        color: darken($secondaryColor, 10);
+        border-radius: .2em;
         padding: 10px 0px;
-        // padding: 10px 90px 10px 80px;
-        border: 1px solid $secondaryColor !important;
-        width: 240px;
+        transition: .5s;
+        width: 220px;
+        margin: 0 auto;
+        display: block;
         &:before {
-            right: -40px;
+            content: '';
+            width: 67px;
+            height: 4px;
+            background-image: url('../images/button_icon02.png');
+            background-repeat: no-repeat;
+            background-position: right center;
+            position: absolute;
+            top: 45%;
+            right: -30px;
+            transition: .5s;
+            @media(max-width: 400px){
+                display: none;
+            }
+
         }
-        @media(max-width: 400px) {
-            padding: 10px 0;
+        
+        &:hover, &:focus {
+            color: #fff;
+            padding: 10px 0px;
+            border: 1px solid $secondaryColor!important;
+            width: 240px;
+            background-color: $secondaryColor;
+            &:before {
+                right: -40px;
+            }
+            @media(max-width: 400px) {
+                padding: 10px 0;
+            }
         }
+        
     }
 }
 .share_link {
@@ -212,5 +216,5 @@ body {
     }
 }
 .share_link_width {
-    width: 80%!important;
+    width: 80% !important;
 }

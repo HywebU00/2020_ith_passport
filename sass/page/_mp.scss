@@ -96,13 +96,11 @@
             transition: .5s;
         }
         &:hover, &:focus {
-            // color: $linkColor;
             padding: 10px 0px;
-            // padding: 10px 90px 10px 80px;
             border: 1px solid $secondaryColor !important;
             width: 240px;
             background-color: $secondaryColor;
-            color:#fff;
+            color: #fff;
             &:before {
                 right: -40px;
             }
@@ -421,7 +419,7 @@
             padding: 0;
             font-family: 'Comfortaa', cursive;
             font-weight: 600;
-            @media(max-width: 500px){
+            @media(max-width: 500px) {
                 display: inline-block;
             }
         }
@@ -908,11 +906,11 @@
             @extend .block01_h2;
             color: #fff;
             margin: 0 0 60px 0;
-            text-shadow: 0 0 2px  #666, 0 0 4px  #666;
+            text-shadow: 0 0 2px #666, 0 0 4px #666;
             &:before {
                 background-color: #fff;
             }
-            @include screen('xs_mobile'){
+            @include screen('xs_mobile') {
                 padding: 0px 10px 0 20px;
                 &:before {
                     width: 10px;
@@ -1272,7 +1270,7 @@
                         right: 12%;
                         a {
                             span {
-                                &.distributed_point_no03{
+                                &.distributed_point_no03 {
                                     &:before {
                                         right: 0px;
                                         top: 30px;

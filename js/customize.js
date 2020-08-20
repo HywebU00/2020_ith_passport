@@ -1,4 +1,6 @@
 // 自行加入的JS請寫在這裡
+//menu滑動連結
+
 $(function() {
     // 首頁輪播
     $('.mpSlider').slick({
@@ -483,3 +485,24 @@ $(function() {
         $('.location10>a').removeClass('addcolor');
     })
 })
+
+$(function() {
+    $('.menu_group01').click(function(e) {
+        $('body,html').stop(true, true).animate({ scrollTop: $('.groupA').offset().top - 80 }, 200, 'easeOutExpo');
+    });
+    $('.menu_group02').click(function(e) {
+        $('body,html').stop(true, true).animate({ scrollTop: $('.groupB').offset().top - 70 }, 200, 'easeOutExpo');
+    });
+    $('.menu_group03').click(function(e) {
+        $('body,html').stop(true, true).animate({ scrollTop: $('.groupC').offset().top - 70 }, 200, 'easeOutExpo');
+    });
+    $('.menu_group04').click(function(e) {
+        $('body,html').stop(true, true).animate({ scrollTop: $('.groupD').offset().top - 70 }, 200, 'easeOutExpo');
+    });
+    $('.menu_group05').click(function(e) {
+        $('body,html').stop(true, true).animate({ scrollTop: $('.groupE').offset().top - 70 }, 200, 'easeOutExpo');
+    });
+   
+    // e.preventDefault();
+})
+

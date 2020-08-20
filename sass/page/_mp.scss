@@ -347,6 +347,9 @@
     @include screen('tablet') {
         flex-wrap: wrap;
     }
+    @include screen('mobile') {
+        padding: 0;
+    }
     div {
         flex: none;
         font-size: 1.125em;
@@ -356,6 +359,14 @@
         @include box-sizing;
         position: relative;
         white-space: nowrap;
+        @include screen('tablet') {
+            font-size: 1em;
+        }
+        @include screen('mobile') {
+            font-size: 0.875em;
+            padding: 6px 0px 5px;
+            line-height: 1.5em;
+        }
         &:after {
             content: '';
             border: 36px solid #ccc;
@@ -366,12 +377,40 @@
             right: -71px;
             top: 0;
             z-index: 1;
+            @include screen('mobile') {
+                border: 15px solid #ccc;
+                border-top-color: transparent;
+                border-right-color: transparent;
+                border-bottom-color: transparent;
+                right: -25px;
+            }
+            @media(max-width:500px) {
+                border: 15px solid #ccc;
+                border-left-color: transparent;
+                border-right-color: transparent;
+                border-bottom-color: transparent;
+                border-top-color: #ccc;
+                right: 10px;
+                bottom: -25px;
+                top: auto;
+            }
+            @media(max-width:350px) {
+                bottom: -20px;
+                right: 5px;
+            }
         }
         &:first-child {
             padding: 13px 15px;
+            @include screen('mobile') {
+                padding: 6px 0px 5px;
+            }
         }
-        @media(max-width: 480px) {
-            padding: 13px 15px;
+        &:last-child {
+            @include screen('mobile') {
+                &:after {
+                    display: none;
+                }
+            }
         }
         span {
             display: block;
@@ -380,6 +419,9 @@
             padding: 0;
             font-family: 'Comfortaa', cursive;
             font-weight: 600;
+            @media(max-width: 500px){
+                display: inline-block;
+            }
         }
         &.period01 {
             flex-basis: 11%;
@@ -389,16 +431,20 @@
                 border-left-color: #bc8e57;
             }
             @include screen('tablet') {
+                flex-basis: 16%;
+                width: 16%;
+            }
+            @include screen('mobile') {
                 flex-basis: 20%;
                 width: 20%;
             }
-            @include screen('mobile') {
-                flex-basis: 38%;
-                width: 38%;
-            }
-            @media(max-width:480px) {
+            @media(max-width: 500px) {
                 flex-basis: 100%;
                 width: 100%;
+                &:after {
+                    border-left-color: transparent;
+                    border-top-color: #bc8e57;
+                }
             }
         }
         &.period02 {
@@ -409,16 +455,20 @@
                 border-left-color: #bf575e;
             }
             @include screen('tablet') {
-                flex-basis: 33%;
-                width: 33%;
+                flex-basis: 20%;
+                width: 20%;
             }
             @include screen('mobile') {
-                flex-basis: 62%;
-                width: 62%;
+                flex-basis: 20%;
+                width: 20%;
             }
-            @media(max-width:480px) {
+            @media(max-width: 500px) {
                 flex-basis: 100%;
                 width: 100%;
+                &:after {
+                    border-left-color: transparent;
+                    border-top-color: #bf575e;
+                }
             }
         }
         &.period03 {
@@ -429,16 +479,20 @@
                 border-left-color: #68627e;
             }
             @include screen('tablet') {
-                flex-basis: 47%;
-                width: 47%;
+                flex-basis: 20%;
+                width: 20%;
             }
             @include screen('mobile') {
-                flex-basis: 65%;
-                width: 65%;
+                flex-basis: 20%;
+                width: 20%;
             }
-            @media(max-width:480px) {
+            @media(max-width: 500px) {
                 flex-basis: 100%;
                 width: 100%;
+                &:after {
+                    border-left-color: transparent;
+                    border-top-color: #68627e;
+                }
             }
         }
         &.period04 {
@@ -449,16 +503,20 @@
                 border-left-color: #768aaf;
             }
             @include screen('tablet') {
-                flex-basis: 27%;
-                width: 27%;
+                flex-basis: 19%;
+                width: 19%;
             }
             @include screen('mobile') {
-                flex-basis: 35%;
-                width: 35%;
+                flex-basis: 20%;
+                width: 20%;
             }
-            @media(max-width:480px) {
+            @media(max-width: 500px) {
                 flex-basis: 100%;
                 width: 100%;
+                &:after {
+                    border-left-color: transparent;
+                    border-top-color: #768aaf;
+                }
             }
         }
         &.period05 {
@@ -469,12 +527,20 @@
                 border-left-color: #6e7d66;
             }
             @include screen('tablet') {
-                flex-basis: 73%;
-                width: 73%;
+                flex-basis: 25%;
+                width: 25%;
             }
             @include screen('mobile') {
+                flex-basis: 20%;
+                width: 20%;
+            }
+            @media(max-width: 500px) {
                 flex-basis: 100%;
                 width: 100%;
+                &:after {
+                    border-left-color: transparent;
+                    border-top-color: #6e7d66;
+                }
             }
         }
     }
@@ -488,16 +554,27 @@
     @include screen('tablet') {
         flex-wrap: wrap;
     }
+    @include screen('xs_mobile') {
+        padding: 0;
+    }
     div {
         flex: none;
         font-size: 1em;
-        padding: 13px 0px 13px 35px;
+        padding: 13px 0px 13px 25px;
         color: #fff;
         text-align: center;
         @include box-sizing;
         position: relative;
         white-space: nowrap;
         line-height: 1.4em;
+        @include screen('mobile') {
+            font-size: 0.875em;
+            padding: 8px 0px 7px 35px;
+        }
+        @include screen('xs_mobile') {
+            padding: 8px 0px 7px;
+            font-size: 0.813em;
+        }
         &:after {
             content: '';
             border: 36px solid #ccc;
@@ -508,9 +585,46 @@
             right: -71px;
             top: 0;
             z-index: 1;
+            @include screen('mobile') {
+                border: 27px solid #ccc;
+                border-top-color: transparent;
+                border-right-color: transparent;
+                border-bottom-color: transparent;
+                right: -54px;
+            }
+            @include screen('xs_mobile') {
+                border: 15px solid #ccc;
+                border-top-color: transparent;
+                border-right-color: transparent;
+                border-bottom-color: transparent;
+                right: -25px;
+            }
+            @media(max-width:500px) {
+                border: 15px solid #ccc;
+                border-left-color: transparent;
+                border-right-color: transparent;
+                border-bottom-color: transparent;
+                border-top-color: #ccc;
+                right: 10px;
+                bottom: -25px;
+                top: auto;
+            }
+            @media(max-width:350px) {
+                bottom: -20px;
+            }
         }
         &:first-child {
             padding: 13px 15px;
+            @include screen('mobile') {
+                padding: 8px 10px 7px;
+            }
+        }
+        &:last-child {
+            @include screen('xs_mobile') {
+                &:after {
+                    display: none;
+                }
+            }
         }
         span {
             font-size: 0.875em;
@@ -527,12 +641,23 @@
                 border-left-color: #bc8e57;
             }
             @include screen('tablet') {
-                flex-basis: 36%;
-                width: 36%;
+                flex-basis: 25%;
+                width: 25%;
             }
-            @include screen('xs_mobile') {
+            @include screen('mobile') {
+                flex-basis: 33%;
+                width: 33%;
+            }
+            @media(max-width:500px) {
                 flex-basis: 100%;
                 width: 100%;
+                br {
+                    display: none
+                }
+                &:after {
+                    border-left-color: transparent;
+                    border-top-color: #bc8e57;
+                }
             }
         }
         &.period02 {
@@ -542,13 +667,20 @@
             &:after {
                 border-left-color: #bf575e;
             }
-            @include screen('tablet') {
-                flex-basis: 64%;
-                width: 64%;
+            @include screen('mobile') {
+                flex-basis: 33%;
+                width: 33%;
             }
-            @include screen('xs_mobile') {
+            @media(max-width:500px) {
                 flex-basis: 100%;
                 width: 100%;
+                br {
+                    display: none
+                }
+                &:after {
+                    border-left-color: transparent;
+                    border-top-color: #bf575e;
+                }
             }
         }
         &.period03 {
@@ -559,8 +691,23 @@
                 border-left-color: #68627e;
             }
             @include screen('tablet') {
+                flex-basis: 45%;
+                width: 45%;
+            }
+            @include screen('mobile') {
+                flex-basis: 33%;
+                width: 33%;
+            }
+            @media(max-width:500px) {
                 flex-basis: 100%;
                 width: 100%;
+                br {
+                    display: none
+                }
+                &:after {
+                    border-left-color: transparent;
+                    border-top-color: #68627e;
+                }
             }
         }
     }
@@ -1093,7 +1240,7 @@
                     .num_people {
                         padding: 5px 10px;
                         color: #333;
-                        background-color:lighten($color-yellow, 10);
+                        background-color: lighten($color-yellow, 10);
                         border-radius: 5px;
                         position: absolute;
                         display: none;
@@ -1462,7 +1609,6 @@
         padding: 55px 30px 0;
         overflow: hidden;
         margin: 65px 0;
-       
         @media(max-width: 400px) {
             padding: 55px 20px;
         }

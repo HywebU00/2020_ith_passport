@@ -30,7 +30,7 @@
         width: 60px !important;
         height: 60px !important;
         position: absolute;
-        top: 0px;
+        top: 5px;
         display: block;
         font-size: 0em;
         padding: 15px;
@@ -113,18 +113,25 @@
             margin-top: 10px;
         }
         @include screen('mobile') {
-            padding: 2px 60px;
-            width: 80%;
+            padding: 5px 60px;
+            width:100%;
             flex: auto;
             text-align: center;
             height: 60px;
             margin:0 auto ;
             img {
-                
+                 width: 270px;
                 max-height: 54px;
                 height: auto;
                 margin: 16px auto 0;
                 // transform: scale(.8);
+            }
+        }
+        @media(max-width: 380px){
+                padding: 5px 20px 5px 50px;
+            img {
+                 width: 230px;
+                
             }
         }
     }

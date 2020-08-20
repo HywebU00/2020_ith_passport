@@ -364,7 +364,7 @@ button,
 input[type="button"],
     {
     @extend %btn;
-    @include btn_setting($form-focus, #FFF);
+    @include btn_setting($secondaryColor, #FFF);
 }
 input[type="submit"] {
     @extend %btn;

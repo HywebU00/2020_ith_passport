@@ -461,6 +461,14 @@ $(function() {
             $('.scrollToTop').fadeOut();
         }
     });
+    // 
+     $(window).bind('scroll', function() {
+        if ($(this).scrollTop() > 200) {
+            $('.share_link').fadeIn();
+        } else {
+            $('.share_link').fadeOut();
+        }
+    });
     /*-----------------------------------*/
     /////click event to scroll to top//////
     /*-----------------------------------*/

@@ -513,8 +513,19 @@ $(function() {
 })
 // 後分類更多按鈕
 $(function() {
-    // // $('.sort_block ul li').eq(2).stop().addClass('listhidden');
-    // $('.sort_block .more a').click(function() {
-        
+    // $(".sort_block").find("li:gt(2)").hide();
+    // $(".sort_block .more").click(function() {
+    //     $(this).prev("ul").find("li").show(300);
     // })
+    $(".sort_block").find("li:gt(2)").hide();
+    $(".sort_block .more").click(function() {
+        const isOpen = $(this).attr("isOpen") == "true" ? "false" : "true";
+        $(this).attr("isOpen", isOpen);
+        if (isOpen == "true") {
+            $(this).prev("ul").find("li").show(300);
+        } else {
+            $(".sort_block").find("li:gt(2)").hide(300);
+        }
+        $(this).find("a").html(isOpen == "true" ? "收合" : "更多")
+    })
 })

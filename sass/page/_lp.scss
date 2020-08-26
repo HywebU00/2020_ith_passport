@@ -243,9 +243,14 @@
                 margin: 5px 0 0 0;
                 padding: 0;
                 list-style-type: none;
+                
+                // max-height: 90px;
+                // overflow: hidden;
+                // &.openblock {
+                //     max-height: 100%;
+                // }
                 li {
                     list-style-type: none;
-                   
                     a {
                         padding: 3px 8px;
                         display: block;

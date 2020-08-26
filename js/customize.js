@@ -1,6 +1,5 @@
 // 自行加入的JS請寫在這裡
 //menu滑動連結
-
 $(function() {
     // 首頁輪播
     $('.mpSlider').slick({
@@ -485,7 +484,6 @@ $(function() {
         $('.location10>a').removeClass('addcolor');
     })
 })
-
 $(function() {
     $('.menu_group01').click(function(e) {
         $('body,html').stop(true, true).animate({ scrollTop: $('.groupA').offset().top - 90 }, 200, 'easeOutExpo');
@@ -502,7 +500,21 @@ $(function() {
     $('.menu_group05').click(function(e) {
         $('body,html').stop(true, true).animate({ scrollTop: $('.groupE').offset().top - 70 }, 200, 'easeOutExpo');
     });
-   
     // e.preventDefault();
 })
-
+// 結果條列頁展開按鈕
+$(function() {
+    $('.result_table table tr td .openbtn').click(function() {
+        $(this).stop().toggleClass('closebtn');
+        $(this).parents('tr').siblings('tr').find('.second_data').stop().slideUp();
+        $(this).parents('tr').next('tr').find('.second_data').stop().slideToggle();
+        $(this).parents('tr').siblings('tr').find('.openbtn').stop().removeClass('closebtn');
+    })
+})
+// 後分類更多按鈕
+$(function() {
+    // // $('.sort_block ul li').eq(2).stop().addClass('listhidden');
+    // $('.sort_block .more a').click(function() {
+        
+    // })
+})

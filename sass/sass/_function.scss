@@ -12,26 +12,45 @@ $function_color:#888;
 div.function {
     @include box-sizing;
     @extend %clearfix;
-    margin: .5em 0;
+    margin:0 0 20px;
     ul {
         @include li-reset;
+        display: flex;
+        justify-content: flex-end;
         li {
             display: block;
-            float: left;
-            margin: 0 3px 3px 0;
+           
+            margin: 0 3px 0px 0;
             button,
             a {
-                font-size: .813em;
-                display: block;
-                padding: .2em 1em;
-                background: $function_color;
-                border-color: $function_color;
-                color: #FFF;
-                border-radius: 4px;
+                background-color: #a39387;
+                color: #fff;
+                padding: 6px 60px 6px 20px;
+                float: right;
+                margin: 0;
+                position: relative;
+                transition: .5s;
+                border-radius: .2em;
+                &:before {
+                    content: '';
+                    width: 30px;
+                    height: 5px;
+                    background-image: url('../images/button_icon01.png');
+                    background-repeat: no-repeat;
+                    background-position: right center;
+                    position: absolute;
+                    top: 45%;
+                    right: 20px;
+                    transition: .5s;
+                }
                 &:hover,
                 &:focus {
-                    background: darken($aHover, 0);
-                    border-color: darken($aHover, 0);
+                    background-color: darken(#a39387, 10);
+                    padding: 8px 65px 8px 20px;
+                     box-shadow:none;
+                    &:before {
+                        right: 15px;
+                    }
                 }
             }
             // 回上一頁
@@ -72,7 +91,7 @@ div.function {
                 height: 60%;
                 top: 20%;
                 left: 20%;
-                background: url(../images/basic/icon_share.png) no-repeat center center  !important;
+                background: url(../images/basic/icon_share.png) no-repeat center center !important;
                 background-size: 24px !important;
             }
             text-indent:-9999px;

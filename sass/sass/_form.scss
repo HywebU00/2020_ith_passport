@@ -22,7 +22,7 @@ select::-ms-expand {
     .form_grp {
         overflow: hidden;
         padding: .2em 0;
-        display:flex;
+        display: flex;
         // align-items: center;
         @include screen('mobile') {
             flex-wrap: wrap;
@@ -395,11 +395,11 @@ select {
     line-height: 2.5em;
     height: 2.5em;
     padding: 0 24px 0 .5em;
-    border: 1px solid $color-gray;
-    background: #fff url(../images/icon/icon_select_arrow.png) no-repeat right center;
-    background-size: 16px;
-    color: darken($color-gray, 10);
-    option {
+    border: 1px solid #a39387;
+    background: #fff url('../images/select_icon_arrow.png') no-repeat right center;
+    position: relative;
+    color: $color-word;
+     option {
         outline: none;
         border: none;
     }
@@ -429,7 +429,7 @@ input[type="radio"] {
 }
 input[type="checkbox"]:checked, input[type="checkbox"]:focus,
 input[type="radio"]:checked, input[type="radio"]:focus {
-    border-color:$color-gray;
+    border-color: $color-gray;
     background-color: $color-gray;
     outline: none;
 }
@@ -443,17 +443,16 @@ input[type="checkbox"]:checked {
 }
 input[type="radio"]:checked {
     box-shadow: #fff 0 0 0 3px inset, $color-gray 0 0 0 1px;
-    
 }
-input[type="radio"]:focus{
-   border-color:$color-orange;
-   background-color: $color-orange;
-     box-shadow: #fff 0 0 0 3px inset, $color-orange 0 0 0 1px;
+input[type="radio"]:focus {
+    border-color: $color-orange;
+    background-color: $color-orange;
+    box-shadow: #fff 0 0 0 3px inset, $color-orange 0 0 0 1px;
 }
-input[type="checkbox"]:focus{
-    border-color:$color-orange;
-   background-color: $color-orange;
-   box-shadow: $color-orange 0 0 0 1px;
+input[type="checkbox"]:focus {
+    border-color: $color-orange;
+    background-color: $color-orange;
+    box-shadow: $color-orange 0 0 0 1px;
 }
 //---------------------------------------------readonly disable -------//
 input[readonly],

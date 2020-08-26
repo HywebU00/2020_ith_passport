@@ -8,11 +8,13 @@
     span {
         color: $primaryColor;
         margin: 0px .5em;
+        font-family: 'Comfortaa', cursive;
+            font-weight: 600;
     }
     .page {
         margin: 10px 0;
         padding: 0;
-        display: block;
+        display: inline-block;
         li {
             display: inline-block;
             min-width: 40px;
@@ -21,27 +23,29 @@
             list-style: none;
             @include box-sizing();
             a {
-                border-radius: 5px;
-                padding: 6px 10px;
+                border-radius: 3px;
+               padding:9px 10px 5px;
                 font-weight: 700;
                 display: block;
                 white-space: nowrap;
                 font-size: 1em;
                 color: $color-word;
-                @include gradient (#F7F7F7, #EAEAEA, vertical);
-                border: #ccc solid 1px;
+                background-color:#fff;
+                border: #a39387 solid 1px;
+                font-family: 'Comfortaa', cursive;
+            font-weight: 600;
                 &:hover,
                 &:focus {
-                    background: $primaryColor;
+                    background: $color-brown2;
                     color: #fff !important;
-                    border: $primaryColor solid 1px;
+                    border:$color-brown2 solid 1px;
                 }
             }
             &.active {
                 a {
                     color: #fff !important;
-                    background: $form-focus;
-                    border: darken($form-focus, 5) solid 1px;
+                    background: $color-brown2;
+                    border: $color-brown2 solid 1px;
                 }
             }
             %arrow {
@@ -114,7 +118,7 @@
     }
     .total {
         padding: 0em;
-        display: inline-block;
+        display:block;
         vertical-align: middle;
         select {
             margin: 0px .5em;
@@ -139,15 +143,38 @@
                 box-shadow: none !important;
             }
         }
+        input[type="image"] {
+            background-image: url('../images/total_icon_close.png');
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 22px;
+            height: 22px;
+            padding: 10px;
+            border: none;
+        }
+        em{
+            font-family: 'Comfortaa', cursive;
+            font-weight: 600;
+            font-style: normal;
+        }
     }
     .items {
         display: inline-block;
         vertical-align: middle;
-        
         a {
             padding: 0 5px;
             color: $primaryColor;
             text-decoration: none;
+        }
+    }
+    .sequence{
+        display: inline-block;
+        vertical-align: middle;
+        select{
+            width: auto;
+        }
+        label{
+            margin:0 8px;
         }
     }
 }

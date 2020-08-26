@@ -84,3 +84,226 @@
         }
     }
 }
+// 輸入查詢內容
+.search_block_in {
+    background-color: #fff;
+    border: 1px solid $color-brown;
+    padding: 30px;
+    margin-bottom: 20px;
+    box-shadow: 0 3px 5px #ccc;
+    @include box-sizing;
+    display: flex;
+    align-items: flex-start;
+    @include screen('tablet') {
+        display: block;
+    }
+    @media(max-width: 480px) {
+        padding: 30px 20px;
+    }
+    .form_grp {
+        flex: none;
+        flex-basis: 55%;
+        max-width: 55%;
+        display: flex;
+        align-items: center;
+        @include screen('tablet') {
+            flex-basis: 100%;
+            max-width: 100%;
+            margin-bottom: 10px;
+        }
+        label {
+            flex: none;
+            flex-basis: 22%;
+            max-width: 22%;
+            white-space: nowrap;
+            margin: 0;
+            text-align: center;
+        }
+        input[type="text"] {
+            flex: auto;
+            flex-basis: 78%;
+            max-width: 78%;
+            border: 1px solid #a0a0a0;
+            background-color: #fff;
+            margin-bottom: 0;
+        }
+        @include screen('xs_mobile') {
+            display: block;
+            label {
+                flex-basis: 100%;
+                max-width: 100%;
+                text-align: left;
+                margin-bottom: 10px;
+            }
+            input[type="text"] {
+                flex-basis: 100%;
+                max-width: 100%;
+            }
+        }
+    }
+    .btn_grp {
+        padding: 0;
+        flex: auto;
+        flex-basis: calc(100% - 55%);
+        max-width: calc(100% - 55%);
+        justify-content: flex-start;
+        display: flex;
+        @include screen('tablet') {
+            flex-basis: 100%;
+            max-width: 100%;
+        }
+        @media(max-width: 380px) {
+            flex-wrap: wrap;
+        }
+        input {
+            flex: auto;
+            flex-basis: 33%;
+            max-width: 33%;
+            text-align: center;
+            border: 1px solid #a0a0a0;
+            background-color: #fff;
+            color: #797979;
+            transition: .5s;
+            padding: 0.5em;
+            &:hover {
+                background-color: #797979;
+                color: #fff;
+            }
+            @include screen('tablet') {
+                &:first-child {
+                    margin-left: 0;
+                }
+            }
+            @media(max-width: 480px) {
+                // margin-bottom: 8px;
+                // flex-basis: 50%;
+                // max-width: 50%;
+                font-size: 0.875em;
+            }
+            @media(max-width: 380px) {
+                margin-bottom: 8px;
+                flex-basis: 100%;
+                max-width: 100%;
+                margin-left: 0;
+                background-color: #eee;
+            }
+        }
+    }
+}
+// 查詢比數資料
+// .quantity_blcok{
+// }
+// 查詢結果區塊 
+.search_result_content {
+    display: flex;
+    justify-content: flex-start;
+    .content_leftblock {
+        flex: auto;
+        flex-basis: calc(100% - 190px);
+        max-width: calc(100% - 190px);
+        .result_sort {
+            color: #333;
+            text-align: center;
+            span {
+                font-family: 'Comfortaa', cursive;
+                font-weight: 600;
+            }
+        }
+    }
+    .content_rightblock {
+        flex: none;
+        flex-basis: 170px;
+        max-width: 170px;
+        padding-left: 20px;
+        @include box-sizing;
+        .quantity {
+            background-image: url('../images/icon/icon_info2.svg');
+            background-repeat: no-repeat;
+            background-position: left center;
+            background-size: 20px;
+            padding-left: 25px;
+            margin-top: 97px;
+            margin-bottom: 10px;
+        }
+        .sort_block {
+            border-top: 4px solid #000;
+            border-bottom: 1px solid #000;
+            clear: both;
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+            overflow: hidden;
+            .title {
+                background-color: $color-brown2;
+                color: #fff;
+                padding: 20px 5px;
+                text-align: center;
+                border-bottom: #474646 1px solid;
+            }
+            ul {
+                margin: 5px 0 0 0;
+                padding: 0;
+                list-style-type: none;
+                li {
+                    list-style-type: none;
+                   
+                    a {
+                        padding: 3px 8px;
+                        display: block;
+                        color: #1a1a1a;
+                        font-size: 0.938em;
+                        .num {
+                            font-family: 'Comfortaa', cursive;
+                            font-weight: 600;
+                            font-size: 0.875em;
+                            padding: 0 3px;
+                            letter-spacing: 0.05em
+                        }
+                    }
+                }
+            }
+            .more {
+                margin-top: 10px;
+                a {
+                    background-color: transparent;
+                    border: none;
+                    position: relative;
+                    color: #1a1a1a;
+                    border-radius: 0;
+                    padding: 0 0 0 20px;
+                    transition: .5s;
+                    width: auto;
+                    margin: 0 auto;
+                    float: right;
+                    background-image: url('../images/icon_more.png');
+                    background-repeat: no-repeat;
+                    background-position: left center;
+                    transition: .5s;
+                    &:before {
+                        display: none;
+                    }
+                    &:hover, &:focus {
+                        border: none !important;
+                        padding: 0 0 0 15px;
+                    }
+                }
+            }
+        }
+    }
+}
+// 結果列表
+.result_table {
+    .openbtn {
+        img {
+            width: 13px;
+            transition: .5s;
+        }
+        &.closebtn {
+            img {
+                transform: rotate(180deg);
+            }
+        }
+    }
+    .second_data {
+        display: none;
+    }
+}

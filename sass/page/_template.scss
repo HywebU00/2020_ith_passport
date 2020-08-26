@@ -70,9 +70,13 @@ body {
 ////////////////////////////////////////////////////////////
 // 為了與首頁區隔，請在內頁加上innerpage ClassName
 .innerpage {
-    padding-top: 2em;
-    @include screen('mobile') {
-        padding-top: 5em;
+    margin: 0 auto;
+    padding: 360px 0 60px 0;
+    background-image: url('../images/innerpage_bg.jpg');
+    background-repeat: repeat;
+    background-position: center top;
+    &:before {
+        height: 350px;
     }
     >.container {
         @include gutter(); //gutter 代表左右要留白
@@ -175,16 +179,14 @@ body {
             top: 45%;
             right: -30px;
             transition: .5s;
-            @media(max-width: 400px){
+            @media(max-width: 400px) {
                 display: none;
             }
-
         }
-        
         &:hover, &:focus {
             color: #fff;
             padding: 10px 0px;
-            border: 1px solid $secondaryColor!important;
+            border: 1px solid $secondaryColor !important;
             width: 240px;
             background-color: $secondaryColor;
             &:before {
@@ -194,7 +196,6 @@ body {
                 padding: 10px 0;
             }
         }
-        
     }
 }
 .share_link {

@@ -1,8 +1,11 @@
 @charset "utf-8";
 // 文章標題
-h1.title, h2.title {
-    line-height: 1.25em;
-    margin: .4em 0;
+h1.title {
+    
+}
+h2.title {
+     @extend .block01_h2;
+     margin-bottom: 15px;
 }
 .cp {
     .pic {

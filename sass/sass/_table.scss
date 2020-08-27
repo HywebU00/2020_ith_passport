@@ -4,15 +4,22 @@ table {
     border-collapse: collapse;
     border-top: 4px solid #000;
     border-bottom: 4px solid #000;
+    background-color: #fff;
     @include screen('xs_mobile') {
         width: 100%;
+    }
+    tbody {
+        tr {
+            &:nth-child(4n-1) {
+                background-color: #e3dedb;
+            }
+        }
     }
     th,
     td {
         padding: 15px 8px;
         text-align: left;
         vertical-align: top;
-        background-color: #fff;
     }
     td {
         border-right: #bfbfbf 1px solid;
@@ -37,8 +44,8 @@ table {
         &.num {
             text-align: center;
             white-space: nowrap;
-            font-family: 'Comfortaa', cursive;
-            font-weight: 600;
+            // font-family: 'Comfortaa', cursive;
+            // font-weight: 600;
         }
         &.date {
             text-align: center;
@@ -77,6 +84,12 @@ table {
             border-bottom: none;
         }
         table {
+            tr {
+                background-color: #fff;
+                &:nth-child(4n-1) {
+                    background-color: #fff;
+                }
+            }
             th {
                 padding: 6px 8px;
                 text-align: right;
@@ -95,7 +108,7 @@ table {
     }
 }
 .table_list {
-    @include screen('xs_mobile') {
+    @include screen('mobile') {
         background-color: transparent !important; //Force table to not be like tables anymore
         thead,
         tbody,

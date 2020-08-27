@@ -512,21 +512,33 @@ $(function() {
     })
 })
 // 後分類更多按鈕
-// $(function() {
-   
-//     $(".sort_block").find("li:gt(2)").hide();
-//     $(".sort_block .more").click(function() {
-//         const isOpen = $(this).attr("isOpen") == "true" ? "false" : "true";
-//         $(this).attr("isOpen", isOpen);
-//         if (isOpen == "true") {
-//             $(this).prev("ul").find("li").show(300);
-//             $(this).children('a').addClass('close_btn');
-//             $(this).parents('.sort_block').siblings().find("li:gt(2)").hide(300);
-//             $(this).parents('.sort_block').siblings().children('.more').find('a').removeClass('close_btn');
-//         } else {
-//             $(".sort_block").find("li:gt(2)").hide(300);
-//              $(this).children('a').removeClass('close_btn');
-//         }
-//         $(this).find("a").html(isOpen == "true" ? "收合" : "更多")
-//     })
-// })
+$(function() {
+    
+    $(".sort_block").find("li:gt(2)").hide();
+    $(".sort_block .more").click(function() {
+        const isOpen = $(this).attr("isOpen") == "true" ? "false" : "true";
+        $(this).attr("isOpen", isOpen);
+        if (isOpen == "true") {
+             $(".sort_block").find("li:gt(2)").hide(300);
+      $(".sort_block .more").not(this).attr("isOpen","false")
+      $(".sort_block .more a").not(this).removeClass("close_btn").html("更多")
+      $(this).prev("ul").find("li").show(300);
+      $(this).find("a").addClass("close_btn");
+        } else {
+             $(".sort_block").find("li:gt(2)").hide(300);
+     $(this).find("a").removeClass("close_btn");
+        }
+        $(this).find("a").html(isOpen == "true" ? "收合" : "更多")
+    })
+})
+// 後分類開關
+$(function() {
+    $('.sort_switch>a').click(function() {
+        $('.search_result_content .content_rightblock').css('right', '0');
+        $('body').addClass('fix');
+    })
+    $('.search_result_content .content_rightblock .close>a').click(function() {
+        $('.search_result_content .content_rightblock').css('right', '-100%');
+        $('body').removeClass('fix');
+    })
+})

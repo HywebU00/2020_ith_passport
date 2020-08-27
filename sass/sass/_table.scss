@@ -25,7 +25,7 @@ table {
         border-right: #bfbfbf 1px solid;
         border-bottom: #474646 1px solid;
         word-break: break-all;
-        color: #000;
+        color: #333;
         a {
             word-break: break-all;
         }
@@ -94,6 +94,8 @@ table {
                 padding: 6px 8px;
                 text-align: right;
                 width: 120px;
+                font-size: 0.938em;
+                font-weight: normal;
                 &.aCenter {
                     text-align: center;
                     @include screen('mobile') {
@@ -103,6 +105,7 @@ table {
             }
             td {
                 padding: 6px 8px;
+                 font-size: 0.938em;
             }
         }
     }
@@ -137,14 +140,32 @@ table {
             &:before {
                 content: attr(data-title);
                 position: absolute;
-                top: .5em;
+                top: 15px;
                 left: .5em;
                 width: 30%;
                 padding-right: 10px;
                 white-space: nowrap;
                 text-align: left;
                 font-weight: bold;
-                color: #000;
+                color: #333;
+            }
+            &.nopadding {
+                padding: 0;
+                border-bottom: none;
+                padding-left: 0 !important;
+            }
+            table {
+                th,
+                td,
+                tr {
+                    display: block;
+                }
+                td {
+                    padding: 6px 8px !important;
+                    &:before {
+                        display: none;
+                    }
+                }
             }
         }
     }

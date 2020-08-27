@@ -144,8 +144,8 @@
     .btn_grp {
         padding: 0;
         flex: auto;
-        flex-basis: calc(100% - 55%);
-        max-width: calc(100% - 55%);
+        // flex-basis: calc(100% - 55%);
+        // max-width: calc(100% - 55%);
         justify-content: flex-start;
         display: flex;
         @include screen('tablet') {
@@ -157,8 +157,8 @@
         }
         input {
             flex: auto;
-            flex-basis: 33%;
-            max-width: 33%;
+            // flex-basis: 33%;
+            // max-width: 33%;
             text-align: center;
             border: 1px solid #a0a0a0;
             background-color: #fff;

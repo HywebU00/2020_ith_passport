@@ -14,11 +14,11 @@ body {
         margin: 0;
         padding: 0;
     }
-    .fix{
+    .fix {
         height: 100%;
-    overflow: hidden !important;
-    width: 100%;
-    position: fixed;
+        overflow: hidden !important;
+        width: 100%;
+        position: fixed;
     }
 }
 // 最外圍預設為100%
@@ -147,6 +147,12 @@ body {
             // display: block;
             // margin-bottom: 10px;
             // text-align: left;
+        }
+    }
+    a{
+        color:#fff;
+        &:hover{
+           text-decoration: underline;
         }
     }
     .btn_grp {

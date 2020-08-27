@@ -523,8 +523,12 @@ $(function() {
         $(this).attr("isOpen", isOpen);
         if (isOpen == "true") {
             $(this).prev("ul").find("li").show(300);
+            $(this).children('a').addClass('close_btn');
+            $(this).parents('.sort_block').siblings().find("li:gt(2)").hide(300);
+            $(this).parents('.sort_block').siblings().children('.more').find('a').removeClass('close_btn');
         } else {
             $(".sort_block").find("li:gt(2)").hide(300);
+             $(this).children('a').removeClass('close_btn');
         }
         $(this).find("a").html(isOpen == "true" ? "收合" : "更多")
     })

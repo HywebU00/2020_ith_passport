@@ -290,6 +290,9 @@
                         border: none !important;
                         padding: 0 0 0 15px;
                     }
+                    &.close_btn{
+                         background-image: url('../images/icon_more02.png');
+                    }
                 }
             }
         }

@@ -12,14 +12,13 @@ $function_color:#888;
 div.function {
     @include box-sizing;
     @extend %clearfix;
-    margin:0 0 20px;
+    margin: 0 0 20px;
     ul {
         @include li-reset;
         display: flex;
         justify-content: flex-end;
         li {
             display: block;
-           
             margin: 0 3px 0px 0;
             button,
             a {
@@ -46,10 +45,20 @@ div.function {
                 &:hover,
                 &:focus {
                     background-color: darken(#a39387, 10);
-                   padding: 6px 65px 6px 20px;
-                     box-shadow:none;
+                    padding: 6px 65px 6px 20px;
+                    box-shadow: none;
                     &:before {
                         right: 15px;
+                    }
+                }
+                @include screen('xs_mobile') {
+                    padding: 6px 10px;
+                    &:before {
+                        display: none;
+                    }
+                    &:hover,
+                    &:focus {
+                        padding: 6px 20px;
                     }
                 }
             }

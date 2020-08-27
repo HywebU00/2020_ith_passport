@@ -300,6 +300,9 @@
                 padding: 20px 5px;
                 text-align: center;
                 border-bottom: #474646 1px solid;
+                @include screen('tablet'){
+                     padding:10px 5px;
+                }
             }
             ul {
                 margin: 5px 0 0 0;

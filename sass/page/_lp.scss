@@ -197,10 +197,15 @@
 .search_result_content {
     display: flex;
     justify-content: flex-start;
+    position:relative;
     .content_leftblock {
         flex: auto;
         flex-basis: calc(100% - 190px);
         max-width: calc(100% - 190px);
+        @include screen('tablet'){
+           flex-basis:100%;
+        max-width: 100%;
+        }
         .result_sort {
             color: #333;
             text-align: center;
@@ -216,6 +221,12 @@
         max-width: 170px;
         padding-left: 20px;
         @include box-sizing;
+        @include screen('tablet'){
+            position:absolute;
+            right:0;
+            top:0;
+            width: 50%;
+        }
         .quantity {
             background-image: url('../images/icon/icon_info2.svg');
             background-repeat: no-repeat;

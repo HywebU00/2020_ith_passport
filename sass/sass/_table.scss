@@ -105,7 +105,7 @@ table {
             }
             td {
                 padding: 6px 8px;
-                 font-size: 0.938em;
+                font-size: 0.938em;
             }
         }
     }
@@ -127,7 +127,7 @@ table {
         }
         tr {
             border: 1px solid #ccc;
-            margin-bottom: 10px; // background-color: #333;
+            margin-bottom: 5px; // background-color: #333;
         }
         td {
             // Behave  like a "row"
@@ -137,10 +137,11 @@ table {
             padding-left: 35% !important;
             white-space: normal;
             text-align: left;
+            padding: 8px;
             &:before {
                 content: attr(data-title);
                 position: absolute;
-                top: 15px;
+                top: 8px;
                 left: .5em;
                 width: 30%;
                 padding-right: 10px;
@@ -155,17 +156,33 @@ table {
                 padding-left: 0 !important;
             }
             table {
-                th,
-                td,
                 tr {
-                    display: block;
+                    // display: block;
+                    margin-bottom: 0;
+                    clear: both;
+                    float: none;
+                    display: flex;
+                }
+                th {
+                   
+                    border: none;
+                   
+                    flex: none;
+                    flex-basis: 120px;
+                  max-width:120px;
                 }
                 td {
                     padding: 6px 8px !important;
+                    border: none;
+                  flex:auto;
+                  flex-basis: calc(100% - 120px);
+                  max-width: calc(100% - 120px);
+                    width: auto;
                     &:before {
                         display: none;
                     }
                 }
+                
             }
         }
     }

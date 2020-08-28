@@ -74,3 +74,66 @@
         }
     }
 }
+// 查無結果
+.no_result_block {
+    text-align: center;
+    position: relative;
+    background-image: url('../images/no_result_bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center top;
+    min-height: 771px;
+    background-size: 80%;
+    margin-top: 50px;
+    @include screen('tablet') {
+        min-height: 600px;
+        background-size: 80%;
+    }
+    @include screen('mobile') {
+        min-height: 550px;
+        background-size: 90%;
+    }
+    @include screen('xs_mobile') {
+        min-height: 400px;
+    }
+   @media(max-width:450px ) {
+        min-height: 300px;
+    }
+     @media(max-width:380px ) {
+        min-height: 250px;
+    }
+    .pic {
+        padding: 10% 0 80px;
+        img {
+            width: 15%;
+        }
+        @include screen('mobile') {
+            padding: 10% 0 50px;
+            img {
+                width: 20%;
+            }
+        }
+        @include screen('xs_mobile') {
+            padding: 10% 0 30px;
+            img {
+                width: 20%;
+            }
+        }
+    }
+    .content {
+        background-color: #ebe0ce;
+        padding: 30px;
+        text-align: center;
+        width: 50%;
+        margin: 0 auto;
+        border-radius: 50px;
+        font-size: 1.5em;
+        line-height: 1.5em;
+        @include screen('xs_mobile') {
+            width: 60%;
+            font-size: 1.25em;
+            line-height: 1.5;
+            padding:0;
+            background-color: transparent;
+        }
+    }
+}

@@ -156,6 +156,8 @@
                                 </div>
                             </div>
                             <!-- 表格 內容 start-->
+                            <!--  全選992px以下才出現 -->
+                            <div class="select_all"><input type="checkbox" name="" value="">全選</div>
                             <div class="table_list result_table">
                                 <table>
                                     <thead>
@@ -197,7 +199,7 @@
                                                         </tr>
                                                         <tr>
                                                             <th>延伸查詢</th>
-                                                            <td><a href="#"><img src="images/icon/icon_search.svg" alt="" width="20px"></a></td>
+                                                            <td><a href="#" data-fancybox data-src="#lightbox_extend_block"><img src="images/icon/icon_search.svg" alt="" width="20px"></a></td>
                                                         </tr>
                                                         <tr>
                                                             <th>識別號</th>
@@ -1299,6 +1301,30 @@
                                 </table>
                             </div>
                             <!-- 表格 內容 end-->
+                            <!--延伸查詢燈箱 start-->
+                            <div class="lightboxblock commonlightbox_small" id="lightbox_extend_block">
+                                <h3 class="title">延伸查詢</h3>
+                                <div class="content">
+                                    <h4>資源列表</h4>
+                                    <div class="datalist_blcok">
+                                        <label for=""><input type="radio" name="" value="" placeholder=""> 臺灣日記知識庫</label>
+                                        <label for=""><input type="radio" name="" value="" placeholder="">臺灣史研究所．檔案館</label>
+                                        <label for=""><input type="radio" name="" value="" placeholder="">臺灣史檔案資源系統</label>
+                                        <label for=""><input type="radio" name="" value="" placeholder="">臺灣總督府職員錄系統</label>
+                                        <label for=""><input type="radio" name="" value="" placeholder="">臺灣研究古籍資料庫</label>
+                                    </div>
+                                    <h4>查詢欄位</h4>
+                                    <div class="datalist_blcok">
+                                        <label for=""><input type="radio" name="" value="" placeholder="">姓名：盧騰芳</label>
+                                        <label for=""><input type="radio" name="" value="" placeholder="">州廳：臺北縣</label>
+                                    </div>
+                                </div>
+                                <div class="btn_grp">
+                                    <input  name="" type="submit" value="確定送出" />
+                                     <input  name="" type="reset" value="取消" />
+                                </div>
+                            </div>
+                            <!-- 延伸查詢燈箱 end-->
                         </div>
                         <div class="content_rightblock">
                             <!-- 992以下才出現 start-->

@@ -385,6 +385,18 @@
     }
 }
 // 結果列表
+.select_all{
+    margin:0 0 10px;
+    padding:5px 8px;
+    background-color:$secondaryColor;
+    color:#fff;
+    display: inline-block;;
+    border-radius:4px;
+    display: none;
+    @include screen('tablet'){
+        display: inline-block;;
+    }
+}
 .result_table {
     .openbtn {
         img {
@@ -399,5 +411,11 @@
     }
     .second_data {
         display: none;
+        @include screen('tablet'){
+            margin-bottom: 5px;
+            table{
+                border-top:none;
+            }
+        }
     }
 }

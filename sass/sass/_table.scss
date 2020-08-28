@@ -8,13 +8,6 @@ table {
     @include screen('xs_mobile') {
         width: 100%;
     }
-    tbody {
-        tr {
-            &:nth-child(4n-1) {
-                background-color: #e3dedb;
-            }
-        }
-    }
     th,
     td {
         padding: 15px 8px;
@@ -22,10 +15,8 @@ table {
         vertical-align: top;
     }
     td {
-        border-right: #bfbfbf 1px solid;
-        border-bottom: #474646 1px solid;
+        border: #ddd 1px solid;
         word-break: break-all;
-        color: #333;
         a {
             word-break: break-all;
         }
@@ -41,19 +32,6 @@ table {
                 text-align: left;
             }
         }
-        &.num {
-            text-align: center;
-            white-space: nowrap;
-            // font-family: 'Comfortaa', cursive;
-            // font-weight: 600;
-        }
-        &.date {
-            text-align: center;
-            width: 10%;
-        }
-        img {
-            vertical-align: middle;
-        }
     }
     th {
         background-color: $color-brown2;
@@ -65,9 +43,6 @@ table {
         padding: 20px 5px;
         font-weight: 500;
     }
-    tr>td:last-child, tr>th:last-child {
-        border-right: none;
-    }
     &.table_hover {
         tr:hover {
             background: #F3F3F3;
@@ -76,37 +51,6 @@ table {
     &.table_sprite {
         tr:nth-child(even) {
             background: #F5F5F5;
-        }
-    }
-    td {
-        &.nopadding {
-            padding: 0;
-            border-bottom: none;
-        }
-        table {
-            tr {
-                background-color: #fff;
-                &:nth-child(4n-1) {
-                    background-color: #fff;
-                }
-            }
-            th {
-                padding: 6px 8px;
-                text-align: right;
-                width: 120px;
-                font-size: 0.938em;
-                font-weight: normal;
-                &.aCenter {
-                    text-align: center;
-                    @include screen('mobile') {
-                        text-align: left;
-                    }
-                }
-            }
-            td {
-                padding: 6px 8px;
-                font-size: 0.938em;
-            }
         }
     }
 }
@@ -127,7 +71,7 @@ table {
         }
         tr {
             border: 1px solid #ccc;
-            margin-bottom: 5px; // background-color: #333;
+            margin-bottom: 10px; // background-color: #333;
         }
         td {
             // Behave  like a "row"
@@ -137,52 +81,178 @@ table {
             padding-left: 35% !important;
             white-space: normal;
             text-align: left;
-            padding: 8px;
             &:before {
                 content: attr(data-title);
                 position: absolute;
-                top: 8px;
+                top: .5em;
                 left: .5em;
                 width: 30%;
                 padding-right: 10px;
                 white-space: nowrap;
                 text-align: left;
                 font-weight: bold;
+                color: $secondaryColor;
+            }
+        }
+    }
+}
+.result_table {
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        border-top: 4px solid #000;
+        border-bottom: 4px solid #000;
+        background-color: #fff;
+        @include screen('xs_mobile') {
+            width: 100%;
+        }
+        tbody {
+            tr {
+                &:nth-child(4n-1) {
+                    background-color: #e3dedb;
+                }
+            }
+        }
+        th,
+        td {
+            padding: 15px 8px;
+        }
+        td {
+            border-right: #bfbfbf 1px solid;
+            border-bottom: #474646 1px solid;
+            color: #333;
+            &.num {
+                text-align: center;
+                white-space: nowrap;
+                // font-family: 'Comfortaa', cursive;
+                // font-weight: 600;
+            }
+            &.date {
+                text-align: center;
+                width: 10%;
+            }
+            img {
+                vertical-align: middle;
+            }
+        }
+        th {
+            background-color: $color-brown2;
+            color: #fff;
+            border-right: #7d7169 1px solid;
+            border-bottom: #474646 1px solid;
+            text-align: center;
+            white-space: nowrap;
+            padding: 20px 5px;
+            font-weight: 500;
+        }
+        tr>td:last-child, tr>th:last-child {
+            border-right: none;
+        }
+        td {
+            &.nopadding {
+                padding: 0;
+                border-bottom: none;
+            }
+            table {
+                tr {
+                    background-color: #fff;
+                    &:nth-child(4n-1) {
+                        background-color: #fff;
+                    }
+                }
+                th {
+                    padding: 6px 8px;
+                    text-align: right;
+                    width: 120px;
+                    font-size: 0.938em;
+                    font-weight: normal;
+                    &.aCenter {
+                        text-align: center;
+                        @include screen('mobile') {
+                            text-align: left;
+                        }
+                    }
+                }
+                td {
+                    padding: 6px 8px;
+                    font-size: 0.938em;
+                }
+            }
+        }
+    }
+}
+.result_table {
+    @include screen('mobile') {
+        tr {
+            border: 1px solid #ccc;
+            margin-bottom: 5px; // background-color: #333;
+            position: relative;
+            &:nth-child(even) {
+                border: none;
+                // margin-bottom: 0;
+                td {
+                    padding-bottom: 0px !important;
+                    padding-top: 0px !important;
+                }
+            }
+        }
+        td {
+            padding-bottom: 10px !important;
+            padding-top: 10px !important;
+            &:first-child {
+                padding-bottom: 20px !important;
+                padding-top: 15px !important;
+                input[type="checkbox"] {
+                    position: absolute;
+                    left: 15px;
+                }
+            }
+            &:before {
+                top: 10px;
                 color: #333;
             }
             &.nopadding {
-                padding: 0;
+                padding: 0 !important;
                 border-bottom: none;
                 padding-left: 0 !important;
             }
             table {
+                border: 1px solid #ccc !important;
                 tr {
                     // display: block;
                     margin-bottom: 0;
+                    border: none;
+                    border-bottom: 1px solid #ccc !important;
                     clear: both;
                     float: none;
                     display: flex;
                 }
                 th {
-                   
                     border: none;
-                   
                     flex: none;
                     flex-basis: 120px;
-                  max-width:120px;
+                    max-width: 120px;
+                    font-size: 0.938em;
+                    @media(max-width: 380px) {
+                        flex-basis: 35%;
+                        max-width: 35%;
+                    }
                 }
                 td {
                     padding: 6px 8px !important;
                     border: none;
-                  flex:auto;
-                  flex-basis: calc(100% - 120px);
-                  max-width: calc(100% - 120px);
+                    flex: auto;
+                    flex-basis: calc(100% - 120px);
+                    max-width: calc(100% - 120px);
                     width: auto;
+                    @media(max-width: 380px) {
+                        flex-basis: calc(100% - 35%);
+                        max-width: calc(100% - 35%);
+                    }
                     &:before {
                         display: none;
                     }
                 }
-                
             }
         }
     }

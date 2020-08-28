@@ -79,6 +79,7 @@
         transition: .5s;
         width: 220px;
         @media(max-width: 400px) {
+            width:150px;
             &:before {
                 display: none;
             }

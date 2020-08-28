@@ -12,7 +12,7 @@ $function_color:#888;
 div.function {
     @include box-sizing;
     @extend %clearfix;
-    margin: 0 0 20px;
+    margin: 0 0 15px;
     ul {
         @include li-reset;
         display: flex;

@@ -5,6 +5,14 @@
     text-align: center;
     font-size: .938em;
     @extend %clearfix; // outline: 1px solid red;
+    &.pagination_flex{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include screen('mobile'){
+            display: block;
+        }
+    }
     span {
         color: $primaryColor;
         margin: 0px .5em;
@@ -177,6 +185,11 @@
             margin:0 8px;
             display: inline-block;
         }
+    }
+}
+.pagination_flex{
+    .total{
+        margin-right: 15px;
     }
 }
 @include screen('mobile') {

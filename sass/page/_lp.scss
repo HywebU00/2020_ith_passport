@@ -397,6 +397,7 @@
         display: inline-block;;
     }
 }
+// 結果表格
 .result_table {
     .openbtn {
         img {
@@ -415,6 +416,11 @@
             margin-bottom: 5px;
             table{
                 border-top:none;
+                td{
+                    a{
+                        color:$linkColor;
+                    }
+                }
             }
         }
     }

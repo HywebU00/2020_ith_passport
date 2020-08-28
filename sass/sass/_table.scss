@@ -15,7 +15,7 @@ table {
         vertical-align: top;
     }
     td {
-        border: #ddd 1px solid;
+        border: #7d7169 1px solid;
         word-break: break-all;
         a {
             word-break: break-all;
@@ -40,7 +40,7 @@ table {
         border-bottom: #474646 1px solid;
         text-align: center;
         white-space: nowrap;
-        padding: 20px 5px;
+        padding: 20px 8px;
         font-weight: 500;
     }
     &.table_hover {
@@ -50,7 +50,7 @@ table {
     }
     &.table_sprite {
         tr:nth-child(even) {
-            background: #F5F5F5;
+             background-color:#eeebe9;
         }
     }
 }
@@ -70,21 +70,22 @@ table {
             left: -9999px;
         }
         tr {
-            border: 1px solid #ccc;
+            border: 1px solid #7d7169;
             margin-bottom: 10px; // background-color: #333;
         }
         td {
             // Behave  like a "row"
             border: none !important;
-            border-bottom: 1px solid #eee !important;
+            border-bottom: 1px solid #ccc !important;
             position: relative;
+            padding:8px;
             padding-left: 35% !important;
             white-space: normal;
             text-align: left;
             &:before {
                 content: attr(data-title);
                 position: absolute;
-                top: .5em;
+                top: 8px;
                 left: .5em;
                 width: 30%;
                 padding-right: 10px;
@@ -109,17 +110,18 @@ table {
         tbody {
             tr {
                 &:nth-child(4n-1) {
-                    background-color: #e3dedb;
+                    background-color:#eeebe9;
                 }
             }
         }
         th,
         td {
-            padding: 15px 8px;
+            padding: 15px 5px;
         }
         td {
-            border-right: #bfbfbf 1px solid;
-            border-bottom: #474646 1px solid;
+            border:none;
+            border-right: #bfbfbf 1px solid!important;
+            border-bottom: #474646 1px solid!important;
             color: #333;
             &.num {
                 text-align: center;

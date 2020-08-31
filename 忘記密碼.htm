@@ -88,11 +88,11 @@
                 <div class="breadcrumb">
                     <ul>
                         <li><a href="#">首頁</a></li>
-                        <li>查詢結果</li>
+                        <li>忘記密碼</li>
                     </ul>
                 </div>
                 <!-- h2節點 -->
-                <h2 class="title wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0s">查詢結果</h2>
+                <h2 class="title wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0s">忘記密碼</h2>
                 <!-- function功能區塊 -->
                 <div class="function">
                     <ul>
@@ -100,12 +100,36 @@
                     </ul>
                 </div>
                 <section class="sp">
-                    <!-- 無結果 start-->
-                    <div class="no_result_block">
-                        <div class="pic"><img src="images/icon_noresult.svg"></div>
-                        <div class="content">抱歉，查無相關資料，請重新查詢</div>
+                    <!-- 會員登入start -->
+                    <div class="member_block">
+                        <div class="explain_block">
+                            <div class="remind">提醒您，如果您忘了自己的密碼，請使用您之前在本站註冊時使用的電子郵件來變更您的密碼</div>
+                        </div>
+                        <div class="member_form_block">
+                            <form action="" class="form_grid flex-form">
+                                <div class="form_grp">
+                                    <label for="username" class="form_title">
+                                        <!-- <abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr> -->會員帳號</label>
+                                    <div class="form_content">
+                                        <input type="text" id="username" value="" placeholder="請填入E-mail">
+                                    </div>
+                                </div>
+                                <div class="form_grp">
+                                    <label for="selectSample" class="form_title">驗證碼</label>
+                                    <div class="form_content form_inline">
+                                        <input name="" type="text" value="" placeholder="請輸入右方驗證碼">
+                                        <img src="images/basic/captcha.gif" alt="" class="captcha">
+                                        <button class="btn">重新整理</button>
+                                    </div>
+                                </div>
+                                <div class="btn_grp">
+                                    <button class="btn btn-reset">清除</button>
+                                    <button class="btn btn-submit">確認送出</button>
+                                </div>
+                            </form>
+                        </div>
                     </div>
-                    <!-- 無結果 end-->
+                    <!-- 會員登入end -->
                 </section>
                 <!-- LP End -->
             </div>

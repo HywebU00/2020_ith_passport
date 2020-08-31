@@ -51,6 +51,7 @@ select::-ms-expand {
         @include screen('mobile') {
             width: 100%;
             text-align: left;
+            padding-top:0;
         }
     }
     .form_content {

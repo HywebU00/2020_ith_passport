@@ -88,24 +88,126 @@
                 <div class="breadcrumb">
                     <ul>
                         <li><a href="#">首頁</a></li>
-                        <li>查詢結果</li>
+                        <li>系統公告</li>
                     </ul>
                 </div>
                 <!-- h2節點 -->
-                <h2 class="title wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0s">查詢結果</h2>
+                <h2 class="title wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0s">系統公告</h2>
                 <!-- function功能區塊 -->
                 <div class="function">
                     <ul>
                         <li><a href="#">回上一頁</a></li>
                     </ul>
                 </div>
-                <section class="sp">
-                    <!-- 無結果 start-->
-                    <div class="no_result_block">
-                        <div class="pic"><img src="images/icon_noresult.svg"></div>
-                        <div class="content">抱歉，查無相關資料，請重新查詢</div>
+                <section class="lp">
+                    <!-- category -->
+                    <div class="category">
+                        <ul>
+                            <li><a href="#">全部</a></li>
+                            <li><a href="#">資料組</a></li>
+                            <li><a href="#">系統人員</a></li>
+                            <li><a href="#">其他</a></li>
+                        </ul>
                     </div>
-                    <!-- 無結果 end-->
+                    <!-- Pagination -->
+                    <div class="pagination pagination_flex">
+                        <form action="" class="form_inline">
+                            <div class="total"> 共<span>1691</span>筆資料 </div>
+                        </form>
+                        <ul class="page">
+                            <li class="first">
+                                <a href="#" title="第一頁">第一頁 </a></li>
+                            <li class="prev">
+                                <a href="#" title="回上一頁">回上一頁 </a></li>
+                            <li class="active"><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                            <li><a href="#">...</a></li>
+                            <!--  <li><a href="#">7</a></li>
+                                    <li><a href="#">8</a></li>
+                                    <li><a href="#">9</a></li>
+                                    <li><a href="#">10</a></li> -->
+                            <li class="next">
+                                <a href="#" title="下一頁">下一頁 </a>
+                            </li>
+                            <li class="last">
+                                <a href="#" title="最後一頁">最後一頁 </a>
+                            </li>
+                        </ul>
+                        <div class="sequence"><label for="">排序</label><select name="" id="selectSample">
+                                <option value="">識別號小到大</option>
+                                <option value="">識別號大到小</option>
+                                <option value="">州廳小到大</option>
+                                <option value="">州廳大到小</option>
+                                <option value="">姓名(正體字)小到大</option>
+                                <option value="">姓名(正體字)大到小</option>
+                            </select>
+                        </div>
+                    </div>
+                    <!-- 表格start -->
+                    <div class="table_list">
+                        <table class="table_sprite">
+                            <thead>
+                                <tr>
+                                    <th width="20%">發佈日期</th>
+                                    <th>標題</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="date">2020-05-20</td>
+                                    <td><a href="#">歡迎下載系統操作說明</a></td>
+                                </tr>
+                                <tr>
+                                    <td class="date">2020-05-12</td>
+                                    <td><a href="#">2020年3月23日進行系統維護</a></td>
+                                </tr>
+                                <tr>
+                                    <td class="date">2020-05-04</td>
+                                    <td><a href="#">2020年2月11日系統更新</a></td>
+                                </tr>
+                                <tr>
+                                    <td class="date">2020-05-20</td>
+                                    <td><a href="#">歡迎下載系統操作說明</a></td>
+                                </tr>
+                                <tr>
+                                    <td class="date">2020-05-12</td>
+                                    <td><a href="#">2020年3月23日進行系統維護</a></td>
+                                </tr>
+                                <tr>
+                                    <td class="date">2020-05-04</td>
+                                    <td><a href="#">2020年2月11日系統更新</a></td>
+                                </tr>
+                                <tr>
+                                    <td class="date">2020-05-20</td>
+                                    <td><a href="#">歡迎下載系統操作說明</a></td>
+                                </tr>
+                                <tr>
+                                    <td class="date">2020-05-12</td>
+                                    <td><a href="#">2020年3月23日進行系統維護</a></td>
+                                </tr>
+                                <tr>
+                                    <td class="date">2020-05-04</td>
+                                    <td><a href="#">2020年2月11日系統更新</a></td>
+                                </tr>
+                                <tr>
+                                    <td class="date">2020-05-20</td>
+                                    <td><a href="#">歡迎下載系統操作說明</a></td>
+                                </tr>
+                                <tr>
+                                    <td class="date">2020-05-12</td>
+                                    <td><a href="#">2020年3月23日進行系統維護</a></td>
+                                </tr>
+                                <tr>
+                                    <td class="date">2020-05-04</td>
+                                    <td><a href="#">2020年2月11日系統更新</a></td>
+                                </tr> 
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- 表格end -->
                 </section>
                 <!-- LP End -->
             </div>

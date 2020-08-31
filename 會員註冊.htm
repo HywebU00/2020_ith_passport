@@ -88,11 +88,11 @@
                 <div class="breadcrumb">
                     <ul>
                         <li><a href="#">首頁</a></li>
-                        <li>查詢結果</li>
+                        <li>會員註冊</li>
                     </ul>
                 </div>
                 <!-- h2節點 -->
-                <h2 class="title wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0s">查詢結果</h2>
+                <h2 class="title wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0s">會員註冊</h2>
                 <!-- function功能區塊 -->
                 <div class="function">
                     <ul>
@@ -100,12 +100,62 @@
                     </ul>
                 </div>
                 <section class="sp">
-                    <!-- 無結果 start-->
-                    <div class="no_result_block">
-                        <div class="pic"><img src="images/icon_noresult.svg"></div>
-                        <div class="content">抱歉，查無相關資料，請重新查詢</div>
+                    <!-- 會員登入start -->
+                    <div class="member_block">
+                        <div class="explain_block">
+                            <p>歡迎申請「臺灣總督府旅券系統」會員帳號，目前僅開放本國政府與教育機關所屬人員註冊，您的 E-Mail 信箱必須隸屬於下列網域 (即結尾相同)，系統方可核發帳號：<br>edu.tw<br>gov.tw</p>
+                            <p>註冊完成後，請登入系統並詳閱系統頁尾所連結之<a href="#">系統聲明</a>，並請您務必遵守相關的使用規範。<br> 帳號有效期為 2 年，屆滿後如欲再登入系統，將需重新認證。<br> 逾期過久未重新認證者，帳號將被逕行刪除，如欲續用請重新註冊。</p>
+                            <p>非本國政府與教育機關所屬人員，可至本所<a href="#">檔案館</a>流通室使用。<br> 若您現為相關機關所屬人員，但因 E-Mail 信箱不符規則而無法註冊，請透過<a href="#">我要提問</a>功能聯繫我們，謝謝。</p>
+                        </div>
+                        <div class="member_form_block">
+                            <div class="step_block">
+                                <ul>
+                                    <li>帳號及密碼設定</li>
+                                    <li>收取驗證信</li>
+                                    <li>申請成功</li>
+                                </ul>
+                            </div>
+                            <form action="" class="form_grid flex-form">
+                                <div class="form_grp">
+                                    <label for="username" class="form_title">
+                                        <!-- <abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr> -->會員帳號</label>
+                                    <div class="form_content">
+                                        <input type="text" id="username" value="" placeholder="請填入E-mail">
+                                    </div>
+                                </div>
+                                <div class="form_grp">
+                                    <label for="password" class="form_title">密碼</label>
+                                    <div class="form_content">
+                                        <input name="password" type="password" value="" placeholder="輸入6～20位英數字">
+                                    </div>
+                                </div>
+                                <div class="form_grp">
+                                    <label for="password" class="form_title">密碼再次確認</label>
+                                    <div class="form_content">
+                                        <input name="password" type="password" value="" placeholder="輸入6～20位英數字">
+                                    </div>
+                                </div>
+                                <div class="form_grp">
+                                    <label for="selectSample" class="form_title">驗證碼</label>
+                                    <div class="form_content form_inline">
+                                        <input name="" type="text" value="" placeholder="請輸入右方驗證碼">
+                                        <img src="images/basic/captcha.gif" alt="" class="captcha">
+                                        <button class="btn">重新整理</button>
+                                    </div>
+                                </div>
+                                <div class="btn_grp">
+                                    <button class="btn btn-reset">清除</button>
+                                    <button class="btn btn-submit">確認送出</button>
+                                </div>
+                                <div class="member_link">
+                                    <ul>
+                                        <li><a href="#">重寄驗證信</a></li>
+                                    </ul>
+                                </div>
+                            </form>
+                        </div>
                     </div>
-                    <!-- 無結果 end-->
+                    <!-- 會員登入end -->
                 </section>
                 <!-- LP End -->
             </div>

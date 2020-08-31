@@ -66,8 +66,17 @@
 .btn_grp {
     button {
         margin-right: 70px;
-        @media(max-width: 400px) {
+        @include screen('mobile') {
+            margin-right: 50px;
+        }
+        @media(max-width: 500px) {
             margin-right: 0;
+        }
+        &:last-child {
+            margin-right: 0;
+        }
+        &.btn {
+            font-weight: bolder;
         }
     }
     .btn-reset, .btn-submit {
@@ -78,8 +87,15 @@
         padding: 10px 0px;
         transition: .5s;
         width: 220px;
-        @media(max-width: 400px) {
-            width:150px;
+        @include screen('mobile') {
+            width: 170px;
+        }
+        @include screen('xs_mobile') {
+            width: 150px;
+        }
+        @media(max-width: 500px) {
+            width: 100%;
+            margin-left: 0;
             &:before {
                 display: none;
             }
@@ -105,8 +121,15 @@
             &:before {
                 right: -40px;
             }
-            @media(max-width: 400px) {
+            @include screen('mobile') {
+                width: 180px;
+            }
+            @include screen('xs_mobile') {
+                width: 160px;
+            }
+            @media(max-width: 500px) {
                 padding: 10px 0;
+                width: 100%;
             }
         }
     }

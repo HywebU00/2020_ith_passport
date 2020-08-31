@@ -85,6 +85,7 @@
             <!-- 內頁新增一個classname-->
             <a class="accesskey" href="#aC" id="aC" accesskey="C" title="主要內容區">:::</a>
             <div class="container">
+                <!-- breadcrumb路徑 -->
                 <div class="breadcrumb">
                     <ul>
                         <li><a href="#">首頁</a></li>
@@ -92,152 +93,67 @@
                     </ul>
                 </div>
                 <!-- h2節點 -->
-                <h2 class="title wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0s">系統公告</h2>
+                <h2 class="title wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0s">2020年3月23日進行系統維護</h2>
                 <!-- function功能區塊 -->
                 <div class="function">
                     <ul>
-                        <li><a href="#">回上一頁</a></li>
+                        <li class="print"><a href="#">友善列印</a></li>
+                        <li class="back"><a href="#">回上一頁</a></li>
                     </ul>
                 </div>
-                <section class="lp">
-                    <!-- category -->
-                    <div class="category">
-                        <ul>
-                            <li><a href="#">全部</a></li>
-                            <li><a href="#">資料組</a></li>
-                            <li><a href="#">系統人員</a></li>
-                            <li><a href="#">其他</a></li>
-                        </ul>
+                <ul class="publish_info">
+                    <li>發佈日期：2020-05-20</li>
+                    <li>發佈單位：臺灣史研究所</li>
+                </ul>
+                <!-- CP Start -->
+                <section class="cp">
+                    <div class="pic">
+                        <!-- 此範例為4:3比例 -->
+                        <picture>
+                            <source media="(min-width: 1200px)" srcset="images/cp_pic_maintain.png">
+                            <source media="(min-width: 992px)" srcset="images/cp_pic_maintain.png">
+                            <source media="(min-width: 576px)" srcset="images/cp_pic_maintain.png">
+                            <source media="(max-width: 575px)" srcset="images/cp_pic_maintain.png">
+                            <img data-src="images/cp_pic_maintain.png" class="lazy">
+                            <noscript><img src="images/cp_pic_maintain.png"></noscript>
+                        </picture>
+                        <!-- <span>圖說</span> -->
                     </div>
-                    <!-- Pagination -->
-                    <div class="pagination pagination_flex">
-                        <form action="" class="form_inline">
-                            <div class="total"> 共<span>1691</span>筆資料 </div>
-                        </form>
-                        <ul class="page">
-                            <li class="first">
-                                <a href="#" title="第一頁">第一頁 </a></li>
-                            <li class="prev">
-                                <a href="#" title="回上一頁">回上一頁 </a></li>
-                            <li class="active"><a href="#">1</a></li>
-                            <li><a href="#">2</a></li>
-                            <li><a href="#">3</a></li>
-                            <li><a href="#">4</a></li>
-                            <li><a href="#">5</a></li>
-                            <li><a href="#">...</a></li>
-                            <!--  <li><a href="#">7</a></li>
-                                    <li><a href="#">8</a></li>
-                                    <li><a href="#">9</a></li>
-                                    <li><a href="#">10</a></li> -->
-                            <li class="next">
-                                <a href="#" title="下一頁">下一頁 </a>
-                            </li>
-                            <li class="last">
-                                <a href="#" title="最後一頁">最後一頁 </a>
-                            </li>
-                        </ul>
-                        <div class="sequence"><label for="">排序</label><select name="" id="selectSample">
-                                <option value="">發布日期_升冪</option>
-                                <option value="">發布日期_降冪</option>
-                                <option value="">類別_升冪</option>
-                                <option value="">類別_降冪</option>
-                                <option value="">標題_升冪</option>
-                                <option value="">標題_降冪</option>
-                            </select>
-                        </div>
-                    </div>
-                    <!-- 文字列表 start-->
-                    <div class="list">
-                        <ul>
-                            <li>
-                                <a href="#">
-                                    <span class="num">1</span> 
-                                    <time>2020-05-20</time>
-                                    歡迎下載系統操作說明歡迎下載系統操作說明歡迎下載系統操作說明</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                     <span class="num">2</span> 
-                                    <time>2020-05-12</time>
-                                    2020年3月23日進行系統維護</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <span class="num">3</span> 
-                                    <time>2020-05-04</time>
-                                    2020年2月11日系統更新</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <span class="num">4</span> 
-                                    <time>2020-05-20</time>
-                                    歡迎下載系統操作說明歡迎下載系統操作說明歡迎下載系統操作說明</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                     <span class="num">5</span> 
-                                    <time>2020-05-12</time>
-                                    2020年3月23日進行系統維護</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <span class="num">6</span> 
-                                    <time>2020-05-04</time>
-                                    2020年2月11日系統更新</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <span class="num">7</span> 
-                                    <time>2020-05-20</time>
-                                    歡迎下載系統操作說明歡迎下載系統操作說明歡迎下載系統操作說明</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                     <span class="num">8</span> 
-                                    <time>2020-05-12</time>
-                                    2020年3月23日進行系統維護</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <span class="num">9</span> 
-                                    <time>2020-05-04</time>
-                                    2020年2月11日系統更新</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <span class="num">10</span> 
-                                    <time>2020-05-20</time>
-                                    歡迎下載系統操作說明歡迎下載系統操作說明歡迎下載系統操作說明</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                     <span class="num">11</span> 
-                                    <time>2020-05-12</time>
-                                    2020年3月23日進行系統維護</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <span class="num">12</span> 
-                                    <time>2020-05-04</time>
-                                    2020年2月11日系統更新</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <!-- 文字列表 end-->
+                    <p>為提供您更良好的服務及用戶體驗，本網站將在2020年3月23日進行系統升級與維護。</p>
+                    <p>感謝您的支持與造訪，我們將儘快完成作業，造成您的不便與困擾，敬請見諒。</p>
+                    <h3>注意事項</h3>
+                    <p>為提供您更良好的服務及用戶體驗，本網站將在2020年3月23日進行系統升級與維護。 感謝您的支持與造訪，我們將儘快完成作業，造成您的不便與困擾，敬請見諒。</p>
+                    <h3>說明事項</h3>
+                    <!-- <ul>
+                        <li>影開兒中不們西動會味理化由子常洲國有標題</li>
+                        <li>首動我行得流事個要使著獨操大</li>
+                        <li>推列黃上道有畫走長市上</li>
+                        <li>證會不就人推陸跑公片重</li>
+                        <li>處來在山工國生即工球一，易心個長什去實用當們公有也候</li>
+                    </ul> -->
+                    <ol>
+                        <li>期間暫停使用</li>
+                        <li>影響範圍，本網站功能皆無法使用</li>
+                        <li>若有任何問題請與本網服務專員接洽聯繫， <ul>
+                                <li>服務專員︰王小明</li>
+                                <li>服務電話︰02-123456789</li>
+                                <li>Email︰service@gmail.com</li>
+                            </ul>
+                        </li>
+                    </ol>
                 </section>
-                <!-- LP End -->
+                <!-- CP End -->
+                <!-- weblink 外部連結 -->
+                <!-- <div class="web_link">
+                    <h3>外部連結</h3>
+                    <ol>
+                        <li><a href="javscript:;">外部連結1</a></li>
+                        <li><a href="javscript:;">外部連結2</a></li>
+                        <li><a href="javscript:;">外部連結3</a></li>
+                        <li><a href="javscript:;">外部連結4</a></li>
+                        <li><a href="javscript:;">外部連結5</a></li>
+                    </ol>
+                </div> -->
             </div>
         </div>
         <!-- footer Start-->

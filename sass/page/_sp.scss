@@ -171,10 +171,9 @@
                 display: inline-block;
                 position: relative;
                 font-size: 1.063em;
-                @media(max-width: 400px){
-                     margin: 0 10px;
+                @media(max-width: 400px) {
+                    margin: 0 10px;
                 }
-                
                 &:after {
                     content: '';
                     border: 7px solid $secondaryColor;
@@ -192,7 +191,6 @@
                         color: $linkColor;
                     }
                 }
-                
             }
         }
     }
@@ -241,5 +239,46 @@
                 }
             }
         }
+    }
+}
+// 我要提問
+.ask_questions {
+    font-size: 1.25em;
+    .image {
+        float: left;
+        max-width: 577px;
+        img {
+            width: 100%;
+        }
+        @include screen('tablet'){
+             max-width: 430px;
+        }
+        @include screen('mobile'){
+            float: none;
+             max-width: 400px;
+             margin:0 auto;
+        }
+        @media(max-width: 450px){
+            max-width: 100%;
+        }
+    }
+    .content {
+        padding-top: 200px;
+        overflow:hidden;
+        @include screen('tablet'){
+            padding-top: 150px;
+        }
+        @include screen('mobile'){
+            padding:0 20px;
+        }
+        ul{
+            margin:0;
+            padding:0;
+            list-style-type: none;
+            li{
+                margin-bottom: 8px;
+            }
+        }
+
     }
 }

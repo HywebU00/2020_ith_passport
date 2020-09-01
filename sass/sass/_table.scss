@@ -50,7 +50,7 @@ table {
     }
     &.table_sprite {
         tr:nth-child(even) {
-             background-color:#eeebe9;
+            background-color: #eeebe9;
         }
     }
 }
@@ -78,7 +78,7 @@ table {
             border: none !important;
             border-bottom: 1px solid #ccc !important;
             position: relative;
-            padding:8px;
+            padding: 8px;
             padding-left: 35% !important;
             white-space: normal;
             text-align: left;
@@ -110,7 +110,7 @@ table {
         tbody {
             tr {
                 &:nth-child(4n-1) {
-                    background-color:#eeebe9;
+                    background-color: #eeebe9;
                 }
             }
         }
@@ -119,10 +119,13 @@ table {
             padding: 15px 5px;
         }
         td {
-            border:none;
-            border-right: #bfbfbf 1px solid!important;
-            border-bottom: #474646 1px solid!important;
+            border: none;
+            border-right: #bfbfbf 1px solid !important;
+            border-bottom: #474646 1px solid !important;
             color: #333;
+            @include screen('mobile'){
+                 border-bottom: #989898 1px solid !important;
+            }
             &.num {
                 text-align: center;
                 white-space: nowrap;
@@ -178,29 +181,63 @@ table {
                 td {
                     padding: 6px 8px;
                     font-size: 0.938em;
+
+                }
+            }
+            a {
+                &.share_link_btn, &.open_btn {
+                    display: inline-block;
+                    padding: 1px 5px 3px;
+                    @include gradient(#ddd, #b8b8b8, vertical);
+                    border-radius: 6px;
+                    @include screen('mobile') {
+                        width: 40px;
+                        text-align: center;
+                    }
+                }
+                &:hover {
+                    &.share_link_btn, &.open_btn {
+                        @include gradient(#b8b8b8, #b8b8b8, vertical);
+                    }
                 }
             }
         }
     }
 }
 .result_table {
+
     @include screen('mobile') {
+        table{
+             border-top:none;
+        }
         tr {
             border: 1px solid #ccc;
-            margin-bottom: 5px; // background-color: #333;
+            margin-bottom:10px; // background-color: #333;
             position: relative;
+             border-top: 4px solid #000;
             &:nth-child(even) {
                 border: none;
                 // margin-bottom: 0;
                 td {
                     padding-bottom: 0px !important;
                     padding-top: 0px !important;
+                    border-bottom: none !important;
+                    table{
+                        border-right:none !important;
+                        td{
+                            border-bottom: #474646 1px solid !important;
+                        }
+                    }
                 }
             }
+        }
+        th{
+            border-bottom: #474646 1px solid !important;
         }
         td {
             padding-bottom: 10px !important;
             padding-top: 10px !important;
+
             &:first-child {
                 padding-bottom: 20px !important;
                 padding-top: 15px !important;
@@ -220,11 +257,12 @@ table {
             }
             table {
                 border: 1px solid #ccc !important;
+
                 tr {
                     // display: block;
                     margin-bottom: 0;
                     border: none;
-                    border-bottom: 1px solid #ccc !important;
+                    border-bottom:none !important;
                     clear: both;
                     float: none;
                     display: flex;
@@ -247,6 +285,8 @@ table {
                     flex-basis: calc(100% - 120px);
                     max-width: calc(100% - 120px);
                     width: auto;
+                    border-right: none !important;
+                     border-bottom-color:#989898 !important;
                     @media(max-width: 380px) {
                         flex-basis: calc(100% - 35%);
                         max-width: calc(100% - 35%);

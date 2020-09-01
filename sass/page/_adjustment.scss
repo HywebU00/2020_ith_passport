@@ -1,0 +1,119 @@
+// 矯正
+body.large_size {
+    // 旅行地點分佈
+    .travel_location_block {
+        height: 770px;
+        .map_pic {
+            img {
+                height: 100%;
+            }
+        }
+    }
+    // menu
+    .menu {
+        >ul {
+            >li {
+                >a {
+                    padding: 0 .4em;
+                    @include screen('tablet') {
+                        padding: 0 .3em;
+                    }
+                }
+                &.hasChild {
+                    >a {
+                        &:after {
+                            right: -9px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // 旅券瀏覽
+    .year_browsing div {
+        padding: 10px 0px 10px 35px;
+        &:first-child {
+            padding: 10px 15px;
+        }
+    }
+    .year_browsing2 {
+        @media(max-width: 850px) {
+            padding-right: 0;
+        }
+        div {
+            padding: 10px 0px 10px 25px;
+            &:first-child {
+                padding: 10px 15px;
+            }
+            @media(max-width:850px) {
+                &.period01, &.period02, &.period03 {
+                    flex-basis: 33%;
+                    width: 33%;
+                }
+                &:after {
+                    border: 15px solid #ccc;
+                    border-top-color: transparent;
+                    border-right-color: transparent;
+                    border-bottom-color: transparent;
+                    right: -25px;
+                }
+                &.period01 {
+                    &:after {
+                        border-left-color: #bc8e57;
+                    }
+                }
+                &.period02 {
+                    &:after {
+                        border-left-color: #bf575e;
+                    }
+                }
+                &.period03 {
+                    &:after {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+    // 專題旅券
+    .topic_passport_block {
+       height: 950px;
+        .topic_slider {
+            .topic_content {
+                p {
+                    height: 155px;
+                }
+            }
+        }
+    }
+}
+// 小字
+body.small_size {
+    // 旅券瀏覽
+    .year_browsing2 {
+        div {
+            &:after {
+                border-width: 34px;
+                right: -68px;
+                @include screen('mobile') {
+                    border-width: 26px;
+                    right: -52px;
+                }
+                @include screen('xs_mobile') {
+                    border-width: 15px;
+                    right: -25px;
+                }
+            }
+        }
+    }
+    // 專題旅券
+    .topic_passport_block {
+        .topic_slider {
+            .topic_content {
+                p {
+                    height: 155px;
+                }
+            }
+        }
+    }
+}

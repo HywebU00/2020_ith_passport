@@ -486,7 +486,7 @@ $(function() {
 })
 $(function() {
     $('.menu_group01').click(function(e) {
-        $('body,html').stop(true, true).animate({ scrollTop: $('.groupA').offset().top - 90 }, 200, 'easeOutExpo');
+        $(' body,html').stop(true, true).animate({ scrollTop: $('.groupA').offset().top - 90 }, 200, 'easeOutExpo');
     });
     $('.menu_group02').click(function(e) {
         $('body,html').stop(true, true).animate({ scrollTop: $('.groupB').offset().top - 70 }, 200, 'easeOutExpo');
@@ -540,5 +540,11 @@ $(function() {
     $('.search_result_content .content_rightblock .close>a').click(function() {
         $('.search_result_content .content_rightblock').css('right', '-100%');
         $('body').removeClass('fix');
+    })
+})
+// 按進階查詢後，高度為auto
+$(function(){
+    $('.passport_search .tabSet .advancedbtn').click(function(){
+        $(this).parents('.passport_search .tabSet').addClass('add_blockheight')
     })
 })

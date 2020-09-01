@@ -20,6 +20,12 @@ body {
         width: 100%;
         position: fixed;
     }
+     &.small_size {
+        font-size: .938em;
+    }
+    &.large_size {
+        font-size: 1.125em;
+    }
 }
 // 最外圍預設為100%
 .wrapper {
@@ -37,6 +43,7 @@ body {
     margin: 0 auto;
     max-width: $container-max; //請看_variable.scss
     @include gutter(); //gutter 代表左右要留白
+    // outline: 1px solid red;
 }
 .main {
     position: relative;

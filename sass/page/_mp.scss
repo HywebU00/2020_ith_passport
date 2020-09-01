@@ -16,6 +16,9 @@
         @include aspect-ratio(5, 2);
     }
 }
+.main section {
+    overflow: hidden;
+}
 // 廣告輪播
 .adSlider {
     @include gutter(30px);
@@ -162,8 +165,12 @@
         }
     }
 }
-// 旅券查詢
+//1 旅券查詢
 .passport_search_block {
+    // height: 522px;
+    @include screen('tablet'){
+        height: auto;
+    }
     >.container {
         position: relative;
         &:before {
@@ -348,12 +355,17 @@
         }
     }
 }
-// 旅券瀏覽
+//2 旅券瀏覽
 .passport_browse_block {
     background-image: url('../images/passport_browse_bg.jpg');
     background-position: center top;
     background-repeat: repeat;
     padding: 30px 0 0 0;
+    height: 676px;
+    @include box-sizing;
+    @include screen('tablet'){
+        height: auto;
+    }
 }
 .passport_browse {
     text-align: left;
@@ -366,7 +378,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-right: 32px;
+    padding-right: 36px;
     margin-bottom: 20px;
     @include screen('tablet') {
         flex-wrap: wrap;
@@ -398,7 +410,7 @@
             border-right-color: transparent;
             border-bottom-color: transparent;
             position: absolute;
-            right: -71px;
+            right: -72px;
             top: 0;
             z-index: 1;
             @include screen('mobile') {
@@ -573,7 +585,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-right: 32px;
+    padding-right: 36px;
     margin-bottom: 20px;
     @include screen('tablet') {
         flex-wrap: wrap;
@@ -606,7 +618,7 @@
             border-right-color: transparent;
             border-bottom-color: transparent;
             position: absolute;
-            right: -71px;
+            right: -72px;
             top: 0;
             z-index: 1;
             @include screen('mobile') {
@@ -919,9 +931,14 @@
         right: -35px;
     }
 }
-// 旅行地點分佈
+//3 旅行地點分佈
 .travel_location_block {
     padding: 50px 0 60px;
+    height: 740px;
+    @include screen('tablet'){
+        height: auto;
+    }
+    @include box-sizing;
     .container {
         @include gutter(80px);
     }
@@ -1612,7 +1629,7 @@
         }
     }
 }
-// 旅行目的
+//4 旅行目的
 .travel_purpose_block {
     background-image: url('../images/travel_purpose_bg.jpg');
     background-repeat: no-repeat;
@@ -1620,6 +1637,10 @@
     // min-height: 900px;
     background-color: #e0d3c1;
     position: relative;
+    height: 699px;
+    @include screen('tablet'){
+        height: auto;
+    }
     &:before {
         content: '';
         background-image: url('../images/travel_purpose_beforebg.png');
@@ -1713,12 +1734,17 @@
         }
     }
 }
-// 專題旅券
+//5 專題旅券
 .topic_passport_block {
     background-image: url('../images/topic_passport_bg.jpg');
     background-repeat: repeat;
     background-position: center top;
     padding: 60px 0 80px;
+    height: 920px;
+    @include box-sizing;
+    @include screen('tablet'){
+        height: auto;
+    }
     .container {
         @include gutter(80px);
     }

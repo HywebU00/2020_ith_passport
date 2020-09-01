@@ -79,12 +79,32 @@
     }
 }
 //多組 可設定差異
-.example-2 {
+.passport_search, .passport_browse {
     .tabItem>a:hover {
         background: $secondaryColor;
     }
     .tabItem.active>a {
         background: $secondaryColor;
+    }
+}
+.passport_search{
+    .tabSet{
+        height: 380px;
+        @include screen('tablet'){
+            height: auto;
+        }
+        &.add_blockheight{
+            height: auto;
+        }
+    }
+}
+.passport_browse{
+    .tabSet{
+        height: 502px;
+        @include screen('tablet'){
+            height: auto;
+        }
+
     }
 }
 // 顯示content
@@ -99,7 +119,6 @@
     clear: both;
     padding: 30px 0px 0;
     display: none;
-    // max-height: 500px;
     @include screen('mobile') {
         position: static;
     }

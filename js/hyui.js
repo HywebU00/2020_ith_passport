@@ -32,11 +32,9 @@ $(function() {
     /*-----------------------------------*/
     /////// header選單 tab及 fix設定////////
     /*-----------------------------------*/
-
     var _menu = $('.menu');
     _menu.find('li').has('ul').addClass('hasChild');
     var liHasChild = _menu.find('li.hasChild');
-
     /*-----------------------------------*/
     ////////////// 行動版選單切換////////////
     /*-----------------------------------*/
@@ -216,7 +214,7 @@ $(function() {
         search_mode = false;
     });
     // 固定版頭
-     // hh = Math.floor($('.header').outerHeight(true));
+    // hh = Math.floor($('.header').outerHeight(true));
     if ($('header .menu').length > 0) {
         var stickyMenuTop = Math.floor($('header .menu').offset().top);
         // console.log(stickyMenuTop);
@@ -388,11 +386,12 @@ $(function() {
         resizeTimer1 = setTimeout(function() {
             ww = _window.outerWidth();
             tabSet();
+            tabSet2();
         }, 50);
     });
 
     function tabSet() {
-        $('.tabs').each(function() {
+        $('.passport_search_tab').each(function() {
             var _tab = $(this),
                 _tabItem = _tab.find('.tabItem'),
                 _tabItemA = _tabItem.children('a'),
@@ -409,7 +408,6 @@ $(function() {
                 _tab.height(tabContentHeight + tabItemHeight);
                 // tabItemWidth = (tabwidth - (tabItemLength - 1) * tiGap) / tabItemLength;
                 _tabItem.width(tabItemWidth).css('margin-left', tiGap);
-                
                 _tabItem.first().css('margin-left', 0);
                 // _tabItem.last().css({ 'position': 'absolute', 'top': 0, 'right': 0 }).width(tabItemWidth);
             } else {
@@ -438,8 +436,8 @@ $(function() {
                     // _tabItem.not('.active').next().hide();
                     // _tabItemNow.next().show();
                     // 抓到slick的寬高
-                     _tabItem.not('.active').next().fadeOut();
-                     _tabItemNow.next().fadeIn("0", function() {
+                    _tabItem.not('.active').next().fadeOut();
+                    _tabItemNow.next().fadeIn("0", function() {
                         $('.slider-time').slick("setPosition", 0);
                     });
                     tabContentHeight = _tabItemNow.next().innerHeight();
@@ -449,8 +447,68 @@ $(function() {
             }
         });
     }
-    $('.tabs>.tabItem:first-child>a').trigger('click');
+
+    function tabSet2() {
+        $('.passport_browse_tab').each(function() {
+            var _tab = $(this),
+                _tabItem = _tab.find('.tabItem'),
+                _tabItemA = _tabItem.children('a'),
+                _tabContent = _tab.find('.tabContent'),
+                tabwidth = _tab.width(),
+                tabItemHeight = _tabItem.outerHeight(),
+                tabContentHeight = _tab.find('.active').next().innerHeight(),
+                tiGap = 10,
+                tabItemLength = _tabItem.length,
+                tabItemWidth;
+            _tab.find('.active').next('.tabContent').show();
+            if (ww >= wwSmall) {
+                _tabContent.css('top', tabItemHeight);
+                _tab.height(tabContentHeight + tabItemHeight);
+                // tabItemWidth = (tabwidth - (tabItemLength - 1) * tiGap) / tabItemLength;
+                _tabItem.width(tabItemWidth).css('margin-left', tiGap);
+                _tabItem.first().css('margin-left', 0);
+                // _tabItem.last().css({ 'position': 'absolute', 'top': 0, 'right': 0 }).width(tabItemWidth);
+            } else {
+                _tab.css('height', 'auto');
+                // _tabItem.width(tabwidth);
+                _tabItem.css('margin-left', 0).last().css('position', 'relative');
+            }
+            _tabItemA.focus(tabs);
+            _tabItemA.click(tabs);
+
+            function tabs(e) {
+                var _tabItemNow = $(this).parent(),
+                    tvp = _tab.offset().top,
+                    tabIndex = _tabItemNow.index() / 2,
+                    scollDistance = tvp + tabItemHeight * tabIndex - hh;
+                _tabItem.removeClass('active');
+                _tabItemNow.addClass('active');
+                if (ww <= wwSmall) {
+                    _tabItem.not('.active').next().slideUp();
+                    // _tabItemNow.next().slideDown();
+                    _tabItemNow.next().slideDown("0", function() {
+                        $('.slider-time').slick("setPosition", 0);
+                    });
+                    $("html,body").stop(true, false).animate({ scrollTop: scollDistance });
+                } else {
+                    // _tabItem.not('.active').next().hide();
+                    // _tabItemNow.next().show();
+                    // 抓到slick的寬高
+                    _tabItem.not('.active').next().fadeOut();
+                    _tabItemNow.next().fadeIn("0", function() {
+                        $('.slider-time').slick("setPosition", 0);
+                    });
+                    tabContentHeight = _tabItemNow.next().innerHeight();
+                    _tab.height(tabContentHeight + tabItemHeight);
+                }
+                e.preventDefault();
+            }
+        });
+    }
+    $('.passport_search_tab>.tabItem:first-child>a').trigger('click');
     tabSet();
+    $('.passport_browse_tab>.tabItem:first-child>a').trigger('click');
+    tabSet2();
     /*-----------------------------------*/
     ///////////////置頂go to top////////////
     /*-----------------------------------*/
@@ -462,7 +520,7 @@ $(function() {
         }
     });
     // 
-     $(window).bind('scroll', function() {
+    $(window).bind('scroll', function() {
         if ($(this).scrollTop() > 200) {
             $('.share_link').fadeIn();
         } else {
@@ -556,19 +614,19 @@ $(function() {
     $('.font_size').find('.medium').addClass('active');
     $('.font_size').find('.small').click(function(e) {
         $(this).parent('li').siblings('li').find('a').removeClass('active');
-        $('.cp').removeClass('large_size').addClass('small_size');
+        $('body').removeClass('large_size').addClass('small_size');
         $(this).addClass('active');
         e.preventDefault();
     });
     $('.font_size').find('.medium').click(function(e) {
         $(this).parent('li').siblings('li').find('a').removeClass('active');
-        $('.cp').removeClass('large_size small_size');
+        $('body').removeClass('large_size small_size');
         $(this).addClass('active');
         e.preventDefault();
     });
     $('.font_size').find('.large').click(function(e) {
         $(this).parent('li').siblings('li').find('a').removeClass('active');
-        $('.cp').removeClass('small_size').addClass('large_size');
+        $('body').removeClass('small_size').addClass('large_size');
         $(this).addClass('active');
         e.preventDefault();
     });

@@ -3,7 +3,7 @@
      margin: 0px auto 1em;
      @extend %clearfix;
      p {
-         font-size: .813em;
+         font-size: .938em;
          kbd {
              border: 1px solid #AAA;
              background: transparent;
@@ -28,7 +28,8 @@
  $sitemapWidth:100%/ $sitemapLength;
  .cascading {
      border-top: 1px solid #CCC;
-     @include gutter;
+     padding-top:20px;
+     // @include gutter;
      @include box-sizing;
      ul {
          @include li-reset;

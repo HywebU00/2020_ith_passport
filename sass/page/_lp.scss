@@ -39,6 +39,9 @@
                     line-height: 1.8em;
                     color: $color-word;
                     @include text-overflow;
+                    @include screen('xs_mobile'){
+                        white-space: normal;
+                    }
                     &:hover {
                         color: $aHover;
                     }
@@ -79,6 +82,9 @@
                     display: inline-block;
                     color: $secondaryColor;
                     margin: 0 20px 0 0px;
+                    @include screen('xs_mobile'){
+                        display: block;
+                    }
                 }
             }
         }

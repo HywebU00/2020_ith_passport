@@ -168,7 +168,7 @@
 //1 旅券查詢
 .passport_search_block {
     // height: 522px;
-    @include screen('tablet'){
+    @include screen('tablet') {
         height: auto;
     }
     >.container {
@@ -256,7 +256,7 @@
         }
         .field {
             select, input[type="text"] {
-                width: 30%;
+                width: 43%;
                 @include screen('xs_mobile') {
                     width: 100%;
                 }
@@ -282,7 +282,7 @@
             }
             .title {
                 flex: none;
-                width: 100px;
+                width: 140px;
                 color: $primaryColor;
                 text-align: right;
                 @include screen('mobile') {
@@ -353,6 +353,96 @@
                 }
             }
         }
+        // 
+        .form_grid {
+            .form_title {
+                &.add_boolean {
+                    width: 220px;
+                    flex: 0 0 220px;
+                    display: flex;
+                    align-items: center;
+                    padding-top: 0;
+                    justify-content: flex-end;
+                    select {
+                        flex: none;
+                        margin-right: 25px;
+                        width: 60%;
+                    }
+                    @include screen('mobile') {
+                        width: 100%;
+                        flex: 0 0 100%;
+                        justify-content: flex-start;
+                        select {
+                            width: 65%;
+                            margin-right: 5px;
+                            
+                        }
+                    }
+                }
+            }
+            .form_content {
+                &.extra_wide {
+                    width: calc(100% - 220px) !important;
+                    flex-basis: calc(100% - 220px) !important;
+                    @include screen('xs_mobile') {
+                        width: 100% !important;
+                        flex-basis: 100% !important;
+                    }
+                }
+            }
+        }
+    }
+    // 查詢記錄
+    .recording {
+        display: flex;
+        border: 1px solid #79634a;
+        background-color: #fff;
+        padding: 20px 30px;
+        box-shadow: 0 0 5px #ccc;
+        @include box-sizing;
+        @include screen('mobile') {
+            margin-bottom: 30px;
+        }
+        @include screen('xs_mobile') {
+            display: block;
+        }
+        @media(max-width:480px) {
+            padding: 20px;
+        }
+        .title {
+            flex: none;
+            width: 140px;
+            color: #79634a;
+            text-align: right;
+            @include screen('mobile') {
+                text-align: left;
+            }
+            @include screen('xs_mobile') {
+                margin-bottom: 10px;
+            }
+        }
+        .content {
+            flex: auto;
+            padding: 0 0 0 20px;
+            @include screen('mobile') {
+                padding: 0 0 0 10px;
+            }
+            ul {
+                margin: 0;
+                padding: 0;
+                list-style-type: none;
+                li {
+                    margin: 0 0 10px 0;
+                    padding: 0;
+                    line-height: 1.6;
+                    a {
+                        color: #222;
+                        text-decoration: none;
+                        display: block;
+                    }
+                }
+            }
+        }
     }
 }
 //2 旅券瀏覽
@@ -363,7 +453,7 @@
     padding: 30px 0 0 0;
     height: 676px;
     @include box-sizing;
-    @include screen('tablet'){
+    @include screen('tablet') {
         height: auto;
     }
 }
@@ -935,7 +1025,7 @@
 .travel_location_block {
     padding: 50px 0 60px;
     height: 740px;
-    @include screen('tablet'){
+    @include screen('tablet') {
         height: auto;
     }
     @include box-sizing;
@@ -1638,7 +1728,7 @@
     background-color: #e0d3c1;
     position: relative;
     height: 699px;
-    @include screen('tablet'){
+    @include screen('tablet') {
         height: auto;
     }
     &:before {
@@ -1742,7 +1832,7 @@
     padding: 60px 0 80px;
     height: 920px;
     @include box-sizing;
-    @include screen('tablet'){
+    @include screen('tablet') {
         height: auto;
     }
     .container {

@@ -89,7 +89,7 @@
 }
 .passport_search{
     .tabSet{
-        height: 380px;
+        height: 233px;
         @include screen('tablet'){
             height: auto;
         }
@@ -163,40 +163,40 @@
             }
         }
         // 查詢記錄
-        .recording {
-            display: flex;
-            border: 1px solid #79634a;
-            background-color: #fff;
-            padding: 20px 30px;
-            box-shadow: 0 0 5px #ccc;
-            @include box-sizing;
-            @include screen('mobile'){
-                margin-bottom: 30px;
-            }
-            @include screen('xs_mobile'){
-                display: block;
-            }
-             @media(max-width:480px ){
-                padding:20px ;
-            }
-            .title {
-                flex: none;
-                width: 100px;
-                color: #79634a;
-                text-align: right;
-                @include screen('mobile'){
-                    text-align: left;
-                }
-                 @include screen('xs_mobile'){
-                    margin-bottom: 10px;
-                }
-            }
-            .content {
-                flex: auto;
-                padding: 0 0 0 20px;
-                @include screen('mobile'){
-                    padding: 0 0 0 10px;
-                }
-            }
-        }
+        // .recording {
+        //     display: flex;
+        //     border: 1px solid #79634a;
+        //     background-color: #fff;
+        //     padding: 20px 30px;
+        //     box-shadow: 0 0 5px #ccc;
+        //     @include box-sizing;
+        //     @include screen('mobile'){
+        //         margin-bottom: 30px;
+        //     }
+        //     @include screen('xs_mobile'){
+        //         display: block;
+        //     }
+        //      @media(max-width:480px ){
+        //         padding:20px ;
+        //     }
+        //     .title {
+        //         flex: none;
+        //         width: 100px;
+        //         color: #79634a;
+        //         text-align: right;
+        //         @include screen('mobile'){
+        //             text-align: left;
+        //         }
+        //          @include screen('xs_mobile'){
+        //             margin-bottom: 10px;
+        //         }
+        //     }
+        //     .content {
+        //         flex: auto;
+        //         padding: 0 0 0 20px;
+        //         @include screen('mobile'){
+        //             padding: 0 0 0 10px;
+        //         }
+        //     }
+        // }
 }

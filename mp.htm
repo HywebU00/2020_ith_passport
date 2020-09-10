@@ -110,7 +110,7 @@
                                                 <div class="form_grp">
                                                     <label for="" class="form_title">全文檢索</label>
                                                     <div class="form_content form_inline simple">
-                                                        <input name="" type="text" placeholder="輸入關鍵字">
+                                                        <input name="" type="text" placeholder="輸入關鍵字，多值請以空白區隔，例︰陳澄波  上海">
                                                         <input name="" type="submit" title="搜尋" value="搜尋" />
                                                     </div>
                                                 </div>
@@ -128,7 +128,7 @@
                                         </div>
                                         <!-- 表單區塊 end -->
                                         <!-- 查詢記錄 start-->
-                                        <div class="recording">
+                                        <!-- <div class="recording">
                                             <div class="title"> 查詢紀錄</div>
                                             <div class="content">
                                                 <ul>
@@ -137,7 +137,7 @@
                                                     <li><a href="#">旅券下付表</a></li>
                                                 </ul>
                                             </div>
-                                        </div>
+                                        </div> -->
                                         <!-- 查詢記錄 end-->
                                     </div>
                                     <div class="tabItem advancedbtn"><a href="#">進階查詢</a></div>
@@ -168,8 +168,8 @@
                                             <!-- 查詢方式說明燈箱 end-->
                                             <form action="" class="form_grid">
                                                 <div class="form_grp">
-                                                    <label for="username" class="form_title">查詢欄位</label>
-                                                    <div class="form_content form_inline field">
+                                                    <label for="username" class="form_title add_boolean">查詢欄位</label>
+                                                    <div class="form_content form_inline field extra_wide "">
                                                         <select id="selectSample" name="">
                                                             <option value="">請選擇</option>
                                                             <option value="">不限欄位</option>
@@ -180,17 +180,17 @@
                                                             <option value="">旅行地名</option>
                                                         </select>
                                                         <input name="" type="text" placeholder="輸入關鍵字">
-                                                        <select id="selectSample" name="">
-                                                            <option value="">請選擇布林值</option>
-                                                            <option value="">且(AND)</option>
-                                                            <option value="">或(OR)</option>
-                                                            <option value="">非(ONT)</option>
-                                                        </select>
+                                                       
                                                     </div>
                                                 </div>
                                                 <div class="form_grp">
-                                                    <label for="username" class="form_title">查詢欄位</label>
-                                                    <div class="form_content form_inline field">
+                                                    <label for="username" class="form_title add_boolean"> <select id="selectSample" name="">
+                                                            <option value="">請選擇布林值</option>
+                                                            <option value="">且(AND)</option>
+                                                            <option value="">或(OR)</option>
+                                                            <option value="">非(ONT)</option>
+                                                        </select>查詢欄位</label>
+                                                    <div class="form_content form_inline field extra_wide ">
                                                         <select id="selectSample" name="">
                                                             <option value="">請選擇</option>
                                                             <option value="">不限欄位</option>
@@ -201,12 +201,6 @@
                                                             <option value="">旅行地名</option>
                                                         </select>
                                                         <input name="" type="text" placeholder="輸入關鍵字">
-                                                        <select id="selectSample" name="">
-                                                            <option value="">請選擇布林值</option>
-                                                            <option value="">且(AND)</option>
-                                                            <option value="">或(OR)</option>
-                                                            <option value="">非(ONT)</option>
-                                                        </select>
                                                         <span class="field_pic"><a href="#"><img src="images/icon_add_field.png"></a></span>
                                                     </div>
                                                 </div>
@@ -337,7 +331,7 @@
                                         </div>
                                         <!-- 表單區塊 end -->
                                         <!-- 查詢記錄 start-->
-                                        <div class="recording">
+                                        <!-- <div class="recording">
                                             <div class="title">查詢記錄</div>
                                             <div class="content">
                                                 <ul>
@@ -346,12 +340,24 @@
                                                     <li><a href="#">不限欄位=張木生 OR 不限欄位=臺北縣 NOT 不限欄位=旅券下付表</a></li>
                                                 </ul>
                                             </div>
-                                        </div>
+                                        </div> -->
                                         <!-- 查詢記錄 end-->
                                     </div>
                                 </section>
                             </div>
                             <!-- 頁籤end -->
+                            <!-- 查詢記錄 start-->
+                            <div class="recording">
+                                <div class="title">查詢記錄</div>
+                                <div class="content">
+                                    <ul>
+                                        <li><a href="#">姓名（正體字）=張木生 OR 申請州廳=臺北縣 NOT 旅券類型=旅券下付表</a></li>
+                                        <li><a href="#">姓名（正體字）=張木生 AND 不限欄位=臺北縣 OR 旅券類型=旅券下付表 NOT 旅行目的=家族引取 </a></li>
+                                        <li><a href="#">不限欄位=張木生 OR 不限欄位=臺北縣 NOT 不限欄位=旅券下付表</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- 查詢記錄 end-->
                         </div>
                         <!-- 旅券查詢 end -->
                     </div>

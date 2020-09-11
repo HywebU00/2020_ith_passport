@@ -116,11 +116,11 @@
                     <!-- 查詢結果區塊 start-->
                     <div class="search_result_content">
                         <div class="content_leftblock">
-                            <div class="result_sort">查詢類別為不限欄位=<span>1897 AND</span> 申請=臺北縣</div>
+                            <div class="result_sort">查詢條件：不限欄位=<em >1897 AND</em > 申請=臺北縣<span>第一排序識別號小到大、第二排序州廳小到大、第三排序姓名大到小</span></div>
                             <!-- Pagination -->
-                            <div class="pagination">
+                            <div class="pagination pagination_flex">
                                 <form action="" class="form_inline">
-                                    <div class="total"> 共<span>1691</span>筆資料，已選<span>2</span>筆(上限<em>300</em>筆) <input type="image" name="" value="" placeholder="關閉">
+                                    <div class="total"> 共<span>1691</span>筆資料
                                     </div>
                                 </form>
                                 <ul class="page">
@@ -145,7 +145,7 @@
                                         <a href="#" title="最後一頁">最後一頁 </a>
                                     </li>
                                 </ul>
-                                <div class="sequence"><label for="">排序</label><select name="" id="selectSample">
+                                <!-- <div class="sequence"><label for="">排序</label><select name="" id="selectSample">
                                         <option value="">識別號小到大</option>
                                         <option value="">識別號大到小</option>
                                         <option value="">州廳小到大</option>
@@ -153,11 +153,12 @@
                                         <option value="">姓名(正體字)小到大</option>
                                         <option value="">姓名(正體字)大到小</option>
                                     </select>
-                                </div>
+                                </div> -->
                             </div>
                             <!-- 表格 內容 start-->
                             <!--  全選992px以下才出現 -->
                             <div class="select_all"><input type="checkbox" name="" value="">全選</div>
+                            <div class="delcheck">已勾選<em>2</em>筆(上限300筆)<input type="button"  name="" value="取消勾選" ></div>
                             <div class="table_list result_table">
                                 <table>
                                     <thead>

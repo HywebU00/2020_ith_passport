@@ -227,21 +227,21 @@ $(function() {
             }
         }]
     });
-    var slideLength = $('.slider-time div').length,
-        slideIndex = $('.slide-time div').index();
-    // console.log(slideLength);
-    // console.log(slideIndex);
-    $('.slider-time').children('div').eq(slideIndex).find('a').off().click(function(e) {
-        slideIndex = $(this).parent().index();
-        $('.content').find('a:first').focus();
-        $(this).parent().addClass('now');
-        console.log(slideIndex);
-        e.preventDefault();
-    });
-    $('.content').find('a:last').focusout(function(e) {
-        $('.slider-time').children('.now').next('div').find('a').focus();
-    });
-    // 
+    // var slideLength = $('.slider-time div').length,
+    //     slideIndex = $('.slide-time div').index();
+    // // console.log(slideLength);
+    // // console.log(slideIndex);
+    // $('.slider-time').children('div').eq(slideIndex).find('a').off().click(function(e) {
+    //     slideIndex = $(this).parent().index();
+    //     $('.content').find('a:first').focus();
+    //     $(this).parent().addClass('now');
+    //     console.log(slideIndex);
+    //     e.preventDefault();
+    // });
+    // $('.content').find('a:last').focusout(function(e) {
+    //     $('.slider-time').children('.now').next('div').find('a').focus();
+    // });
+    
 })
 // 旅券瀏覽2
 $(function() {
@@ -285,21 +285,21 @@ $(function() {
             }
         }]
     });
-    var slideLength = $('.slider-time2 div').length,
-        slideIndex = $('.slide-time2 div').index();
-    // console.log(slideLength);
-    // console.log(slideIndex);
-    $('.slider-time2').children('div').eq(slideIndex).find('a').off().click(function(e) {
-        slideIndex = $(this).parent().index();
-        $('.content').find('a:first').focus();
-        $(this).parent().addClass('now');
-        console.log(slideIndex);
-        e.preventDefault();
-    });
-    $('.content').find('a:last').focusout(function(e) {
-        $('.slider-time2').children('.now').next('div').find('a').focus();
-    });
-    // 
+    // var slideLength = $('.slider-time2 div').length,
+    //     slideIndex = $('.slide-time2 div').index();
+    // // console.log(slideLength);
+    // // console.log(slideIndex);
+    // $('.slider-time2').children('div').eq(slideIndex).find('a').off().click(function(e) {
+    //     slideIndex = $(this).parent().index();
+    //     $('.content').find('a:first').focus();
+    //     $(this).parent().addClass('now');
+    //     console.log(slideIndex);
+    //     e.preventDefault();
+    // });
+    // $('.content').find('a:last').focusout(function(e) {
+    //     $('.slider-time2').children('.now').next('div').find('a').focus();
+    // });
+    
 })
 // 地點分佈
 $(function() {

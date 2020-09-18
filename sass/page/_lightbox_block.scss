@@ -18,8 +18,8 @@
 }
 // 關閉按鈕
 .fancybox-content button:hover, .fancybox-content button:focus {
-    background-color: transparent !important;
-    border: 1px solid transparent !important;
+    // background-color: transparent !important;
+    // border: 1px solid transparent !important;
 }
 .fancybox-slide--html .fancybox-close-small {
     padding: 0;
@@ -57,7 +57,7 @@
         padding-bottom: .5em;
         padding-left: 1em;
         margin-bottom: 1em;
-        color:$primaryColor;
+        color: $primaryColor;
         font-size: 1.5em;
         font-weight: 700;
         position: relative;
@@ -78,38 +78,42 @@
         padding: 0;
         // overflow-y: auto;
         line-height: 1.9em;
-        
-        
         h4 {
             margin: 0 0 10px 0;
             padding: 0;
             font-size: 1.125em;
             color: #bf575e;
         }
-        ul{
+        ul {
             list-style-type: none;
-            margin:0 0 30px;
-            padding:0 0 20px;
+            margin: 0 0 30px;
+            padding: 0 0 20px;
             border-bottom: 1px dashed #ccc;
-            li{
-                margin:0 0 5px;
+            li {
+                margin: 0 0 5px;
             }
         }
-        .datalist_blcok{
-            padding:20px 20px 10px;
-            border-radius:5px;
-            background-color:#ddd;
+        .datalist_blcok {
+            padding: 20px 20px 10px;
+            border-radius: 5px;
+            background-color: #ddd;
             margin-bottom: 15px;
-            label{
+            label {
                 display: block;
                 margin-bottom: 10px;
             }
-
         }
-        
+        // 勘誤
+        .errata_block {
+            .errata_leftblock {
+                
+            }
+            .errata_rightblock {
+
+            }
+        }
     }
 }
-
 // 共用小燈箱
 .commonlightbox_small {
     min-width: 500px;
@@ -122,9 +126,9 @@
     }
 }
 .commonlightbox_big {
-     min-width: 600px;
-    max-width: 70%;
-    max-height: 80%;
+    min-width: 600px;
+    max-width: 75%;
+    max-height: 75%;
     display: none;
     @include screen('mobile') {
         min-width: 90%;
@@ -132,9 +136,8 @@
         max-height: 90%;
     }
 }
-
 .commonlightbox_oversized {
-     min-width: 800px;
+    min-width: 800px;
     max-width: 90%;
     max-height: 90%;
     display: none;

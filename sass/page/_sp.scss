@@ -6,10 +6,9 @@
         display: block;
     }
     .errata_leftblock {
-        flex: auto;
-        flex-basis: 55%;
-        max-width: 55%;
-        margin-right: 1%;
+        flex: none;
+        flex-basis: 54%;
+        max-width: 54%;
         background-color: #eee;
         border-radius: 4px;
         @include screen('tablet') {
@@ -19,7 +18,7 @@
             margin-bottom: 10px
         }
         .errata_table {
-            padding: 25px;
+            padding: 25px 15px;
             table {
                 th, td {
                     border-bottom: #474646 1px solid;
@@ -28,25 +27,31 @@
                 th {
                     text-align: right;
                 }
-                @include screen('xs_mobile'){
-                    th,td{
+
+                @include screen('xs_mobile') {
+                    th, td {
                         display: block;
                         border-bottom: transparent;
                         text-align: left;
                     }
-                    
                 }
             }
         }
     }
     .errata_rightblock {
-        flex: auto;
-        flex-basis: clac(100% - 55% -1%);
-        max-width: clac(100% - 55% -1%);
+        flex: none;
+        flex-basis: 45%;
+        max-width: 45%;
+        margin-left: 1%;
         background-color: #eee;
         border-radius: 4px;
+        @include screen('tablet') {
+            flex-basis: 100%;
+            max-width: 100%;
+            margin-left: 0;
+        }
         .errata_form_block {
-            padding: 25px;
+            padding: 25px 15px;
             .form_content {
                 .btn {
                     padding: 0.5em 1em;
@@ -58,6 +63,11 @@
                 }
                 .verification_code {
                     max-width: 120px;
+                }
+                &.form_inline{
+                    select{
+                        width:100%;
+                    }
                 }
             }
             // 按鈕
@@ -123,13 +133,13 @@
         @include screen('mobile') {
             padding: 10% 0 50px;
             img {
-               width: 13%;
+                width: 13%;
             }
         }
         @include screen('xs_mobile') {
             padding: 10% 0 30px;
             img {
-               width: 16%;
+                width: 16%;
             }
         }
     }
@@ -142,10 +152,10 @@
         border-radius: 50px;
         font-size: 1.25em;
         line-height: 1.25em;
-        @include screen('mobile'){
+        @include screen('mobile') {
             font-size: 1.125em;
-        line-height: 1.25em;
-         width: 60%;
+            line-height: 1.25em;
+            width: 60%;
         }
         @include screen('xs_mobile') {
             width: 60%;
@@ -279,7 +289,6 @@
             max-width: 100%;
             img {
                 width: 90%;
-               
             }
         }
     }

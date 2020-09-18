@@ -119,7 +119,7 @@
             padding: 10px 0px;
             border: 1px solid $secondaryColor !important;
             width: 240px;
-            background-color: $secondaryColor;
+            background-color: $secondaryColor!important;
             color: #fff;
             &:before {
                 right: -40px;

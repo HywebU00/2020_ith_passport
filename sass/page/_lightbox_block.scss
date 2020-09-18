@@ -124,12 +124,24 @@
 .commonlightbox_big {
      min-width: 600px;
     max-width: 70%;
-    max-height: 70%;
+    max-height: 80%;
     display: none;
     @include screen('mobile') {
         min-width: 90%;
         max-width: 90%;
         max-height: 90%;
+    }
+}
+
+.commonlightbox_oversized {
+     min-width: 800px;
+    max-width: 90%;
+    max-height: 90%;
+    display: none;
+    @include screen('mobile') {
+        min-width: 95%;
+        max-width: 95%;
+        max-height: 95%;
     }
 }
 // 燈箱連結

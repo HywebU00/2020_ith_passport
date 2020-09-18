@@ -28,6 +28,14 @@
                 th {
                     text-align: right;
                 }
+                @include screen('xs_mobile'){
+                    th,td{
+                        display: block;
+                        border-bottom: transparent;
+                        text-align: left;
+                    }
+                    
+                }
             }
         }
     }

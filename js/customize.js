@@ -52,9 +52,9 @@ $(function() {
         ]
     });
     //燈箱slick+lightBox組合
-    $('.cp_slider').slick({
-        dots: true,
-        infinite: true,
+    $('.cppic_slider').slick({
+        dots: false,
+        infinite: false,
         speed: 500,
         slidesToShow: 4,
         slidesToScroll: 1,
@@ -72,7 +72,7 @@ $(function() {
                 slidesToShow: 2,
                 slidesToScroll: 2,
                 infinite: true,
-                dots: true
+                
             }
         }, {
             breakpoint: 545,
@@ -87,7 +87,7 @@ $(function() {
                 arrows: true,
                 slidesToShow: 1,
                 slidesToScroll: 1,
-                arrows: false
+               
             }
         }]
     });
@@ -241,7 +241,6 @@ $(function() {
     // $('.content').find('a:last').focusout(function(e) {
     //     $('.slider-time').children('.now').next('div').find('a').focus();
     // });
-    
 })
 // 旅券瀏覽2
 $(function() {
@@ -299,7 +298,6 @@ $(function() {
     // $('.content').find('a:last').focusout(function(e) {
     //     $('.slider-time2').children('.now').next('div').find('a').focus();
     // });
-    
 })
 // 地點分佈
 $(function() {
@@ -513,20 +511,19 @@ $(function() {
 })
 // 後分類更多按鈕
 $(function() {
-    
     $(".sort_block").find("li:gt(2)").hide();
     $(".sort_block .more").click(function() {
         const isOpen = $(this).attr("isOpen") == "true" ? "false" : "true";
         $(this).attr("isOpen", isOpen);
         if (isOpen == "true") {
-             $(".sort_block").find("li:gt(2)").hide(300);
-      $(".sort_block .more").not(this).attr("isOpen","false")
-      $(".sort_block .more a").not(this).removeClass("close_btn").html("更多")
-      $(this).prev("ul").find("li").show(300);
-      $(this).find("a").addClass("close_btn");
+            $(".sort_block").find("li:gt(2)").hide(300);
+            $(".sort_block .more").not(this).attr("isOpen", "false")
+            $(".sort_block .more a").not(this).removeClass("close_btn").html("更多")
+            $(this).prev("ul").find("li").show(300);
+            $(this).find("a").addClass("close_btn");
         } else {
-             $(".sort_block").find("li:gt(2)").hide(300);
-     $(this).find("a").removeClass("close_btn");
+            $(".sort_block").find("li:gt(2)").hide(300);
+            $(this).find("a").removeClass("close_btn");
         }
         $(this).find("a").html(isOpen == "true" ? "收合" : "更多")
     })
@@ -543,8 +540,8 @@ $(function() {
     })
 })
 // 按進階查詢後，高度為auto
-$(function(){
-    $('.passport_search .tabSet .advancedbtn').click(function(){
+$(function() {
+    $('.passport_search .tabSet .advancedbtn').click(function() {
         $(this).parents('.passport_search .tabSet').addClass('add_blockheight')
     })
 })

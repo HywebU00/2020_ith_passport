@@ -98,14 +98,14 @@
         &.slick-active {
             button {
                 &:before {
-                    background: $aHover;
+                    background:$primaryColor;
                 }
                 &:hover,
                 &:focus {
                     &:before {
                         opacity: .9;
                         color: black;
-                        background: adjust_hue(saturate(lighten($aHover, 7), 18), -17);
+                        background:$aHover ;
                     }
                 }
             }
@@ -113,17 +113,17 @@
     }
 }
 //  slick燈箱
-.lightbox_slider {
+.lightbox_slider_block {
     h3 {
         font-size: 1.5em;
         padding: 12px 0px 15px 0px;
         margin: 0.5em 0px 1.2em;
         border-bottom: 1px solid $primaryColor;
     }
-    background: #fff;
-    padding: 1em 0;
+    // background: #fff;
+    // padding: 1em 0;
     clear: both;
-    .cp_slider {
+    .cppic_slider {
         @include gutter;
     }
     .img-container {
@@ -150,9 +150,10 @@
     }
     // dots
     .slick-dots {
-        bottom: -30px !important;
+        position:relative;
+        bottom: 0 !important;
         @include screen('mobile') {
-            bottom: -40px !important;
+            
             padding: 0;
         }
         li {
@@ -163,10 +164,10 @@
     }
     //Arrows
     .slick-prev {
-        left: -1 * $grid-gutter-width/2;
+        left:-10px;
     }
     .slick-next {
-        right: -1 * $grid-gutter-width/2;
+        right: -10px;
     }
     a {
         color: #555;

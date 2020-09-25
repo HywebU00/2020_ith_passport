@@ -483,19 +483,19 @@ $(function() {
     })
 })
 $(function() {
-    $('.menu_group01').click(function(e) {
+    $('.query').click(function(e) {
         $(' body,html').stop(true, true).animate({ scrollTop: $('.groupA').offset().top - 90 }, 200, 'easeOutExpo');
     });
-    $('.menu_group02').click(function(e) {
+    $('.browse').click(function(e) {
         $('body,html').stop(true, true).animate({ scrollTop: $('.groupB').offset().top - 70 }, 200, 'easeOutExpo');
     });
-    $('.menu_group03').click(function(e) {
+    $('.place').click(function(e) {
         $('body,html').stop(true, true).animate({ scrollTop: $('.groupC').offset().top - 70 }, 200, 'easeOutExpo');
     });
-    $('.menu_group04').click(function(e) {
+    $('.purpose').click(function(e) {
         $('body,html').stop(true, true).animate({ scrollTop: $('.groupD').offset().top - 70 }, 200, 'easeOutExpo');
     });
-    $('.menu_group05').click(function(e) {
+    $('.project').click(function(e) {
         $('body,html').stop(true, true).animate({ scrollTop: $('.groupE').offset().top - 70 }, 200, 'easeOutExpo');
     });
     // e.preventDefault();

@@ -193,8 +193,8 @@ $(function() {
         // asNavFor: '.slider-for',
         dots: false,
         infinite: false,
-        centerMode: false,
-        focusOnSelect: true,
+        // centerMode: false,
+        // focusOnSelect: true,
         responsive: [{
             breakpoint: 1200,
             settings: {
@@ -250,8 +250,8 @@ $(function() {
         // asNavFor: '.slider-for',
         dots: false,
         infinite: false,
-        centerMode: false,
-        focusOnSelect: true,
+        // centerMode: false,
+        // focusOnSelect: true,
         responsive: [{
             breakpoint: 1200,
             settings: {

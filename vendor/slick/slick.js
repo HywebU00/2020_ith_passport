@@ -509,7 +509,7 @@
             case 'previous':
                 slideOffset = indexOffset === 0 ? _.options.slidesToScroll : _.options.slidesToShow - indexOffset;
                 if (_.slideCount > _.options.slidesToShow) {
-                    _.slideHandler(_.currentSlide - slideOffset, false, dontAnimate);
+                    _.slideHandler((_.currentSlide - slideOffset) <= 0 ? 0 : (_.currentSlide - slideOffset), false, dontAnimate);
                 }
                 break;
             case 'next':

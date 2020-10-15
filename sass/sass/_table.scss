@@ -99,7 +99,6 @@ table {
     }
 }
 .result_table {
-    
     table {
         width: 100%;
         border-collapse: collapse;
@@ -117,7 +116,7 @@ table {
                 td {
                     &:last-child {
                         border-right: none !important;
-                        @include screen('mobile'){
+                        @include screen('mobile') {
                             border-right: #bfbfbf 1px solid !important;
                         }
                     }
@@ -126,7 +125,7 @@ table {
         }
         th,
         td {
-            padding: 15px 5px;
+            padding: 5px 5px;
         }
         td {
             border: none;
@@ -158,7 +157,7 @@ table {
             border-left: none;
             text-align: center;
             white-space: nowrap;
-            padding: 20px 5px;
+            padding: 10px 5px;
             font-weight: 500;
         }
         tr>td:last-child, tr>th:last-child {
@@ -177,7 +176,7 @@ table {
                     }
                 }
                 th {
-                    padding: 6px 8px;
+                    padding:3px 8px;
                     text-align: right;
                     width: 120px;
                     font-size: 0.938em;
@@ -190,7 +189,7 @@ table {
                     }
                 }
                 td {
-                    padding: 6px 8px;
+                    padding: 3px 8px;
                     font-size: 0.938em;
                 }
             }
@@ -212,6 +211,17 @@ table {
                 }
             }
         }
+        .second_data{
+            table{
+                td{
+                    border-bottom:1px #bfb8b3 solid!important;
+                }
+
+                th{
+                    border-bottom: #7d7169 1px solid;
+                }
+            }
+        }
     }
 }
 .result_table {
@@ -224,7 +234,7 @@ table {
             margin-bottom: 10px; // background-color: #333;
             position: relative;
             border-top: 4px solid #000;
-            border-right:none;
+            border-right: none;
             &:nth-child(even) {
                 border: none;
                 // margin-bottom: 0;
@@ -240,7 +250,6 @@ table {
                     }
                 }
             }
-            
         }
         th {
             border-bottom: #474646 1px solid !important;
@@ -310,13 +319,12 @@ table {
 }
 .print_table {
     tbody {
-            tr {
-                &:nth-child(even) {
-                    background-color: #eeebe9;
-                }
-                
+        tr {
+            &:nth-child(even) {
+                background-color: #eeebe9;
             }
         }
+    }
 }
 // fix_th_table
 .fix_th_table {

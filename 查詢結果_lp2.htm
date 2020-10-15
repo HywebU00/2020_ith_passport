@@ -113,51 +113,55 @@
                         </div>
                     </div>
                     <!-- 輸入查詢內容 end-->
-                    <!-- 查詢結果區塊 start-->
-                    <div class="search_result_content">
-                        <div class="content_leftblock">
-                            <div class="result_sort">查詢條件：不限欄位=<em>1897 AND</em> 申請=臺北縣<span>第一排序識別號小到大、第二排序州廳小到大、第三排序姓名大到小</span></div>
-                            <!-- Pagination -->
-                            <div class="pagination pagination_flex">
-                                <form action="" class="form_inline">
-                                    <div class="total"> 共<span>1691</span>筆資料 </div>
-                                </form>
-                                <ul class="page">
-                                    <li class="first">
-                                        <a href="#" title="第一頁">第一頁 </a></li>
-                                    <li class="prev">
-                                        <a href="#" title="回上一頁">回上一頁 </a></li>
-                                    <li class="active"><a href="#">1</a></li>
-                                    <li><a href="#">2</a></li>
-                                    <li><a href="#">3</a></li>
-                                    <li><a href="#">4</a></li>
-                                    <li><a href="#">5</a></li>
-                                    <li><a href="#">...</a></li>
-                                    <!--  <li><a href="#">7</a></li>
+                    <!-- 查詢結果條件 start-->
+                    <div class="result_sort_block">查詢條件：不限欄位=<em>1897 AND</em> 申請=臺北縣<span>第一排序識別號小到大、第二排序州廳小到大、第三排序姓名大到小</span>
+                        查詢條件：不限欄位=<em>1897 AND</em> 申請=臺北縣<span>第一排序識別號小到大、第二排序州廳小到大、第三排序姓名大到小</span>查詢條件：不限欄位=<em>1897 AND</em> 申請=臺北縣<span>第一排序識別號小到大、第二排序州廳小到大、第三排序姓名大到小</span>查詢條件：不限欄位=<em>1897 AND</em> 申請=臺北縣<span>第一排序識別號小到大、第二排序州廳小到大、第三排序姓名大到小</span>
+                    </div>
+                    <!-- Pagination -->
+                    <div class="pagination pagination_flex">
+                        <form action="" class="form_inline">
+                            <div class="total"> 共<span>1691</span>筆資料 </div>
+                        </form>
+                        <ul class="page">
+                            <li class="first">
+                                <a href="#" title="第一頁">第一頁 </a></li>
+                            <li class="prev">
+                                <a href="#" title="回上一頁">回上一頁 </a></li>
+                            <li class="active"><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                            <li><a href="#">...</a></li>
+                            <!--  <li><a href="#">7</a></li>
                                     <li><a href="#">8</a></li>
                                     <li><a href="#">9</a></li>
                                     <li><a href="#">10</a></li> -->
-                                    <li class="next">
-                                        <a href="#" title="下一頁">下一頁 </a>
-                                    </li>
-                                    <li class="last">
-                                        <a href="#" title="最後一頁">最後一頁 </a>
-                                    </li>
-                                </ul>
-                                <!-- <div class="sequence"><label for="">排序</label><select name="" id="selectSample">
-                                        <option value="">識別號小到大</option>
-                                        <option value="">識別號大到小</option>
-                                        <option value="">州廳小到大</option>
-                                        <option value="">州廳大到小</option>
-                                        <option value="">姓名(正體字)小到大</option>
-                                        <option value="">姓名(正體字)大到小</option>
-                                    </select>
-                                </div> -->
-                            </div>
+                            <li class="next">
+                                <a href="#" title="下一頁">下一頁 </a>
+                            </li>
+                            <li class="last">
+                                <a href="#" title="最後一頁">最後一頁 </a>
+                            </li>
+                        </ul>
+                        <div class="sequence"><label for="">排序</label><select name="" id="selectSample">
+                                <option value="">識別號小到大</option>
+                                <option value="">識別號大到小</option>
+                                <option value="">州廳小到大</option>
+                                <option value="">州廳大到小</option>
+                                <option value="">姓名(正體字)小到大</option>
+                                <option value="">姓名(正體字)大到小</option>
+                            </select>
+                        </div>
+                    </div>
+                    <!-- 查詢結果區塊 start-->
+                    <div class="search_result_content">
+                        <div class="content_leftblock">
                             <!-- 表格 內容 start-->
                             <!--  全選992px以下才出現 -->
                             <div class="select_all"><input type="checkbox" name="" value="">全選</div>
                             <div class="delcheck">已勾選<em>2</em>筆(上限300筆)<input type="button" name="" value="取消勾選"></div>
+                             <div class="all_unfold"><a href="javascript:;">全部展開</a></div>
                             <div class="table_list result_table">
                                 <table>
                                     <thead>
@@ -170,7 +174,7 @@
                                             <th width="10%">旅行目的</th>
                                             <th>旅行地名</th>
                                             <th>旅券類型</th>
-                                            <th>分享連結</th>
+                                            <!--  <th>分享連結</th> -->
                                             <th>展開</th>
                                         </tr>
                                     </thead>
@@ -184,7 +188,7 @@
                                             <td>鐵灸術業</td>
                                             <td>廈門；福州；□□；□□；上海；奉天</td>
                                             <td class="aCenter">旅券下付表</td>
-                                            <td class="aCenter"><a href="javascript:;" data-fancybox data-src="#lightbox_sharelink" class="share_link_btn"><img src="images/share_link.png" alt="分享連結"></a></td>
+                                            <!--  <td class="aCenter"><a href="javascript:;" data-fancybox data-src="#lightbox_sharelink" class="share_link_btn"><img src="images/share_link.png" alt="分享連結"></a></td> -->
                                             <td class="aCenter">
                                                 <div class="openbtn"><a href="javascript:;" class="open_btn"><img src="images/icon_arrow01.png"></a></div>
                                             </td>
@@ -193,14 +197,8 @@
                                             <td colspan="10" class="nopadding">
                                                 <div class="second_data">
                                                     <table>
-                                                        <tr>
-                                                            <th>勘誤</th>
-                                                            <td><a href="#" data-fancybox data-src="#lightbox_errata_block"><img src="images/icon_errata.png" alt=""></a></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th>延伸查詢</th>
-                                                            <td><a href="#" data-fancybox data-src="#lightbox_extend_block"><img src="images/icon/icon_search.svg" alt="" width="20px"></a></td>
-                                                        </tr>
+                                                        
+                                                        
                                                         <tr>
                                                             <th>識別號</th>
                                                             <td>001_0002_00</td>
@@ -272,6 +270,18 @@
                                                         <tr>
                                                             <th>相關資料</th>
                                                             <td>總督府職員錄<a href="#">http://who.ith.sinica.edu.tw/mpView.action</a>；<a href="#">臺史所https://www.ith.sinica.edu.tw/</a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>延伸查詢</th>
+                                                            <td><a href="#" data-fancybox data-src="#lightbox_extend_block"><img src="images/icon/icon_search.svg" alt="" width="20px"></a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>分享連結</th>
+                                                            <td><a href="javascript:;" data-fancybox data-src="#lightbox_sharelink"><img src="images/share_link.png" alt="分享連結"></a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>勘誤</th>
+                                                            <td><a href="#" data-fancybox data-src="#lightbox_errata_block"><img src="images/icon_errata.png" alt=""></a></td>
                                                         </tr>
                                                     </table>
                                                 </div>
@@ -286,7 +296,7 @@
                                             <td>葬祭參列；商業；商用</td>
                                             <td>清國廈門；福州；暹邏</td>
                                             <td class="aCenter">旅券下付表</td>
-                                            <td class="aCenter"><a href="javascript:;" data-fancybox data-src="#lightbox_sharelink" class="share_link_btn"><img src="images/share_link.png" alt="分享連結"></a></td>
+                                            <!-- <td class="aCenter"><a href="javascript:;" data-fancybox data-src="#lightbox_sharelink" class="share_link_btn"><img src="images/share_link.png" alt="分享連結"></a></td> -->
                                             <td class="aCenter">
                                                 <div class="openbtn"><a href="javascript:;" class="open_btn"><img src="images/icon_arrow01.png"></a></div></a>
                                             </td>
@@ -295,14 +305,7 @@
                                             <td colspan="10" class="nopadding">
                                                 <div class="second_data">
                                                     <table>
-                                                        <tr>
-                                                            <th>勘誤</th>
-                                                            <td><a href="#"><img src="images/icon_errata.png" alt=""></a></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th>延伸查詢</th>
-                                                            <td><a href="#"><img src="images/icon/icon_search.svg" alt="" width="20px"></a></td>
-                                                        </tr>
+
                                                         <tr>
                                                             <th>識別號</th>
                                                             <td>001_0002_00</td>
@@ -374,6 +377,18 @@
                                                         <tr>
                                                             <th>相關資料</th>
                                                             <td>總督府職員錄<a href="#">http://who.ith.sinica.edu.tw/mpView.action</a>；<a href="#">臺史所https://www.ith.sinica.edu.tw/</a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>延伸查詢</th>
+                                                            <td><a href="#" data-fancybox data-src="#lightbox_extend_block"><img src="images/icon/icon_search.svg" alt="" width="20px"></a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>分享連結</th>
+                                                            <td><a href="javascript:;" data-fancybox data-src="#lightbox_sharelink"><img src="images/share_link.png" alt="分享連結"></a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>勘誤</th>
+                                                            <td><a href="#" data-fancybox data-src="#lightbox_errata_block"><img src="images/icon_errata.png" alt=""></a></td>
                                                         </tr>
                                                     </table>
                                                 </div>
@@ -388,7 +403,7 @@
                                             <td>鐵灸術業</td>
                                             <td>廈門；福州；□□；□□；上海；奉天</td>
                                             <td class="aCenter">旅券下付表</td>
-                                            <td class="aCenter"><a href="javascript:;" data-fancybox data-src="#lightbox_sharelink" class="share_link_btn"><img src="images/share_link.png" alt="分享連結"></a></td>
+                                            <!-- <td class="aCenter"><a href="javascript:;" data-fancybox data-src="#lightbox_sharelink" class="share_link_btn"><img src="images/share_link.png" alt="分享連結"></a></td> -->
                                             <td class="aCenter">
                                                 <div class="openbtn"><a href="javascript:;" class="open_btn"><img src="images/icon_arrow01.png"></a></div></a>
                                             </td>
@@ -397,14 +412,7 @@
                                             <td colspan="10" class="nopadding">
                                                 <div class="second_data">
                                                     <table>
-                                                        <tr>
-                                                            <th>勘誤</th>
-                                                            <td><a href="#"><img src="images/icon_errata.png" alt=""></a></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th>延伸查詢</th>
-                                                            <td><a href="#"><img src="images/icon/icon_search.svg" alt="" width="20px"></a></td>
-                                                        </tr>
+                                                       
                                                         <tr>
                                                             <th>識別號</th>
                                                             <td>001_0002_00</td>
@@ -476,6 +484,18 @@
                                                         <tr>
                                                             <th>相關資料</th>
                                                             <td>總督府職員錄<a href="#">http://who.ith.sinica.edu.tw/mpView.action</a>；<a href="#">臺史所https://www.ith.sinica.edu.tw/</a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>延伸查詢</th>
+                                                            <td><a href="#" data-fancybox data-src="#lightbox_extend_block"><img src="images/icon/icon_search.svg" alt="" width="20px"></a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>分享連結</th>
+                                                            <td><a href="javascript:;" data-fancybox data-src="#lightbox_sharelink"><img src="images/share_link.png" alt="分享連結"></a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>勘誤</th>
+                                                            <td><a href="#" data-fancybox data-src="#lightbox_errata_block"><img src="images/icon_errata.png" alt=""></a></td>
                                                         </tr>
                                                     </table>
                                                 </div>
@@ -490,7 +510,7 @@
                                             <td>葬祭參列；商業；商用</td>
                                             <td>清國廈門；福州；暹邏</td>
                                             <td class="aCenter">旅券下付表</td>
-                                            <td class="aCenter"><a href="javascript:;" data-fancybox data-src="#lightbox_sharelink" class="share_link_btn"><img src="images/share_link.png" alt="分享連結"></a></td>
+                                            <!-- <td class="aCenter"><a href="javascript:;" data-fancybox data-src="#lightbox_sharelink" class="share_link_btn"><img src="images/share_link.png" alt="分享連結"></a></td> -->
                                             <td class="aCenter">
                                                 <div class="openbtn"><a href="javascript:;" class="open_btn"><img src="images/icon_arrow01.png"></a></div></a>
                                             </td>
@@ -499,14 +519,7 @@
                                             <td colspan="10" class="nopadding">
                                                 <div class="second_data">
                                                     <table>
-                                                        <tr>
-                                                            <th>勘誤</th>
-                                                            <td><a href="#"><img src="images/icon_errata.png" alt=""></a></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th>延伸查詢</th>
-                                                            <td><a href="#"><img src="images/icon/icon_search.svg" alt="" width="20px"></a></td>
-                                                        </tr>
+                                                        
                                                         <tr>
                                                             <th>識別號</th>
                                                             <td>001_0002_00</td>
@@ -578,6 +591,18 @@
                                                         <tr>
                                                             <th>相關資料</th>
                                                             <td>總督府職員錄<a href="#">http://who.ith.sinica.edu.tw/mpView.action</a>；<a href="#">臺史所https://www.ith.sinica.edu.tw/</a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>延伸查詢</th>
+                                                            <td><a href="#" data-fancybox data-src="#lightbox_extend_block"><img src="images/icon/icon_search.svg" alt="" width="20px"></a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>分享連結</th>
+                                                            <td><a href="javascript:;" data-fancybox data-src="#lightbox_sharelink"><img src="images/share_link.png" alt="分享連結"></a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>勘誤</th>
+                                                            <td><a href="#" data-fancybox data-src="#lightbox_errata_block"><img src="images/icon_errata.png" alt=""></a></td>
                                                         </tr>
                                                     </table>
                                                 </div>
@@ -592,7 +617,7 @@
                                             <td>葬祭參列；商業；商用</td>
                                             <td>清國廈門；福州；暹邏</td>
                                             <td class="aCenter">旅券下付表</td>
-                                            <td class="aCenter"><a href="javascript:;" data-fancybox data-src="#lightbox_sharelink" class="share_link_btn"><img src="images/share_link.png" alt="分享連結"></a></td>
+                                            <!--  <td class="aCenter"><a href="javascript:;" data-fancybox data-src="#lightbox_sharelink" class="share_link_btn"><img src="images/share_link.png" alt="分享連結"></a></td> -->
                                             <td class="aCenter">
                                                 <div class="openbtn"><a href="javascript:;" class="open_btn"><img src="images/icon_arrow01.png"></a></div></a>
                                             </td>
@@ -601,14 +626,7 @@
                                             <td colspan="10" class="nopadding">
                                                 <div class="second_data">
                                                     <table>
-                                                        <tr>
-                                                            <th>勘誤</th>
-                                                            <td><a href="#"><img src="images/icon_errata.png" alt=""></a></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th>延伸查詢</th>
-                                                            <td><a href="#"><img src="images/icon/icon_search.svg" alt="" width="20px"></a></td>
-                                                        </tr>
+                                                        
                                                         <tr>
                                                             <th>識別號</th>
                                                             <td>001_0002_00</td>
@@ -680,6 +698,18 @@
                                                         <tr>
                                                             <th>相關資料</th>
                                                             <td>總督府職員錄<a href="#">http://who.ith.sinica.edu.tw/mpView.action</a>；<a href="#">臺史所https://www.ith.sinica.edu.tw/</a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>延伸查詢</th>
+                                                            <td><a href="#" data-fancybox data-src="#lightbox_extend_block"><img src="images/icon/icon_search.svg" alt="" width="20px"></a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>分享連結</th>
+                                                            <td><a href="javascript:;" data-fancybox data-src="#lightbox_sharelink"><img src="images/share_link.png" alt="分享連結"></a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>勘誤</th>
+                                                            <td><a href="#" data-fancybox data-src="#lightbox_errata_block"><img src="images/icon_errata.png" alt=""></a></td>
                                                         </tr>
                                                     </table>
                                                 </div>
@@ -694,7 +724,7 @@
                                             <td>葬祭參列；商業；商用</td>
                                             <td>清國廈門；福州；暹邏</td>
                                             <td class="aCenter">旅券下付表</td>
-                                            <td class="aCenter"><a href="javascript:;" data-fancybox data-src="#lightbox_sharelink" class="share_link_btn"><img src="images/share_link.png" alt="分享連結"></a></td>
+                                            <!-- <td class="aCenter"><a href="javascript:;" data-fancybox data-src="#lightbox_sharelink" class="share_link_btn"><img src="images/share_link.png" alt="分享連結"></a></td> -->
                                             <td class="aCenter">
                                                 <div class="openbtn"><a href="javascript:;" class="open_btn"><img src="images/icon_arrow01.png"></a></div></a>
                                             </td>
@@ -703,14 +733,7 @@
                                             <td colspan="10" class="nopadding">
                                                 <div class="second_data">
                                                     <table>
-                                                        <tr>
-                                                            <th>勘誤</th>
-                                                            <td><a href="#"><img src="images/icon_errata.png" alt=""></a></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th>延伸查詢</th>
-                                                            <td><a href="#"><img src="images/icon/icon_search.svg" alt="" width="20px"></a></td>
-                                                        </tr>
+                                                        
                                                         <tr>
                                                             <th>識別號</th>
                                                             <td>001_0002_00</td>
@@ -782,6 +805,18 @@
                                                         <tr>
                                                             <th>相關資料</th>
                                                             <td>總督府職員錄<a href="#">http://who.ith.sinica.edu.tw/mpView.action</a>；<a href="#">臺史所https://www.ith.sinica.edu.tw/</a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>延伸查詢</th>
+                                                            <td><a href="#" data-fancybox data-src="#lightbox_extend_block"><img src="images/icon/icon_search.svg" alt="" width="20px"></a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>分享連結</th>
+                                                            <td><a href="javascript:;" data-fancybox data-src="#lightbox_sharelink"><img src="images/share_link.png" alt="分享連結"></a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>勘誤</th>
+                                                            <td><a href="#" data-fancybox data-src="#lightbox_errata_block"><img src="images/icon_errata.png" alt=""></a></td>
                                                         </tr>
                                                     </table>
                                                 </div>
@@ -796,7 +831,7 @@
                                             <td>葬祭參列；商業；商用</td>
                                             <td>清國廈門；福州；暹邏</td>
                                             <td class="aCenter">旅券下付表</td>
-                                            <td class="aCenter"><a href="javascript:;" data-fancybox data-src="#lightbox_sharelink" class="share_link_btn"><img src="images/share_link.png" alt="分享連結"></a></td>
+                                            <!-- <td class="aCenter"><a href="javascript:;" data-fancybox data-src="#lightbox_sharelink" class="share_link_btn"><img src="images/share_link.png" alt="分享連結"></a></td> -->
                                             <td class="aCenter">
                                                 <div class="openbtn"><a href="javascript:;" class="open_btn"><img src="images/icon_arrow01.png"></a></div></a>
                                             </td>
@@ -805,14 +840,7 @@
                                             <td colspan="10" class="nopadding">
                                                 <div class="second_data">
                                                     <table>
-                                                        <tr>
-                                                            <th>勘誤</th>
-                                                            <td><a href="#"><img src="images/icon_errata.png" alt=""></a></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th>延伸查詢</th>
-                                                            <td><a href="#"><img src="images/icon/icon_search.svg" alt="" width="20px"></a></td>
-                                                        </tr>
+                                                       
                                                         <tr>
                                                             <th>識別號</th>
                                                             <td>001_0002_00</td>
@@ -884,6 +912,18 @@
                                                         <tr>
                                                             <th>相關資料</th>
                                                             <td>總督府職員錄<a href="#">http://who.ith.sinica.edu.tw/mpView.action</a>；<a href="#">臺史所https://www.ith.sinica.edu.tw/</a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>延伸查詢</th>
+                                                            <td><a href="#" data-fancybox data-src="#lightbox_extend_block"><img src="images/icon/icon_search.svg" alt="" width="20px"></a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>分享連結</th>
+                                                            <td><a href="javascript:;" data-fancybox data-src="#lightbox_sharelink"><img src="images/share_link.png" alt="分享連結"></a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>勘誤</th>
+                                                            <td><a href="#" data-fancybox data-src="#lightbox_errata_block"><img src="images/icon_errata.png" alt=""></a></td>
                                                         </tr>
                                                     </table>
                                                 </div>
@@ -898,7 +938,7 @@
                                             <td>葬祭參列；商業；商用</td>
                                             <td>清國廈門；福州；暹邏</td>
                                             <td class="aCenter">旅券下付表</td>
-                                            <td class="aCenter"><a href="javascript:;" data-fancybox data-src="#lightbox_sharelink" class="share_link_btn"><img src="images/share_link.png" alt="分享連結"></a></td>
+                                            <!--  <td class="aCenter"><a href="javascript:;" data-fancybox data-src="#lightbox_sharelink" class="share_link_btn"><img src="images/share_link.png" alt="分享連結"></a></td> -->
                                             <td class="aCenter">
                                                 <div class="openbtn"><a href="javascript:;" class="open_btn"><img src="images/icon_arrow01.png"></a></div></a>
                                             </td>
@@ -907,14 +947,7 @@
                                             <td colspan="10" class="nopadding">
                                                 <div class="second_data">
                                                     <table>
-                                                        <tr>
-                                                            <th>勘誤</th>
-                                                            <td><a href="#"><img src="images/icon_errata.png" alt=""></a></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th>延伸查詢</th>
-                                                            <td><a href="#"><img src="images/icon/icon_search.svg" alt="" width="20px"></a></td>
-                                                        </tr>
+                                                        
                                                         <tr>
                                                             <th>識別號</th>
                                                             <td>001_0002_00</td>
@@ -986,6 +1019,18 @@
                                                         <tr>
                                                             <th>相關資料</th>
                                                             <td>總督府職員錄<a href="#">http://who.ith.sinica.edu.tw/mpView.action</a>；<a href="#">臺史所https://www.ith.sinica.edu.tw/</a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>延伸查詢</th>
+                                                            <td><a href="#" data-fancybox data-src="#lightbox_extend_block"><img src="images/icon/icon_search.svg" alt="" width="20px"></a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>分享連結</th>
+                                                            <td><a href="javascript:;" data-fancybox data-src="#lightbox_sharelink"><img src="images/share_link.png" alt="分享連結"></a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>勘誤</th>
+                                                            <td><a href="#" data-fancybox data-src="#lightbox_errata_block"><img src="images/icon_errata.png" alt=""></a></td>
                                                         </tr>
                                                     </table>
                                                 </div>
@@ -1000,7 +1045,7 @@
                                             <td>葬祭參列；商業；商用</td>
                                             <td>清國廈門；福州；暹邏</td>
                                             <td class="aCenter">旅券下付表</td>
-                                            <td class="aCenter"><a href="javascript:;" data-fancybox data-src="#lightbox_sharelink" class="share_link_btn"><img src="images/share_link.png" alt="分享連結"></a></td>
+                                            <!-- <td class="aCenter"><a href="javascript:;" data-fancybox data-src="#lightbox_sharelink" class="share_link_btn"><img src="images/share_link.png" alt="分享連結"></a></td> -->
                                             <td class="aCenter">
                                                 <div class="openbtn"><a href="javascript:;" class="open_btn"><img src="images/icon_arrow01.png"></a></div></a>
                                             </td>
@@ -1009,14 +1054,7 @@
                                             <td colspan="10" class="nopadding">
                                                 <div class="second_data">
                                                     <table>
-                                                        <tr>
-                                                            <th>勘誤</th>
-                                                            <td><a href="#"><img src="images/icon_errata.png" alt=""></a></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th>延伸查詢</th>
-                                                            <td><a href="#"><img src="images/icon/icon_search.svg" alt="" width="20px"></a></td>
-                                                        </tr>
+                                                        
                                                         <tr>
                                                             <th>識別號</th>
                                                             <td>001_0002_00</td>
@@ -1088,6 +1126,18 @@
                                                         <tr>
                                                             <th>相關資料</th>
                                                             <td>總督府職員錄<a href="#">http://who.ith.sinica.edu.tw/mpView.action</a>；<a href="#">臺史所https://www.ith.sinica.edu.tw/</a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>延伸查詢</th>
+                                                            <td><a href="#" data-fancybox data-src="#lightbox_extend_block"><img src="images/icon/icon_search.svg" alt="" width="20px"></a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>分享連結</th>
+                                                            <td><a href="javascript:;" data-fancybox data-src="#lightbox_sharelink"><img src="images/share_link.png" alt="分享連結"></a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>勘誤</th>
+                                                            <td><a href="#" data-fancybox data-src="#lightbox_errata_block"><img src="images/icon_errata.png" alt=""></a></td>
                                                         </tr>
                                                     </table>
                                                 </div>
@@ -1102,7 +1152,7 @@
                                             <td>葬祭參列；商業；商用</td>
                                             <td>清國廈門；福州；暹邏</td>
                                             <td class="aCenter">旅券下付表</td>
-                                            <td class="aCenter"><a href="javascript:;" data-fancybox data-src="#lightbox_sharelink" class="share_link_btn"><img src="images/share_link.png" alt="分享連結"></a></td>
+                                            <!-- <td class="aCenter"><a href="javascript:;" data-fancybox data-src="#lightbox_sharelink" class="share_link_btn"><img src="images/share_link.png" alt="分享連結"></a></td> -->
                                             <td class="aCenter">
                                                 <div class="openbtn"><a href="javascript:;" class="open_btn"><img src="images/icon_arrow01.png"></a></div></a>
                                             </td>
@@ -1111,14 +1161,7 @@
                                             <td colspan="10" class="nopadding">
                                                 <div class="second_data">
                                                     <table>
-                                                        <tr>
-                                                            <th>勘誤</th>
-                                                            <td><a href="#"><img src="images/icon_errata.png" alt=""></a></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th>延伸查詢</th>
-                                                            <td><a href="#"><img src="images/icon/icon_search.svg" alt="" width="20px"></a></td>
-                                                        </tr>
+                                                        
                                                         <tr>
                                                             <th>識別號</th>
                                                             <td>001_0002_00</td>
@@ -1190,6 +1233,18 @@
                                                         <tr>
                                                             <th>相關資料</th>
                                                             <td>總督府職員錄<a href="#">http://who.ith.sinica.edu.tw/mpView.action</a>；<a href="#">臺史所https://www.ith.sinica.edu.tw/</a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>延伸查詢</th>
+                                                            <td><a href="#" data-fancybox data-src="#lightbox_extend_block"><img src="images/icon/icon_search.svg" alt="" width="20px"></a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>分享連結</th>
+                                                            <td><a href="javascript:;" data-fancybox data-src="#lightbox_sharelink"><img src="images/share_link.png" alt="分享連結"></a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>勘誤</th>
+                                                            <td><a href="#" data-fancybox data-src="#lightbox_errata_block"><img src="images/icon_errata.png" alt=""></a></td>
                                                         </tr>
                                                     </table>
                                                 </div>
@@ -1204,7 +1259,7 @@
                                             <td>葬祭參列；商業；商用</td>
                                             <td>清國廈門；福州；暹邏</td>
                                             <td class="aCenter">旅券下付表</td>
-                                            <td class="aCenter"><a href="javascript:;" data-fancybox data-src="#lightbox_sharelink" class="share_link_btn"><img src="images/share_link.png" alt="分享連結"></a></td>
+                                            <!--  <td class="aCenter"><a href="javascript:;" data-fancybox data-src="#lightbox_sharelink" class="share_link_btn"><img src="images/share_link.png" alt="分享連結"></a></td> -->
                                             <td class="aCenter">
                                                 <div class="openbtn"><a href="javascript:;" class="open_btn"><img src="images/icon_arrow01.png"></a></div></a>
                                             </td>
@@ -1213,14 +1268,7 @@
                                             <td colspan="10" class="nopadding">
                                                 <div class="second_data">
                                                     <table>
-                                                        <tr>
-                                                            <th>勘誤</th>
-                                                            <td><a href="#"><img src="images/icon_errata.png" alt=""></a></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th>延伸查詢</th>
-                                                            <td><a href="#"><img src="images/icon/icon_search.svg" alt="" width="20px"></a></td>
-                                                        </tr>
+                                                        
                                                         <tr>
                                                             <th>識別號</th>
                                                             <td>001_0002_00</td>
@@ -1292,6 +1340,18 @@
                                                         <tr>
                                                             <th>相關資料</th>
                                                             <td>總督府職員錄<a href="#">http://who.ith.sinica.edu.tw/mpView.action</a>；<a href="#">臺史所https://www.ith.sinica.edu.tw/</a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>延伸查詢</th>
+                                                            <td><a href="#" data-fancybox data-src="#lightbox_extend_block"><img src="images/icon/icon_search.svg" alt="" width="20px"></a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>分享連結</th>
+                                                            <td><a href="javascript:;" data-fancybox data-src="#lightbox_sharelink"><img src="images/share_link.png" alt="分享連結"></a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>勘誤</th>
+                                                            <td><a href="#" data-fancybox data-src="#lightbox_errata_block"><img src="images/icon_errata.png" alt=""></a></td>
                                                         </tr>
                                                     </table>
                                                 </div>
@@ -1480,7 +1540,7 @@
                             <!-- 992以下才出現 start-->
                             <div class="close"><a href="#"><img src="images/icon_close.png"></a></div>
                             <!-- 992以下才出現 start-->
-                            <div class="quantity">最多顯示50筆</div>
+                            <!--  <div class="quantity">最多顯示50筆</div> -->
                             <!-- 分類區塊 start -->
                             <!-- 1 -->
                             <div class="sort_block">

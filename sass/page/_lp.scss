@@ -214,15 +214,20 @@
 // 查詢結果條件
 .result_sort_block {
     color: #333;
-    text-align: center;
+    text-align: left;
+    padding:0 0 0 90px;
+    .title{
+margin-left: -80px;
+display: inline-block;
+    }
     em {
         font-family: 'Comfortaa', cursive;
         font-weight: 600;
         font-style: normal;
     }
     span {
-        margin-left: 20px;
-        color: #666;
+        // margin-left: 10px;
+        // color: #666;
     }
 }
 // 查詢結果區塊 

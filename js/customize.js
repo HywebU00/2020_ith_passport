@@ -567,4 +567,9 @@ $(function() {
     $('.passport_search .tabSet .advancedbtn').click(function() {
         $(this).parents('.passport_search .tabSet').addClass('add_blockheight')
     })
+
+    $('.passport_browse .tabSet .yearbrowsebtn').click(function() {
+        $(this).parents('.passport_browse .tabSet').addClass('add_blockheight')       
+        $(this).parents('.passport_browse_block').addClass('add_blockheight')
+    })
 })

@@ -20,7 +20,7 @@ body {
         width: 100%;
         position: fixed;
     }
-     &.small_size {
+    &.small_size {
         font-size: .938em;
     }
     &.large_size {
@@ -78,6 +78,13 @@ body {
     }
     h2 {
         line-height: 1.25em;
+    }
+    .accesskey{
+        position:absolute;
+        top:150px;
+        margin-top:120px;
+        z-index:999;
+        color:#fff;
     }
 }
 ////////////////////////////////////////////////////////////
@@ -156,10 +163,10 @@ body {
             // text-align: left;
         }
     }
-    a{
-        color:#fff;
-        &:hover{
-           text-decoration: underline;
+    a {
+        color: #fff;
+        &:hover {
+            text-decoration: underline;
         }
     }
     .btn_grp {
@@ -172,6 +179,16 @@ body {
         .btn {
             background-color: #6b2617;
             color: #fff;
+            width: auto;
+            padding: 10px;
+             width: 100px;
+            &:before {
+                display: none;
+            }
+            &:hover{
+                width: 100px;
+                 padding: 10px;
+            }
         }
     }
 }
@@ -239,15 +256,15 @@ body {
     width: 80% !important;
 }
 // 大字修正
-.large_size{
-    .navigation{
+.large_size {
+    .navigation {
         input {
             flex: none;
             flex-basis: 60px;
             padding: 0.1em .3em;
             margin-left: 10px;
             margin-top: 2px;
-            font-size:.0.938em;
+            font-size: .0.938em;
             text-align: center;
         }
     }

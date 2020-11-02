@@ -222,10 +222,11 @@ $(function() {
         menuH = Math.floor(_menu.outerHeight(true));
         $(window).bind("load scroll resize", function(e) {
             ww = _window.outerWidth();
-            if (ww >= wwSmall && $(this).scrollTop() > stickyMenuTop) {
+            if (ww >= wwSmall && $(this).scrollTop() > 100) {
                 $('.header').addClass('fixed');
-                $('.header').css('margin-top', menuH - hh);
+                $('.header').css('margin-top', -58);
                 $('.main').css('margin-top', 0);
+                 $('.header').css('visibility','visible');
             } else {
                 $('.header').removeClass('fixed');
                 $('.header').css('margin-top', 0);

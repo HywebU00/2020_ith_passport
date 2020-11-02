@@ -97,30 +97,76 @@ $(function() {
         lazy: true
     });
     // cp_photo
-    $('.Slider-for').on('init reInit afterChange', function(event, slick, currentSlide) {
-        var i = (currentSlide ? currentSlide : 0) + 1;
-        $('.controls').html(i + '/' + slick.slideCount);
-    });
-    $('.Slider-for').slick({
+    // $('.Slider-for').on('init reInit afterChange', function(event, slick, currentSlide) {
+    //     var i = (currentSlide ? currentSlide : 0) + 1;
+    //     $('.controls').html(i + '/' + slick.slideCount);
+    // });
+    // $('.Slider-for').slick({
+    //     slidesToShow: 1,
+    //     slidesToScroll: 1,
+    //     arrows: false,
+    //     fade: true,
+    //     swipe: false,
+    //     swipeToSlide: false,
+    //     lazyLoad: 'ondemand',
+    //     asNavFor: '.Slider-nav',
+    //     infinite: true
+    // });
+    // $('.Slider-nav').slick({
+    //     slidesToShow: 2,
+    //     slidesToScroll: 1,
+    //     asNavFor: '.Slider-for',
+    //     dots: true,
+    //     arrows: true,
+    //     lazyLoad: 'ondemand',
+    //     focusOnSelect: true,
+    //     infinite: true
+    // });
+    // 旅行地點分佈
+    $('.slider-for').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
         arrows: false,
-        fade: true,
-        swipe: false,
-        swipeToSlide: false,
-        lazyLoad: 'ondemand',
-        asNavFor: '.Slider-nav',
-        infinite: true
+        infinite: false,
+        // fade: true,
+        asNavFor: '.slider-nav'
     });
-    $('.Slider-nav').slick({
-        slidesToShow: 2,
+    $('.slider-nav').slick({
+        slidesToShow: 3,
         slidesToScroll: 1,
-        asNavFor: '.Slider-for',
-        dots: true,
-        arrows: true,
-        lazyLoad: 'ondemand',
+        asNavFor: '.slider-for',
+        infinite: false,
+        // centerMode: true,
         focusOnSelect: true,
-        infinite: true
+        responsive: [{
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                }
+            }, {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1
+                }
+            }, {
+                breakpoint: 575,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1
+                }
+            }, {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+            // You can unslick at a given breakpoint now by adding:
+            // settings: "unslick"
+            // instead of a settings object
+        ]
     });
     // 系統公告
     $('.bulletin').addClass('goin');
@@ -159,29 +205,27 @@ $(function() {
         ]
     });
     // 地點分佈輪播
-    $('.location_slider').slick({
-        dots: false,
-        infinite: false,
-        speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        lazyLoaded: true,
-        lazyLoad: 'ondemand',
-        ease: 'ease',
-        prevArrow: '<div type="button"  tabindex="0" class="slick-prev Btn-prev"><a href="javascript:;">清／中華民國分佈</a></div>',
-        nextArrow: '<div type="button" tabindex="0"  class="slick-next Btn-next"><a href="javascript:;">海外分佈</a></div>',
-        responsive: [{
-                breakpoint: 1200,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                }
-            }
-            // You can unslick at a given breakpoint now by adding:
-            // settings: "unslick"
-            // instead of a settings object
-        ]
-    });
+    // $('.location_slider').slick({
+    //     dots: false,
+    //     infinite: false,
+    //     speed: 500,
+    //     slidesToShow: 1,
+    //     slidesToScroll: 1,
+    //     lazyLoaded: true,
+    //     lazyLoad: 'ondemand',
+    //     ease: 'ease',
+    //     responsive: [{
+    //             breakpoint: 1200,
+    //             settings: {
+    //                 slidesToShow: 1,
+    //                 slidesToScroll: 1,
+    //             }
+    //         }
+    //         // You can unslick at a given breakpoint now by adding:
+    //         // settings: "unslick"
+    //         // instead of a settings object
+    //     ]
+    // });
 });
 // 旅券瀏覽1
 $(function() {
@@ -509,7 +553,6 @@ $(function() {
 })
 // 全部展開
 $(function() {
-
     $('.all_unfold>a').click(function(e) {
         $('.result_table table tr td .second_data').stop().slideToggle(function() {
             if ($('.result_table table tr td .second_data').is(':visible')) {
@@ -567,9 +610,8 @@ $(function() {
     $('.passport_search .tabSet .advancedbtn').click(function() {
         $(this).parents('.passport_search .tabSet').addClass('add_blockheight')
     })
-
     $('.passport_browse .tabSet .yearbrowsebtn').click(function() {
-        $(this).parents('.passport_browse .tabSet').addClass('add_blockheight')       
+        $(this).parents('.passport_browse .tabSet').addClass('add_blockheight')
         $(this).parents('.passport_browse_block').addClass('add_blockheight')
     })
 })

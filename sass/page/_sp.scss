@@ -22,12 +22,11 @@
             table {
                 th, td {
                     border-bottom: #474646 1px solid;
-                    padding: 8px;
+                    padding: 3px 8px;
                 }
                 th {
                     text-align: right;
                 }
-
                 @include screen('xs_mobile') {
                     th, td {
                         display: block;
@@ -64,9 +63,9 @@
                 .verification_code {
                     max-width: 120px;
                 }
-                &.form_inline{
-                    select{
-                        width:100%;
+                &.form_inline {
+                    select {
+                        width: 100%;
                     }
                 }
             }
@@ -78,9 +77,14 @@
                         margin-right: 0;
                     }
                 }
-                .btn-reset, .btn-submit {
+                .btn {
                     transition: .5s;
-                    width: 130px;
+                    width: auto;
+                    padding: 10px 20px;
+                    @media(max-width: 500px) {
+                        padding: 10px 0;
+                        width: 100%;
+                    }
                     &:before {
                         content: '';
                         width: 30px;
@@ -88,7 +92,8 @@
                         right: -15px;
                     }
                     &:hover, &:focus {
-                        width: 150px;
+                        width: auto;
+                        padding: 10px 30px;
                         &:before {
                             right: -25px;
                         }

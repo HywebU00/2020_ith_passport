@@ -134,6 +134,7 @@ table {
             color: #333;
             @include screen('mobile') {
                 border-bottom: #989898 1px solid !important;
+
             }
             &.num {
                 text-align: center;
@@ -257,6 +258,7 @@ table {
         td {
             padding-bottom: 10px !important;
             padding-top: 10px !important;
+            min-height:40px;
             &:first-child {
                 padding-bottom: 20px !important;
                 padding-top: 15px !important;
@@ -273,6 +275,7 @@ table {
                 padding: 0 !important;
                 border-bottom: none;
                 padding-left: 0 !important;
+                min-height:auto !important;
             }
             table {
                 border: 1px solid #ccc !important;
@@ -305,6 +308,7 @@ table {
                     width: auto;
                     border-right: none !important;
                     border-bottom-color: #989898 !important;
+
                     @media(max-width: 380px) {
                         flex-basis: calc(100% - 35%);
                         max-width: calc(100% - 35%);

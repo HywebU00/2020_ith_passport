@@ -127,16 +127,14 @@ $(function() {
         slidesToShow: 1,
         slidesToScroll: 1,
         arrows: false,
-        infinite: false,
-        // fade: true,
+        draggable: false,
+        swipe: false,
         asNavFor: '.slider-nav'
     });
     $('.slider-nav').slick({
         slidesToShow: 3,
         slidesToScroll: 1,
         asNavFor: '.slider-for',
-        infinite: false,
-        // centerMode: true,
         focusOnSelect: true,
         responsive: [{
                 breakpoint: 1200,
@@ -148,19 +146,19 @@ $(function() {
                 breakpoint: 992,
                 settings: {
                     slidesToShow: 3,
-                    slidesToScroll: 1
+                    slidesToScroll: 1,
                 }
             }, {
                 breakpoint: 575,
                 settings: {
                     slidesToShow: 2,
-                    slidesToScroll: 1
+                    slidesToScroll: 1,
                 }
             }, {
                 breakpoint: 480,
                 settings: {
                     slidesToShow: 1,
-                    slidesToScroll: 1
+                    slidesToScroll: 1,
                 }
             }
             // You can unslick at a given breakpoint now by adding:

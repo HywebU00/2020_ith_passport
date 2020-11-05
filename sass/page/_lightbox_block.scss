@@ -70,6 +70,9 @@
             left: 0;
             top: 0px;
         }
+        &:focus {
+            outline: none;
+        }
     }
     .content {
         margin-bottom: 0px;
@@ -105,12 +108,8 @@
         }
         // 勘誤
         .errata_block {
-            .errata_leftblock {
-                
-            }
-            .errata_rightblock {
-
-            }
+            .errata_leftblock {}
+            .errata_rightblock {}
         }
     }
 }

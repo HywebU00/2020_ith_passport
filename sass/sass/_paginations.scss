@@ -1,5 +1,5 @@
 .pagination {
-    margin: .5em auto;
+    margin: 1em auto 0.5em;
     padding: 0;
     display: block;
     text-align: center;
@@ -8,6 +8,7 @@
     &.pagination_flex{
         display: flex;
         align-items: center;
+        flex-wrap: wrap;
         justify-content: center;
         @include screen('mobile'){
             display: block;
@@ -124,9 +125,18 @@
             }
         }
     }
+    .pagedata{
+        display: inline-block;
+        vertical-align: middle;
+         margin-right: 10px;
+         @media(max-width: 1050px){
+            display: block;
+            flex-basis: 100%;
+         }
+    }
     .total {
         padding: 0em;
-        display:block;
+        display: inline-block;
         vertical-align: middle;
         select {
             margin: 0px .5em;
@@ -169,6 +179,7 @@
     .items {
         display: inline-block;
         vertical-align: middle;
+       
         a {
             padding: 0 5px;
             color: $primaryColor;

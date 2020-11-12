@@ -359,6 +359,7 @@
                 &.add_boolean {
                     width: 220px;
                     flex: 0 0 220px;
+                    flex-basis: 220px;
                     display: flex;
                     align-items: center;
                     padding-top: 0;
@@ -371,6 +372,7 @@
                     @include screen('mobile') {
                         width: 100%;
                         flex: 0 0 100%;
+                        flex-basis: 100%;
                         justify-content: flex-start;
                         select {
                             width: 65%;
@@ -1140,6 +1142,9 @@
                         transition: .5s;
                         text-shadow: 0 0 3px #fff, 0 0 3px #fff, 0 0 4px #fff, 0 0 5px #fff;
                         &:hover {
+                            span {
+                                color: #c10000;
+                            }
                             text-shadow: 0 0 3px #fff, 0 0 3px #fff, 0 0 3px #fff;
                         }
                     }
@@ -1155,6 +1160,7 @@
                         z-index: 9;
                         span {
                             display: block;
+                            white-space: nowrap;
                             em {
                                 font-style: normal;
                                 color: yellow;
@@ -1179,8 +1185,8 @@
                             }
                         }
                         .num_people {
-                            left: -205px;
-                            top: -50px;
+                            left: 50px;
+                            top: 0px;
                         }
                     }
                     // 福州
@@ -1198,8 +1204,8 @@
                             }
                         }
                         .num_people {
-                            left: -185px;
-                            top: -50px;
+                            left: 50px;
+                            top: 0px;
                         }
                     }
                     // 香港
@@ -1217,8 +1223,8 @@
                             }
                         }
                         .num_people {
-                            left: -155px;
-                            top: -70px;
+                            left: 50px;
+                            top: -25px;
                         }
                     }
                     // 上海       
@@ -1236,8 +1242,8 @@
                             }
                         }
                         .num_people {
-                            left: -185px;
-                            top: -48px;
+                            left: 50px;
+                            top: 0px;
                         }
                     }
                     // 汕頭
@@ -1255,8 +1261,8 @@
                             }
                         }
                         .num_people {
-                            left: -170px;
-                            top: -55px;
+                            left: 50px;
+                            top: 0px;
                         }
                     }
                     // 廣東
@@ -1274,8 +1280,8 @@
                             }
                         }
                         .num_people {
-                            right: -5px;
-                            top: -60px;
+                            left: 60px;
+                            top: 0px;
                         }
                     }
                     // 滿洲國
@@ -1293,8 +1299,8 @@
                             }
                         }
                         .num_people {
-                            left: -165px;
-                            top: -45px;
+                            left: 75px;
+                            top: 0px;
                         }
                     }
                     // 泉州
@@ -1312,27 +1318,27 @@
                             }
                         }
                         .num_people {
-                            right: -10px;
-                            top: -60px;
+                            left: 75px;
+                            top: 0px;
                         }
                     }
                     // 天津
                     &.location09 {
                         top: 24%;
-                        left: 26.5%;
+                        left: 25.5%;
                         a {
                             span {
                                 &.distributed_point_no01 {
                                     &:before {
-                                        left: 36px;
+                                        left: 40px;
                                         top: 7px;
                                     }
                                 }
                             }
                         }
                         .num_people {
-                            right: -5px;
-                            top: -60px;
+                            left: 60px;
+                            top: 0px;
                         }
                     }
                     // 韓國
@@ -1343,15 +1349,15 @@
                             span {
                                 &.distributed_point_no01 {
                                     &:before {
-                                        left: 36px;
+                                        left: 43px;
                                         top: 7px;
                                     }
                                 }
                             }
                         }
                         .num_people {
-                            right: -145px;
-                            top: -60px;
+                            left: 70px;
+                            top: 0px;
                         }
                     }
                     // 
@@ -1410,6 +1416,7 @@
                         }
                         &.addcolor {
                             span {
+                                color: #c10000;
                                 &:before {
                                     background-color: #c10000;
                                     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
@@ -1455,6 +1462,7 @@
                         z-index: 9;
                         span {
                             display: block;
+                            white-space: nowrap;
                             em {
                                 font-style: normal;
                                 color: yellow;
@@ -1479,8 +1487,8 @@
                             }
                         }
                         .num_people {
-                            right: 50px;
-                            top: -55px;
+                            left: 50px;
+                            top: -40px;
                         }
                     }
                     //比律賓
@@ -1498,27 +1506,27 @@
                             }
                         }
                         .num_people {
-                            right: 85px;
-                            top: -30px;
+                            left: -30px;
+                            top: 50px;
                         }
                     }
                     // 新嘉坡
                     &.location03 {
-                        top: 277px;
-                        right: 43%;
+                        top: 270px;
+                        right: 42%;
                         a {
                             span {
                                 &.distributed_point_no04 {
                                     &:before {
-                                        left: -25px;
-                                        top: 12px;
+                                        left: -30px;
+                                        top: 16px;
                                     }
                                 }
                             }
                         }
                         .num_people {
-                            left: -170px;
-                            top: -30px;
+                            left: -25px;
+                            top: 50px;
                         }
                     }
                     // 婆羅洲
@@ -1536,8 +1544,8 @@
                             }
                         }
                         .num_people {
-                            right: -162px;
-                            bottom: 20px;
+                            left: 50px;
+                            top: 50px;
                         }
                     }
                     // 暹羅
@@ -1555,8 +1563,8 @@
                             }
                         }
                         .num_people {
-                            left: -160px;
-                            top: -55px;
+                            left: 50px;
+                            top: 0
                         }
                     }
                     // 印度支那
@@ -1574,8 +1582,8 @@
                             }
                         }
                         .num_people {
-                            right: -160px;
-                            top: -60px;
+                            left: 110px;
+                            top: 0;
                         }
                     }
                     // 蘭領東印度
@@ -1593,8 +1601,8 @@
                             }
                         }
                         .num_people {
-                            left: 110px;
-                            top: -50px;
+                            left: 120px;
+                            top: 0;
                         }
                     }
                     // 英領馬來亞
@@ -1612,8 +1620,8 @@
                             }
                         }
                         .num_people {
-                            left: 105px;
-                            top: -50px;
+                            left: 120px;
+                            top: 0;
                         }
                     }
                     //英領印度
@@ -1631,8 +1639,8 @@
                             }
                         }
                         .num_people {
-                            left: -15px;
-                            top: 30px;
+                            left: 90px;
+                            top: 0;
                         }
                     }
                     // 緬甸
@@ -1650,8 +1658,8 @@
                             }
                         }
                         .num_people {
-                            left: -160px;
-                            top: -50px;
+                            left: 50px;
+                            top: 0;
                         }
                     }
                     // 
@@ -1710,6 +1718,7 @@
                         }
                         &.addcolor {
                             span {
+                                color: #c10000;
                                 &:before {
                                     background-color: #c10000;
                                     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
@@ -1755,6 +1764,7 @@
                         z-index: 9;
                         span {
                             display: block;
+                            white-space: nowrap;
                             em {
                                 font-style: normal;
                                 color: yellow;
@@ -1779,8 +1789,8 @@
                             }
                         }
                         .num_people {
-                            left: 0px;
-                            top: -60px;
+                            left: 30px;
+                            top: 0;
                         }
                     }
                     // 英
@@ -1798,8 +1808,8 @@
                             }
                         }
                         .num_people {
-                            left: -150px;
-                            top: -30px;
+                            left: 40px;
+                            top: 30px;
                         }
                     }
                     // 佛
@@ -1817,8 +1827,8 @@
                             }
                         }
                         .num_people {
-                            left: 60px;
-                            top: -55px;
+                            left: 65px;
+                            top: 0;
                         }
                     }
                     // 獨逸       
@@ -1836,8 +1846,8 @@
                             }
                         }
                         .num_people {
-                            left: -180px;
-                            top: -48px;
+                            left: -30px;
+                            top: 40px;
                         }
                     }
                     // 伊太利
@@ -1855,8 +1865,8 @@
                             }
                         }
                         .num_people {
-                            left: -170px;
-                            top: -55px;
+                            left: -20px;
+                            top: 30px;
                         }
                     }
                     // 加奈陀 
@@ -1874,7 +1884,7 @@
                             }
                         }
                         .num_people {
-                            right: -80px;
+                            left: -20px;
                             top: 30px;
                         }
                     }
@@ -1893,8 +1903,8 @@
                             }
                         }
                         .num_people {
-                            left: 25px;
-                            top: -75px;
+                            left: 40px;
+                            top: -20px;
                         }
                     }
                     // 和
@@ -1912,8 +1922,8 @@
                             }
                         }
                         .num_people {
-                            right: 0;
-                            top: 45px;
+                            left: 25px;
+                            top: 25px;
                         }
                     }
                     // 露
@@ -1950,8 +1960,8 @@
                             }
                         }
                         .num_people {
-                            right: 60px;
-                            top: -60px;
+                            left: 20px;
+                            top: -20px;
                         }
                     }
                     // 
@@ -2009,7 +2019,9 @@
                             }
                         }
                         &.addcolor {
+                            
                             span {
+                                color: #c10000;
                                 &:before {
                                     background-color: #c10000;
                                     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;

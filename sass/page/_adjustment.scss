@@ -1,8 +1,19 @@
 // 矯正
 body.large_size {
+    .navigation {
+        input {
+            flex: none;
+            flex-basis: 60px;
+            padding: 0.1em .3em;
+            margin-left: 10px;
+            margin-top: 2px;
+            font-size: .0.938em;
+            text-align: center;
+        }
+    }
     // 旅行地點分佈
     .travel_location_block {
-        height: 770px;
+        height: 920px;
         .map_pic {
             img {
                 height: 100%;
@@ -75,16 +86,50 @@ body.large_size {
             }
         }
     }
+    // 旅卷查詢
+    .passport_search .search_block .form_grid .form_title.add_boolean {
+        width: 240px;
+        flex: 0 0 240px;
+        flex-basis: 240px;
+    }
+    // 旅卷瀏覽
+    .timeline .content ul.hall {
+        li {
+            margin: 0 0.25% 5px;
+            width: 19.5%;
+            @media(max-width: 1130px) {
+                margin: 0 0.25% 5px;
+                width: 24.5%;
+            }
+            @media(max-width: 900px) {
+                margin: 0 0.66% 5px;
+                width: 32%;
+            }
+            @media(max-width: 700px) {
+                margin: 0 1% 5px;
+                width: 48%;
+            }
+            @media(max-width: 500px) {
+                margin: 0 0 5px;
+                width: 100%;
+            }
+        }
+    }
     // 專題旅券
     .topic_passport_block {
-       height: 950px;
+        height: 950px;
         .topic_slider {
             .topic_content {
-                p {
+                .textcontent {
                     height: 155px;
                 }
             }
         }
+    }
+    // 內頁會員註冊
+    .member_block .step_block ul li:before{
+        right: -56px;
+        border-width:28px;
     }
 }
 // 小字
@@ -110,8 +155,8 @@ body.small_size {
     .topic_passport_block {
         .topic_slider {
             .topic_content {
-                p {
-                    height: 155px;
+                .textcontent {
+                    height: 150px;
                 }
             }
         }

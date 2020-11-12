@@ -406,6 +406,19 @@
             border-top: none;
         }
     }
+    input {
+            flex: none;
+            flex-basis: 60px;
+            padding: .2em .5em;
+            margin-left: 10px;
+            margin-top: 6px;
+            text-align: center;
+            background-color:#fff;
+            color:#333;
+            &:hover{
+                background-color:#eee;
+            }
+        }
 }
 //animation
 @keyframes showMenu {

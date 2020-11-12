@@ -1,3 +1,5 @@
+
+
 // 矯正
 body.large_size {
     .navigation {
@@ -160,5 +162,9 @@ body.small_size {
                 }
             }
         }
+    }
+// 旅行地點分佈
+    .travel_location_block .location_slider .location_blcok .leaderboard .content .group a span{
+        padding: 11px 5px;
     }
 }

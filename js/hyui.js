@@ -488,7 +488,7 @@ $(function() {
                     _tabItem.not('.active').next().slideUp();
                     // _tabItemNow.next().slideDown();
                     _tabItemNow.next().slideDown("0", function() {
-                        $('.slider-time').slick("setPosition", 0);
+                        $('.slider-time, .slider-time2').slick("setPosition", 0);
                     });
                     $("html,body").stop(true, false).animate({ scrollTop: scollDistance });
                 } else {
@@ -497,7 +497,7 @@ $(function() {
                     // 抓到slick的寬高
                     _tabItem.not('.active').next().fadeOut();
                     _tabItemNow.next().fadeIn("0", function() {
-                        $('.slider-time').slick("setPosition", 0);
+                        $('.slider-time, .slider-time2 ').slick("setPosition", 0);
                     });
                     tabContentHeight = _tabItemNow.next().innerHeight();
                     _tab.height(tabContentHeight + tabItemHeight);

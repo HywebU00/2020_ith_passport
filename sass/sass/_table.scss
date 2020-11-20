@@ -390,7 +390,7 @@ table {
     }
 }
 .table_wrapper {
-    @include screen('mobile') {
+    @include screen('notebook'){
         width: 100%;
         display: block;
         @include clearfix;
@@ -403,6 +403,13 @@ table {
             width: 100%;
             // display:none;
             min-width: 600px;
+        }
+    }
+    @include screen('mobile'){
+         table {
+            width: 100%;
+            // display:none;
+            min-width: auto;
         }
     }
 }

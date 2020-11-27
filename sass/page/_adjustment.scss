@@ -1,5 +1,3 @@
-
-
 // 矯正
 body.large_size {
     .navigation {
@@ -11,6 +9,17 @@ body.large_size {
             margin-top: 2px;
             font-size: .0.938em;
             text-align: center;
+            height: 26px;
+        }
+        .forget_password {
+            margin-top: 3px;
+            margin-bottom: .3em;
+            a {
+                padding: 0 .5em;
+                font-size: 0.813em;
+                height: 26px;
+                
+            }
         }
     }
     // 旅行地點分佈
@@ -129,9 +138,9 @@ body.large_size {
         }
     }
     // 內頁會員註冊
-    .member_block .step_block ul li:before{
+    .member_block .step_block ul li:before {
         right: -56px;
-        border-width:28px;
+        border-width: 28px;
     }
 }
 // 小字
@@ -163,8 +172,8 @@ body.small_size {
             }
         }
     }
-// 旅行地點分佈
-    .travel_location_block .location_slider .location_blcok .leaderboard .content .group a span{
+    // 旅行地點分佈
+    .travel_location_block .location_slider .location_blcok .leaderboard .content .group a span {
         padding: 11px 5px;
     }
 }

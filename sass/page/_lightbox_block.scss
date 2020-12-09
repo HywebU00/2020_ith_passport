@@ -153,3 +153,30 @@
     top: 0;
     z-index: 9999;
 }
+// 重整
+.reflash {
+    display: inline-block;
+    padding: 2px;
+    border-radius: 50%;
+    background-color: #fff;
+    position: relative;
+    width: 24px;
+    height: 24px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    vertical-align: middle;
+    margin-left: 5px;
+    @include box-sizing;
+    img {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 14px;
+        height: 14px;
+        margin: auto;
+    }
+    &:hover {
+        background-color: #fdf3b9;
+    }
+}

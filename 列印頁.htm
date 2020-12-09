@@ -96,10 +96,55 @@
                 <!-- function功能區塊 -->
                 <div class="function">
                     <ul>
-                        <li><a href="#">資料列印</a></li>
+                        <li><a href="#" data-fancybox data-src="#lightbox_dataexport_block">資料匯出</a></li>
+                        <li><a href="#" data-fancybox data-src="#lightbox_dataexprint_block">資料列印</a></li>
                         <li><a href="#">回上一頁</a></li>
                     </ul>
                 </div>
+                <!--資料匯出燈箱start-->
+                <div class="lightboxblock commonlightbox_small" id="lightbox_dataexport_block">
+                    <h3 class="title">資料匯出</h3>
+                    <div class="content">
+                        <form action="" class="form_grid flex-form">
+                            <div class="form_grp">
+                                <label for="selectSample" class="form_title">驗證碼</label>
+                                <div class="form_content form_inline">
+                                    <input name="" type="text" value="" placeholder="請輸入驗證碼" class="verification_code">
+                                    <img src="images/basic/captcha.gif" alt="" class="captcha">
+                                    <a href="#" class="reflash"><img src="images/icon/icon_reflash.svg"></a>
+                                    
+                                </div>
+                            </div>
+                            <div class="btn_grp">
+                                <input name="" type="submit" value="確定送出" />
+                                <input name="" type="reset" value="取消" />
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- 資料匯出燈箱end -->
+                <!--資料列印燈箱start-->
+                <div class="lightboxblock commonlightbox_small" id="lightbox_dataexprint_block">
+                    <h3 class="title">資料列印</h3>
+                    <div class="content">
+                        <form action="" class="form_grid flex-form">
+                            <div class="form_grp">
+                                <label for="selectSample" class="form_title">驗證碼</label>
+                                <div class="form_content form_inline">
+                                    <input name="" type="text" value="" placeholder="請輸入驗證碼" class="verification_code">
+                                    <img src="images/basic/captcha.gif" alt="" class="captcha">
+                                    <a href="#" class="reflash"><img src="images/icon/icon_reflash.svg"></a>
+                                    
+                                </div>
+                            </div>
+                            <div class="btn_grp">
+                                <input name="" type="submit" value="確定送出" />
+                                <input name="" type="reset" value="取消" />
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- 資料列印燈箱end -->
                 <section class="lp">
                     <!-- table列表 start-->
                     <div class="table_list  print_table table_wrapper">

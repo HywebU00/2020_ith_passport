@@ -453,6 +453,7 @@
     background-repeat: repeat;
     padding: 30px 0 0 0;
     height: 676px;
+    @include box-sizing;
     &.add_blockheight {
         height: auto;
     }
@@ -1029,6 +1030,7 @@
 .travel_location_block {
     padding: 50px 0 60px;
     height: 870px;
+    @include box-sizing;
     @include screen('tablet') {
         height: auto;
     }

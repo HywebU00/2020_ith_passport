@@ -564,25 +564,22 @@ $(function() {
 //             }
 //         });
 //     });
-   
 // })
 // 全部展開
 $(function() {
-    $('.all_unfold>a').click(function(e) {       
-            if ($('.all_unfold>a').html() === "全部展開") {                
-                $('.result_table table tr td .second_data').stop().slideDown();
-                
-                $('.all_unfold>a').html("全部收合");
-                $('.all_unfold>a').attr('name', '全部收合');                                
-                $('.result_table table tr td .openbtn').stop().addClass('closebtn');
-            } else {             
-                $('.result_table table tr td .second_data').stop().slideUp();
-                
-                $('.all_unfold>a').html("全部展開");
-                $('.all_unfold>a').attr('name', '全部展開');           
-                $('.result_table table tr td .openbtn').stop().removeClass('closebtn');                
-            }       
-    });       
+    $('.all_unfold>a').click(function(e) {
+        if ($('.all_unfold>a').html() === "全部展開") {
+            $('.result_table table tr td .second_data').stop().slideDown();
+            $('.all_unfold>a').html("全部收合");
+            $('.all_unfold>a').attr('name', '全部收合');
+            $('.result_table table tr td .openbtn').stop().addClass('closebtn');
+        } else {
+            $('.result_table table tr td .second_data').stop().slideUp();
+            $('.all_unfold>a').html("全部展開");
+            $('.all_unfold>a').attr('name', '全部展開');
+            $('.result_table table tr td .openbtn').stop().removeClass('closebtn');
+        }
+    });
 })
 // 後分類更多按鈕
 $(function() {

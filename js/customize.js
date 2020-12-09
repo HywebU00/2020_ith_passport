@@ -539,6 +539,11 @@ $(function() {
         $('body,html').stop(true, true).animate({ scrollTop: $('.groupE').offset().top - 70 }, 200, 'easeOutExpo');
     });
     // e.preventDefault();
+    // if ($('.innerpage').length > 0) {
+    //     $('.query').click(function(e) {
+    //         $(' body,html').stop(true, true).animate({ scrollTop: $('.groupA').offset().top - 500 }, 200, 'easeOutExpo');
+    //     });
+    // }
 })
 // 結果條列頁展開按鈕
 $(function() {

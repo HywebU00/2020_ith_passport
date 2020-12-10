@@ -514,7 +514,7 @@ $(function() {
     ///////////////置頂go to top////////////
     /*-----------------------------------*/
     $(window).bind('scroll', function() {
-        if ($(this).scrollTop() > 200) {
+        if ($(this).scrollTop() > 300) {
             $('.scrollToTop').fadeIn();
             $('.passport_search_block').find('.container').addClass('addHeight');
         } else {

@@ -516,8 +516,10 @@ $(function() {
     $(window).bind('scroll', function() {
         if ($(this).scrollTop() > 200) {
             $('.scrollToTop').fadeIn();
+            $('.passport_search_block').find('.container').addClass('addHeight');
         } else {
             $('.scrollToTop').fadeOut();
+             $('.passport_search_block').find('.container').removeClass('addHeight');
         }
     });
     // 

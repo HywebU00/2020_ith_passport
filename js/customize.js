@@ -524,7 +524,7 @@ $(function() {
 })
 $(function() {
     $('.query').click(function(e) {
-        $(' body,html').stop(true, true).animate({ scrollTop: $('.groupA').offset().top - 90 }, 200, 'easeOutExpo');
+        $(' body,html').stop(true, true).animate({ scrollTop: $('.groupA').offset().top }, 200, 'easeOutExpo');
     });
     $('.browse').click(function(e) {
         $('body,html').stop(true, true).animate({ scrollTop: $('.groupB').offset().top - 70 }, 200, 'easeOutExpo');

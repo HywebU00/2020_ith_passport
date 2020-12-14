@@ -32,6 +32,14 @@ table {
                 text-align: left;
             }
         }
+        &.num, &.name {
+            text-align: center;
+            white-space: nowrap;
+
+        }
+        &.nowrap{
+            white-space: nowrap;
+        }
     }
     th {
         background-color: $color-brown2;
@@ -135,7 +143,6 @@ table {
             color: #333;
             @include screen('mobile') {
                 border-bottom: #989898 1px solid !important;
-
             }
             &.num {
                 text-align: center;
@@ -178,7 +185,7 @@ table {
                     }
                 }
                 th {
-                    padding:3px 8px;
+                    padding: 3px 8px;
                     text-align: right;
                     width: 120px;
                     font-size: 0.938em;
@@ -213,16 +220,16 @@ table {
                 }
             }
         }
-        .second_data{
-            table{
-                td{
-                    border-bottom:1px #bfb8b3 solid!important;
-                     padding:3px 8px;
+        .second_data {
+            table {
+                border-top: none !important;
+                td {
+                    border-bottom: 1px #bfb8b3 solid !important;
+                    padding: 3px 8px;
                 }
-
-                th{
+                th {
                     border-bottom: #7d7169 1px solid;
-                     padding:3px 8px;
+                    padding: 3px 8px;
                 }
             }
         }
@@ -261,7 +268,7 @@ table {
         td {
             padding-bottom: 5px !important;
             padding-top: 5px !important;
-            min-height:40px;
+            min-height: 40px;
             &:first-child {
                 padding-bottom: 20px !important;
                 padding-top: 15px !important;
@@ -278,7 +285,7 @@ table {
                 padding: 0 !important;
                 border-bottom: none;
                 padding-left: 0 !important;
-                min-height:auto !important;
+                min-height: auto !important;
             }
             table {
                 border: 1px solid #ccc !important;
@@ -311,7 +318,7 @@ table {
                     width: auto;
                     border-right: none !important;
                     border-bottom-color: #989898 !important;
-                     min-height:auto;
+                    min-height: auto;
                     @media(max-width: 380px) {
                         flex-basis: calc(100% - 35%);
                         max-width: calc(100% - 35%);
@@ -390,7 +397,7 @@ table {
     }
 }
 .table_wrapper {
-    @include screen('notebook'){
+   
         width: 100%;
         display: block;
         @include clearfix;
@@ -404,9 +411,9 @@ table {
             // display:none;
             min-width: 600px;
         }
-    }
-    @include screen('mobile'){
-         table {
+    
+    @include screen('mobile') {
+        table {
             width: 100%;
             // display:none;
             min-width: auto;

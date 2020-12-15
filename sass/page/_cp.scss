@@ -39,16 +39,20 @@ h3.title {
             display: block;
             margin-bottom: .5em;
         }
-        @include screen('xs_mobile'){
+        @include screen('xs_mobile') {
             max-width: 100%;
         }
     }
-   
     p {
         margin-bottom: 1em;
     }
     table {
         background: #FFF;
+        margin:10px 0;
+        th,
+        td {
+            padding: 8px;
+        }
     }
     img {
         &.float_left {

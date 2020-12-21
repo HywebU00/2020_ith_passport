@@ -788,16 +788,16 @@ $(function() {
                     thisScroll = Math.floor($(this).scrollTop());
                 if (thisScroll > stickyArrowTop - 230) {
                     $('.scroltable-wrapper .tablearrow_left').css('display', 'block');
-                    $('.scroltable-wrapper .tablearrow_left').css({ "top": thisScroll - stickyArrowTop + 230 }, 100, 'easeOutQuint');
+                    // $('.scroltable-wrapper .tablearrow_left').css({ "top": thisScroll - stickyArrowTop + 230 }, 100, 'easeOutQuint');
                     $('.scroltable-wrapper .tablearrow_right').css('display', 'block');
-                    $('.scroltable-wrapper .tablearrow_right').css({ "top": thisScroll - stickyArrowTop + 230 }, 100, 'easeOutQuint');
+                    // $('.scroltable-wrapper .tablearrow_right').css({ "top": thisScroll - stickyArrowTop + 230 }, 100, 'easeOutQuint');
                 } else {
                     $('.scroltable-wrapper .tablearrow_left').css({
-                        top: '10px',
+                        top: '20px',
                         display: 'none'
                     });
                     $('.scroltable-wrapper .tablearrow_right').css({
-                        top: '10px',
+                        top: '20px',
                         display: 'none'
                     });
                 }

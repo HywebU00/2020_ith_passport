@@ -216,10 +216,10 @@
 .result_sort_block {
     color: #333;
     text-align: left;
-    padding:0 0 0 90px;
-    .title{
-margin-left: -80px;
-display: inline-block;
+    padding: 0 0 0 90px;
+    .title {
+        margin-left: -80px;
+        display: inline-block;
     }
     em {
         font-family: 'Comfortaa', cursive;
@@ -462,7 +462,7 @@ display: inline-block;
         border: 1px solid #867154;
         background-color: #fff;
         transition: .5s;
-        border-radius:.2em;
+        border-radius: .2em;
         &:hover {
             background-color: #797979;
             color: #fff;
@@ -493,6 +493,36 @@ display: inline-block;
                         color: $linkColor;
                     }
                 }
+            }
+        }
+    }
+}
+// 說明
+.explanation_block {
+    display: flex;
+    @include screen('xs_mobile'){
+        display: block;
+    }
+    .title {
+        flex: none;
+        flex-basis: 10%;
+        background-color:#ddd;
+        color: #000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+         @include screen('xs_mobile'){
+            flex-basis: 100%;
+            padding:8px ;
+         }
+    }
+    .content {
+        flex: auto;
+        ol {
+            margin: 5px 0px 5px 30px;
+            padding: 0;
+            li {
+                margin-bottom: 10px;
             }
         }
     }

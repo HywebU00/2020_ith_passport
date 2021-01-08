@@ -519,7 +519,7 @@ $(function() {
             $('.passport_search_block').find('.container').addClass('addHeight');
         } else {
             $('.scrollToTop').fadeOut();
-             $('.passport_search_block').find('.container').removeClass('addHeight');
+            $('.passport_search_block').find('.container').removeClass('addHeight');
         }
     });
     // 
@@ -783,25 +783,25 @@ $(function() {
     // 固定版頭
     function table_Arrow() {
         if ($('table').parents('.table_list').length == 0 && $('table').parents('.fix_th_table').length == 0 && $(this).parent('form').length == 0) {
-            if ($('.scroltable-wrapper').length > 0) {
-                var stickyArrowTop = Math.floor($('.scroltable-wrapper').offset().top),
-                    thisScroll = Math.floor($(this).scrollTop());
-                if (thisScroll > stickyArrowTop - 230) {
-                    $('.scroltable-wrapper .tablearrow_left').css('display', 'block');
-                   $('.scroltable-wrapper .tablearrow_left').css({ "top": thisScroll - stickyArrowTop + 230 }, 100, 'easeOutQuint');
-                    $('.scroltable-wrapper .tablearrow_right').css('display', 'block');
-                    $('.scroltable-wrapper .tablearrow_right').css({ "top": thisScroll - stickyArrowTop + 230 }, 100, 'easeOutQuint');
+            $('.scroltable-wrapper').each(function(k, v) {
+                var ttop = v.getBoundingClientRect().height - (v.getBoundingClientRect().bottom / 2);
+                let { top, bottom, height } = v.getBoundingClientRect()
+                if (top > 0) {
+                    ttop = ((window.innerHeight - top) / 2) - 15;
                 } else {
-                    $('.scroltable-wrapper .tablearrow_left').css({
-                         top: '10px',
-                        display: 'none'
-                    });
-                    $('.scroltable-wrapper .tablearrow_right').css({
-                         top: '10px',
-                        display: 'none'
-                    });
+                    ttop = (Math.abs(top) + (Math.min(bottom, window.innerHeight) / 2)) - 15;
                 }
-            }
+                if (window.innerHeight > bottom) {
+                    if (top > 0 && bottom > 0) {
+                        //全部都在可視範圍
+                        ttop = (height / 2) - 15;
+                    }
+                }
+                $(v).find('.tablearrow_left').css('display', 'block');
+                $(v).find('.tablearrow_left').css({ "top": ttop }, 100, 'easeOutQuint');
+                $(v).find('.tablearrow_right').css('display', 'block');
+                $(v).find('.tablearrow_right').css({ "top": ttop }, 100, 'easeOutQuint');
+            })
         }
     }
     $(window).scroll(function(event) {

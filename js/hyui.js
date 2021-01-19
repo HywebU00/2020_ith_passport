@@ -785,7 +785,10 @@ $(function() {
         if ($('table').parents('.table_list').length == 0 && $('table').parents('.fix_th_table').length == 0 && $(this).parent('form').length == 0) {
             $('.scroltable-wrapper').each(function(k, v) {
                 var ttop = v.getBoundingClientRect().height - (v.getBoundingClientRect().bottom / 2);
-                let { top, bottom, height } = v.getBoundingClientRect()
+                var clientRect = v.getBoundingClientRect();
+                var top = clientRect.top;
+                var bottom = clientRect.bottom;
+                var height = clientRect.height;
                 if (top > 0) {
                     ttop = ((window.innerHeight - top) / 2) - 15;
                 } else {

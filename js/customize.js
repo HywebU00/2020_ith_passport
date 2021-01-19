@@ -134,7 +134,7 @@ $(function() {
     $('.slider-nav').slick({
         slidesToShow: 3,
         slidesToScroll: 1,
-        asNavFor: '.slider-for',       	 
+        asNavFor: '.slider-for',
         focusOnSelect: true,
         responsive: [{
                 breakpoint: 1200,
@@ -167,39 +167,65 @@ $(function() {
         ]
     });
     // 系統公告
-    if ($('.bulletin').html() != undefined){
-        $('.bulletin').addClass('goin');    
-            if (getCookie('mptopnews' + $('.bulletin').attr('id').replace('div_', '')) == '1') {
-                $('.bulletin').stop().removeClass('goin');
-            }
+    if ($('.bulletin').html() != undefined) {
+        $('.bulletin').addClass('goin');
+        if (getCookie('mptopnews' + $('.bulletin').attr('id').replace('div_', '')) == '1') {
+            $('.bulletin').stop().removeClass('goin');
+        }
         $('.bulletin .btn_grp').click(function() {
             $('.bulletin').stop().removeClass('goin');
-		     var expires = new Date();
-             //有效時間保存 20 分 20*60*1000 改為一年
-             expires.setDate(expires.getDate() + 365);
-             //expires.setTime(expires.getTime() + 1200000);
-             document.cookie = "mptopnews" + $('.bulletin').attr('id').replace('div_', '') + "=" + escape('1') + ";expires=" + expires.toGMTString();				 
+            var expires = new Date();
+            //有效時間保存 20 分 20*60*1000 改為一年
+            expires.setDate(expires.getDate() + 365);
+            //expires.setTime(expires.getTime() + 1200000);
+            document.cookie = "mptopnews" + $('.bulletin').attr('id').replace('div_', '') + "=" + escape('1') + ";expires=" + expires.toGMTString();
         })
     }
-	 function getCookie(name) {
-         var arg = escape(name) + "=";
-         var nameLen = arg.length;
-         var cookieLen = document.cookie.length;
-         var i = 0;
-         while (i < cookieLen) {
-             var j = i + nameLen;
-             if (document.cookie.substring(i, j) == arg) return getCookieValueByIndex(j);
-             i = document.cookie.indexOf(" ", i) + 1;
-             if (i == 0) break;
-         }
-         return null;
-     }
-     function getCookieValueByIndex(startIndex) {
-         var endIndex = document.cookie.indexOf(";", startIndex);
-         if (endIndex == -1) endIndex = document.cookie.length;
-         return unescape(document.cookie.substring(startIndex, endIndex));
-     }
-    // 專題旅券
+
+    function getCookie(name) {
+        var arg = escape(name) + "=";
+        var nameLen = arg.length;
+        var cookieLen = document.cookie.length;
+        var i = 0;
+        while (i < cookieLen) {
+            var j = i + nameLen;
+            if (document.cookie.substring(i, j) == arg) return getCookieValueByIndex(j);
+            i = document.cookie.indexOf(" ", i) + 1;
+            if (i == 0) break;
+        }
+        return null;
+    }
+
+    function getCookieValueByIndex(startIndex) {
+        var endIndex = document.cookie.indexOf(";", startIndex);
+        if (endIndex == -1) endIndex = document.cookie.length;
+        return unescape(document.cookie.substring(startIndex, endIndex));
+    }
+    // 地點分佈輪播
+    // $('.location_slider').slick({
+    //     dots: false,
+    //     infinite: false,
+    //     speed: 500,
+    //     slidesToShow: 1,
+    //     slidesToScroll: 1,
+    //     lazyLoaded: true,
+    //     lazyLoad: 'ondemand',
+    //     ease: 'ease',
+    //     responsive: [{
+    //             breakpoint: 1200,
+    //             settings: {
+    //                 slidesToShow: 1,
+    //                 slidesToScroll: 1,
+    //             }
+    //         }
+    //         // You can unslick at a given breakpoint now by adding:
+    //         // settings: "unslick"
+    //         // instead of a settings object
+    //     ]
+    // });
+});
+// 專題旅券
+$(function() {
     $('.topic_slider').slick({
         dots: false,
         infinite: true,
@@ -230,29 +256,7 @@ $(function() {
             // instead of a settings object
         ]
     });
-    // 地點分佈輪播
-    // $('.location_slider').slick({
-    //     dots: false,
-    //     infinite: false,
-    //     speed: 500,
-    //     slidesToShow: 1,
-    //     slidesToScroll: 1,
-    //     lazyLoaded: true,
-    //     lazyLoad: 'ondemand',
-    //     ease: 'ease',
-    //     responsive: [{
-    //             breakpoint: 1200,
-    //             settings: {
-    //                 slidesToShow: 1,
-    //                 slidesToScroll: 1,
-    //             }
-    //         }
-    //         // You can unslick at a given breakpoint now by adding:
-    //         // settings: "unslick"
-    //         // instead of a settings object
-    //     ]
-    // });
-});
+})
 // 旅券瀏覽1
 $(function() {
     $('.slider-time').slick({
@@ -567,11 +571,11 @@ $(function() {
         $('body,html').stop(true, true).animate({ scrollTop: $('.groupE').offset().top - 70 }, 200, 'easeOutExpo');
     });
     // e.preventDefault();
-	// if ($('.innerpage').length > 0) {
+    // if ($('.innerpage').length > 0) {
     //     $('.query').click(function(e) {
     //         $(' body,html').stop(true, true).animate({ scrollTop: $('.groupA').offset().top - 500 }, 200, 'easeOutExpo');
     //     });
-    // }	
+    // }    
 })
 // 結果條列頁展開按鈕
 $(function() {
@@ -579,7 +583,7 @@ $(function() {
         $(this).stop().toggleClass('closebtn');
         // $(this).parents('tr').siblings('tr').find('.second_data').stop().slideUp();
         $(this).parents('tr').next('tr').find('.second_data').stop().slideToggle();
-        // $(this).parents('tr').siblings('tr').find('.openbtn').stop().removeClass('closebtn');		        
+        // $(this).parents('tr').siblings('tr').find('.openbtn').stop().removeClass('closebtn');                
         if ($('.all_unfold>a').html() === "全部展開") // 只針對單筆展開
         {
             $('.all_unfold>a').html("全部收合");
@@ -589,11 +593,11 @@ $(function() {
             $('.all_unfold>a').html("全部展開");
             $('.all_unfold>a').attr('name', '全部展開');
         }
-		//if ($('.all_unfold>a').html() === "全部收合") {
+        //if ($('.all_unfold>a').html() === "全部收合") {
         //    $('.all_unfold>a').html("全部展開");
         //    $('.all_unfold>a').attr('name', '全部展開');
-		//}
-		////else {
+        //}
+        ////else {
         //    $('.all_unfold>a').html("全部收合");
         //    $('.all_unfold>a').attr('name', '全部收合');
         //}
@@ -614,25 +618,22 @@ $(function() {
 //             }
 //         });
 //     });
-   
 // })
 // 全部展開
 $(function() {
-    $('.all_unfold>a').click(function(e) {       
-            if ($('.all_unfold>a').html() === "全部展開") {                
-                $('.result_table table tr td .second_data').stop().slideDown();
-                
-                $('.all_unfold>a').html("全部收合");
-                $('.all_unfold>a').attr('name', '全部收合');                                
-                $('.result_table table tr td .openbtn').stop().addClass('closebtn');
-            } else {             
-                $('.result_table table tr td .second_data').stop().slideUp();
-                
-                $('.all_unfold>a').html("全部展開");
-                $('.all_unfold>a').attr('name', '全部展開');           
-                $('.result_table table tr td .openbtn').stop().removeClass('closebtn');                
-            }       
-    });       
+    $('.all_unfold>a').click(function(e) {
+        if ($('.all_unfold>a').html() === "全部展開") {
+            $('.result_table table tr td .second_data').stop().slideDown();
+            $('.all_unfold>a').html("全部收合");
+            $('.all_unfold>a').attr('name', '全部收合');
+            $('.result_table table tr td .openbtn').stop().addClass('closebtn');
+        } else {
+            $('.result_table table tr td .second_data').stop().slideUp();
+            $('.all_unfold>a').html("全部展開");
+            $('.all_unfold>a').attr('name', '全部展開');
+            $('.result_table table tr td .openbtn').stop().removeClass('closebtn');
+        }
+    });
 })
 // 後分類更多按鈕
 $(function() {
@@ -671,26 +672,25 @@ $(function() {
     })
     $('.passport_browse .tabSet .yearbrowsebtn').click(function() {
         $(this).parents('.passport_browse .tabSet').addClass('add_blockheight')
-        $(this).parents('.passport_browse_block').addClass('add_blockheight')			   
+        $(this).parents('.passport_browse_block').addClass('add_blockheight')
     })
 })
 // 針對 cookie處理 4095 上限字
 // 紀錄 checkbox value
-$(function () {
+$(function() {
     if (location.href.indexOf("sp-tp-result") > 0) {
-    //var shareSize = $("#HIDShareSize").val();  // 分享筆數上限
-    //var currentCount = parseInt($("#checkedNum").text());
-    var TempNum = 0;
-    var TempStr = "";
-
-    var checkedbox = []; //宣告陣列存放已經點選的Checkbox值    
+        //var shareSize = $("#HIDShareSize").val();  // 分享筆數上限
+        //var currentCount = parseInt($("#checkedNum").text());
+        var TempNum = 0;
+        var TempStr = "";
+        var checkedbox = []; //宣告陣列存放已經點選的Checkbox值    
         //判斷Cookie是否有寫入
         if (getCookie("ckId") != "") {
             //將寫入的cookie轉換為物件
             checkedbox = JSON.parse(getCookie("ckId"));
             //輪流讀取已存放的值
-            $.each(checkedbox, function (i, e) {
-                $("input[name=ckDataID]").each(function () {
+            $.each(checkedbox, function(i, e) {
+                $("input[name=ckDataID]").each(function() {
                     TempStr = $(this).val().substring(0, $(this).val().length - 3); // "_00" 截斷的字                
                     //若發現有同樣的值就勾選
                     if (TempStr === e) {
@@ -701,103 +701,99 @@ $(function () {
             })
             $("#checkedNum").text(JSON.parse(getCookie("ckId")).length);
         }
-    
-   
-    //若該頁紀錄已全選，則全選按鈕 打勾
-    if (TempNum.toString() === $("#HIDPageSize").val()) {
-        $("#clickAll").prop("checked", true);
-        $("#select_all").prop("checked", true);
-    }   
-    //勾選單一Checkbox事件
-    $("input[name=ckDataID]").change(function () {
-        checked = $(this);        
-
-        TempStr = checked.val().substring(0, checked.val().length - 3); // _00 截斷的字
-        //判斷是否選取
-        if ($(this).is(':checked')) {
-
-            // 要修改
-            if ((parseInt($("#checkedNum").text()) + 1) > $("#HIDShareSize").val()) {
-                alert("超過分享筆數上限！");
-                $("#clickAll").prop("checked", false);
-                $("#select_all").prop("checked", false);
-                $(this).prop("checked", false);
-                return false;
-            }
-            //若是已選取狀態則 加入存放值     
-            //判斷現有cookie是否已有該值            
-            //if (!checkedbox.includes(TempStr)) {
-            if (checkedbox.indexOf(TempStr) === -1) {
-                checkedbox.push(TempStr);
-            }                        
-        } else {
-            //若取消選取則移出值
-            $.each(checkedbox, function (i, e) {
-                if (e === TempStr) {
-                    checkedbox.splice(i, 1);
+        //若該頁紀錄已全選，則全選按鈕 打勾
+        if (TempNum.toString() === $("#HIDPageSize").val()) {
+            $("#clickAll").prop("checked", true);
+            $("#select_all").prop("checked", true);
+        }
+        //勾選單一Checkbox事件
+        $("input[name=ckDataID]").change(function() {
+            checked = $(this);
+            TempStr = checked.val().substring(0, checked.val().length - 3); // _00 截斷的字
+            //判斷是否選取
+            if ($(this).is(':checked')) {
+                // 要修改
+                if ((parseInt($("#checkedNum").text()) + 1) > $("#HIDShareSize").val()) {
+                    alert("超過分享筆數上限！");
+                    $("#clickAll").prop("checked", false);
+                    $("#select_all").prop("checked", false);
+                    $(this).prop("checked", false);
+                    return false;
                 }
-            })
-        }        
-        document.cookie = "ckId=" + JSON.stringify(checkedbox);//encodeURIComponent(_QueryLink);
-        // 分享上限
-        if (getCookie("ckId") != "") {
-            $("#checkedNum").text(JSON.parse(getCookie("ckId")).length);
-        }
-    })
-    //全選Checkbox事件
-    $("input[name=clickAll]").change(function () {
-        var difNum = 0;  // 未加
-        var ckData = $("input[name=ckDataID]");        
-        for (var i = 0; i < ckData.length; i++) {
-            if (ckData[i].checked === false) {
-                difNum++;
+                //若是已選取狀態則 加入存放值     
+                //判斷現有cookie是否已有該值            
+                //if (!checkedbox.includes(TempStr)) {
+                if (checkedbox.indexOf(TempStr) === -1) {
+                    checkedbox.push(TempStr);
+                }
+            } else {
+                //若取消選取則移出值
+                $.each(checkedbox, function(i, e) {
+                    if (e === TempStr) {
+                        checkedbox.splice(i, 1);
+                    }
+                })
             }
-        }
-        if ($(this).is(":checked")) {
-            //要修
+            document.cookie = "ckId=" + JSON.stringify(checkedbox); //encodeURIComponent(_QueryLink);
+            // 分享上限
+            if (getCookie("ckId") != "") {
+                $("#checkedNum").text(JSON.parse(getCookie("ckId")).length);
+            }
+        })
+        //全選Checkbox事件
+        $("input[name=clickAll]").change(function() {
+            var difNum = 0; // 未加
+            var ckData = $("input[name=ckDataID]");
+            for (var i = 0; i < ckData.length; i++) {
+                if (ckData[i].checked === false) {
+                    difNum++;
+                }
+            }
+            if ($(this).is(":checked")) {
+                //要修
+                if ((parseInt($("#checkedNum").text()) + difNum) > $("#HIDShareSize").val()) {
+                    alert("超過分享筆數上限！");
+                    $("#clickAll").prop("checked", false);
+                    return false;
+                }
+                $("input[name=ckDataID]").each(function() {
+                    $(this).prop("checked", true);
+                })
+            } else {
+                $("input[name=ckDataID]").each(function() {
+                    $(this).prop("checked", false);
+                })
+            }
+            //checkedbox.splice(0, checkedbox.length); 
+            //因為狀態改變 所以觸發各個的單一選取事件
+            $('input[name=ckDataID]').trigger('change');
+        })
+        // 手機版全選
+        $("input[name=select_all]").change(function() {
+            var difNum = 0; // 未加
+            var ckData = $("input[name=ckDataID]");
+            for (var i = 0; i < ckData.length; i++) {
+                if (ckData[i].checked === false) {
+                    difNum++;
+                }
+            }
+            //判斷是否超過
             if ((parseInt($("#checkedNum").text()) + difNum) > $("#HIDShareSize").val()) {
                 alert("超過分享筆數上限！");
-                $("#clickAll").prop("checked", false);
+                $("#select_all").prop("checked", false);
                 return false;
             }
-            $("input[name=ckDataID]").each(function () {
-                $(this).prop("checked", true);
-            })
-        } else {
-            $("input[name=ckDataID]").each(function () {
-                $(this).prop("checked", false);
-            })
-        }
-        //checkedbox.splice(0, checkedbox.length); 
-        //因為狀態改變 所以觸發各個的單一選取事件
-        $('input[name=ckDataID]').trigger('change');
-    })
-    // 手機版全選
-    $("input[name=select_all]").change(function () {        
-        var difNum = 0;  // 未加
-        var ckData = $("input[name=ckDataID]");
-        for (var i = 0; i < ckData.length; i++) {
-            if (ckData[i].checked === false) {
-                difNum++;
+            if ($(this).is(":checked")) {
+                $("input[name=ckDataID]").each(function() {
+                    $(this).prop("checked", true);
+                })
+            } else {
+                $("input[name=ckDataID]").each(function() {
+                    $(this).prop("checked", false);
+                })
             }
-        }
-        //判斷是否超過
-        if ((parseInt($("#checkedNum").text()) + difNum) > $("#HIDShareSize").val()) {
-            alert("超過分享筆數上限！");            
-            $("#select_all").prop("checked", false);
-            return false;
-        }
-        if ($(this).is(":checked")) {
-            $("input[name=ckDataID]").each(function () {
-                $(this).prop("checked", true);
-            })
-        } else {
-            $("input[name=ckDataID]").each(function () {
-                $(this).prop("checked", false);
-            })
-        }
-        //因為狀態改變 所以觸發各個的單一選取事件
-        $('input[name=ckDataID]').trigger('change');
-    })
+            //因為狀態改變 所以觸發各個的單一選取事件
+            $('input[name=ckDataID]').trigger('change');
+        })
     }
 })

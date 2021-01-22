@@ -99,9 +99,13 @@
                     }
                     &:hover, &:focus {
                         width: auto;
-                        padding: 10px 30px;
+                        padding: 10px 20px;
                         &:before {
                             right: -25px;
+                        }
+                        @media(max-width: 500px) {
+                            padding: 10px 0;
+                            width: 100%;
                         }
                     }
                 }

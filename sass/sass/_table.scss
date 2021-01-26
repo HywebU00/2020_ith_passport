@@ -44,13 +44,29 @@ table {
     th {
         background-color: $color-brown2;
         color: #fff;
-        border-right: #7d7169 1px solid;
+        // border-right: #7d7169 1px solid;
         border-bottom: #474646 1px solid;
-        border-left: #7d7169 1px solid;
+        // border-left: #7d7169 1px solid;
         text-align: center;
         white-space: nowrap;
         padding: 20px 8px;
         font-weight: 500;
+        @include box-sizing;
+        position: relative;
+        &:before {
+            content: '';
+            width: 1px;
+            height: 100%;
+            background-color: #7d7169;
+            right: 0px;
+            top: 0px;
+            position: absolute;
+        }
+        &:last-child {
+            &:before {
+                display: none;
+            }
+        }
     }
     &.table_hover {
         tr:hover {
@@ -64,6 +80,11 @@ table {
     }
 }
 .table_list {
+    th {
+        &:before {
+            display: none;
+        }
+    }
     @include screen('mobile') {
         background-color: transparent !important; //Force table to not be like tables anymore
         thead,

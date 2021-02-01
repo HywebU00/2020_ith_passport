@@ -33,11 +33,17 @@
                 @include screen('xs_mobile') {
                     th, td {
                         display: block;
-                        border-bottom: transparent;
+                        border:none;
+                        border-bottom: #7d7169 1px solid;
                         text-align: left;
+                        &:before{
+                            display: none;
+                        }
                     }
                     td {
                         min-height: 25px;
+                        border:none;
+                         border-bottom: #7d7169 1px solid;
                     }
                 }
             }

@@ -13,10 +13,12 @@ table {
         padding: 15px 8px;
         text-align: left;
         vertical-align: top;
+        @include box-sizing;
     }
     td {
         border: #7d7169 1px solid;
         word-break: break-all;
+
         a {
             word-break: break-all;
         }
@@ -35,10 +37,15 @@ table {
         &.num, &.name {
             text-align: center;
             white-space: nowrap;
-
         }
-        &.nowrap{
+        &.nowrap {
             white-space: nowrap;
+        }
+        &:first-child {
+            border-left-color: #fff;
+        }
+        &:last-child {
+            border-right-color: #fff;
         }
     }
     th {
@@ -46,7 +53,7 @@ table {
         color: #fff;
         // border-right: #7d7169 1px solid;
         border-bottom: #474646 1px solid;
-        // border-left: #7d7169 1px solid;
+        // border-left:none;
         text-align: center;
         white-space: nowrap;
         padding: 20px 8px;
@@ -58,9 +65,10 @@ table {
             width: 1px;
             height: 100%;
             background-color: #7d7169;
-            right: 0px;
+            right: -1px;
             top: 0px;
             position: absolute;
+            z-index: 1;
         }
         &:last-child {
             &:before {
@@ -80,11 +88,7 @@ table {
     }
 }
 .table_list {
-    th {
-        &:before {
-            display: none;
-        }
-    }
+    
     @include screen('mobile') {
         background-color: transparent !important; //Force table to not be like tables anymore
         thead,
@@ -146,9 +150,9 @@ table {
                 td {
                     &:last-child {
                         border-right: none !important;
-                        @include screen('mobile') {
-                            border-right: #bfbfbf 1px solid !important;
-                        }
+                        // @include screen('mobile') {
+                        //     border-right: #bfbfbf 1px solid !important;
+                        // }
                     }
                 }
             }
@@ -418,21 +422,19 @@ table {
     }
 }
 .table_wrapper {
-   
+    width: 100%;
+    display: block;
+    @include clearfix;
+    overflow: hidden;
+    overflow-x: auto;
+    padding-bottom: 1em;
+    -webkit-overflow-scrolling: touch;
+    -webkit-transform: translate3d(0, 0, 0);
+    table {
         width: 100%;
-        display: block;
-        @include clearfix;
-        overflow: hidden;
-        overflow-x: auto;
-        padding-bottom: 1em;
-        -webkit-overflow-scrolling: touch;
-        -webkit-transform: translate3d(0, 0, 0);
-        table {
-            width: 100%;
-            // display:none;
-            min-width: 600px;
-        }
-    
+        // display:none;
+        min-width: 600px;
+    }
     @include screen('mobile') {
         table {
             width: 100%;

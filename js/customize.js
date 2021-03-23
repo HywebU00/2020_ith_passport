@@ -167,40 +167,44 @@ $(function() {
         ]
     });
     // 系統公告
-    if ($('.bulletin').html() != undefined) {
-        $('.bulletin').addClass('goin');
-        if (getCookie('mptopnews' + $('.bulletin').attr('id').replace('div_', '')) == '1') {
-            $('.bulletin').stop().removeClass('goin');
-        }
-        $('.bulletin .btn_grp').click(function() {
-            $('.bulletin').stop().removeClass('goin');
-            var expires = new Date();
-            //有效時間保存 20 分 20*60*1000 改為一年
-            expires.setDate(expires.getDate() + 365);
-            //expires.setTime(expires.getTime() + 1200000);
-            document.cookie = "mptopnews" + $('.bulletin').attr('id').replace('div_', '') + "=" + escape('1') + ";expires=" + expires.toGMTString();
-        })
-    }
+    $('.bulletin').addClass('goin');
+    $('.bulletin .btn_grp').click(function() {
+        $('.bulletin').stop().removeClass('goin');
+    })
+    // if ($('.bulletin').html() != undefined) {
+    //     $('.bulletin').addClass('goin');
+    //     if (getCookie('mptopnews' + $('.bulletin').attr('id').replace('div_', '')) == '1') {
+    //         $('.bulletin').stop().removeClass('goin');
+    //     }
+    //     $('.bulletin .btn_grp').click(function() {
+    //         $('.bulletin').stop().removeClass('goin');
+    //         var expires = new Date();
+    //         //有效時間保存 20 分 20*60*1000 改為一年
+    //         expires.setDate(expires.getDate() + 365);
+    //         //expires.setTime(expires.getTime() + 1200000);
+    //         document.cookie = "mptopnews" + $('.bulletin').attr('id').replace('div_', '') + "=" + escape('1') + ";expires=" + expires.toGMTString();
+    //     })
+    // }
 
-    function getCookie(name) {
-        var arg = escape(name) + "=";
-        var nameLen = arg.length;
-        var cookieLen = document.cookie.length;
-        var i = 0;
-        while (i < cookieLen) {
-            var j = i + nameLen;
-            if (document.cookie.substring(i, j) == arg) return getCookieValueByIndex(j);
-            i = document.cookie.indexOf(" ", i) + 1;
-            if (i == 0) break;
-        }
-        return null;
-    }
+    // function getCookie(name) {
+    //     var arg = escape(name) + "=";
+    //     var nameLen = arg.length;
+    //     var cookieLen = document.cookie.length;
+    //     var i = 0;
+    //     while (i < cookieLen) {
+    //         var j = i + nameLen;
+    //         if (document.cookie.substring(i, j) == arg) return getCookieValueByIndex(j);
+    //         i = document.cookie.indexOf(" ", i) + 1;
+    //         if (i == 0) break;
+    //     }
+    //     return null;
+    // }
 
-    function getCookieValueByIndex(startIndex) {
-        var endIndex = document.cookie.indexOf(";", startIndex);
-        if (endIndex == -1) endIndex = document.cookie.length;
-        return unescape(document.cookie.substring(startIndex, endIndex));
-    }
+    // function getCookieValueByIndex(startIndex) {
+    //     var endIndex = document.cookie.indexOf(";", startIndex);
+    //     if (endIndex == -1) endIndex = document.cookie.length;
+    //     return unescape(document.cookie.substring(startIndex, endIndex));
+    // }
     // 地點分佈輪播
     // $('.location_slider').slick({
     //     dots: false,

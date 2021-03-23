@@ -10,7 +10,7 @@
     @extend %clearfix;
     @include screen('mobile') {
         position: fixed;
-        flex-wrap: wrap;
+        // flex-wrap: wrap;
     }
     // 虛擬底色 - navigation bg
     &:before {

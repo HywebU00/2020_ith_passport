@@ -185,8 +185,8 @@ body {
             &:before {
                 display: none;
             }
-            &:hover {
-                width: 100px;
+            &:hover,&:focus {
+                width: 100px!important;
                 padding: 10px;
             }
         }

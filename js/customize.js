@@ -558,29 +558,29 @@ $(function() {
         $('.location10>a').removeClass('addcolor');
     })
 })
-$(function() {
-    $('.query').click(function(e) {
-        $(' body,html').stop(true, true).animate({ scrollTop: $('.groupA').offset().top }, 200, 'easeOutExpo');
-    });
-    $('.browse').click(function(e) {
-        $('body,html').stop(true, true).animate({ scrollTop: $('.groupB').offset().top - 70 }, 200, 'easeOutExpo');
-    });
-    $('.place').click(function(e) {
-        $('body,html').stop(true, true).animate({ scrollTop: $('.groupC').offset().top - 70 }, 200, 'easeOutExpo');
-    });
-    $('.purpose').click(function(e) {
-        $('body,html').stop(true, true).animate({ scrollTop: $('.groupD').offset().top - 70 }, 200, 'easeOutExpo');
-    });
-    $('.project').click(function(e) {
-        $('body,html').stop(true, true).animate({ scrollTop: $('.groupE').offset().top - 70 }, 200, 'easeOutExpo');
-    });
-    // e.preventDefault();
-    // if ($('.innerpage').length > 0) {
-    //     $('.query').click(function(e) {
-    //         $(' body,html').stop(true, true).animate({ scrollTop: $('.groupA').offset().top - 500 }, 200, 'easeOutExpo');
-    //     });
-    // }    
-})
+// $(function() {
+//     $('.query').click(function(e) {
+//         $(' body,html').stop(true, true).animate({ scrollTop: $('.groupA').offset().top }, 200, 'easeOutExpo');
+//     });
+//     $('.browse').click(function(e) {
+//         $('body,html').stop(true, true).animate({ scrollTop: $('.groupB').offset().top - 70 }, 200, 'easeOutExpo');
+//     });
+//     $('.place').click(function(e) {
+//         $('body,html').stop(true, true).animate({ scrollTop: $('.groupC').offset().top - 70 }, 200, 'easeOutExpo');
+//     });
+//     $('.purpose').click(function(e) {
+//         $('body,html').stop(true, true).animate({ scrollTop: $('.groupD').offset().top - 70 }, 200, 'easeOutExpo');
+//     });
+//     $('.project').click(function(e) {
+//         $('body,html').stop(true, true).animate({ scrollTop: $('.groupE').offset().top - 70 }, 200, 'easeOutExpo');
+//     });
+//     // e.preventDefault();
+//     // if ($('.innerpage').length > 0) {
+//     //     $('.query').click(function(e) {
+//     //         $(' body,html').stop(true, true).animate({ scrollTop: $('.groupA').offset().top - 500 }, 200, 'easeOutExpo');
+//     //     });
+//     // }    
+// })
 // 結果條列頁展開按鈕
 $(function() {
     $('.result_table table tr td .openbtn').click(function() {
